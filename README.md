@@ -1,6 +1,26 @@
 # POV-Ray-matrices
 POV-Ray include file for working with matrices
 
+M_NoOfRows(AA)
+
+M_NoOfCols(AA)
+
+M_NoOfRowsStr(AA)
+
+M_NoOfColsStr(AA)
+
+M_SizeStr(AA)
+
+M_PrintSize(AA)
+
+M_CustomStr(AA, L, P, Compact)
+
+M_Str(AA)
+
+M_CustomPrint(AA, L, P, Compact)
+
+M_Print(AA)
+
 M_Zero(SizeI, SizeJ)
 
 M_Constant(SizeI, SizeJ, Const)
@@ -118,23 +138,3 @@ M_Position3D_FromCol(AA, ColNo)
 M_Vector3D_FromRow(AA, RowNo)
 
 M_Vector3D_FromCol(AA, ColNo)
-
-M_NoOfRows(AA)
-
-M_NoOfCols(AA)
-
-M_NoOfRowsStr(AA)
-
-M_NoOfColsStr(AA)
-
-M_SizeStr(AA)
-
-M_PrintSize(AA)
-
-M_CustomStr(AA, L, P, Compact)
-
-M_Str(AA)
-
-M_CustomPrint(AA, L, P, Compact)
-
-M_Print(AA)
