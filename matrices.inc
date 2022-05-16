@@ -29,20 +29,20 @@ which can be found in the LICENSE file.
 #end // macro _M_FromFn
 
 
-#macro M_Zero(SizeI, SizeJ)
+#macro M_Zero(NoOfRows, NoOfCols)
 
     _M_FromFn(
-        SizeI, SizeJ,
+        NoOfRows, NoOfCols,
         function(_i, _j) { 0 }
     )
 
 #end // macro M_Zero
 
 
-#macro M_Constant(SizeI, SizeJ, Const)
+#macro M_Constant(NoOfRows, NoOfCols, Const)
 
     _M_FromFn(
-        SizeI, SizeJ,
+        NoOfRows, NoOfCols,
         function(_i, _j) { Const }
     )
 
