@@ -4,7 +4,6 @@ POV-Ray include file for working with matrices
 ## M_NoOfRows(AA)
 
 #### Example:
-
 ```
 #declare N =
     M_NoOfRows(
@@ -15,12 +14,9 @@ POV-Ray include file for working with matrices
         }
     )
 ;
-
 #debug str(N, 0, 0)
 ```
-
 #### Result:
-
 ```
 3
 ```
@@ -28,7 +24,6 @@ POV-Ray include file for working with matrices
 ## M_NoOfCols(AA)
 
 #### Example:
-
 ```
 #declare N =
     M_NoOfCols(
@@ -39,18 +34,16 @@ POV-Ray include file for working with matrices
         }
     )
 ;
-
 #debug str(N, 0, 0)
 ```
-
 #### Result:
-
 ```
 4
 ```
 
 ## M_NoOfRowsStr(AA)
 
+#### Example:
 ```
 #declare S =
     M_NoOfRowsStr(
@@ -61,12 +54,9 @@ POV-Ray include file for working with matrices
         }
     )
 ;
-
 #debug S
 ```
-
 #### Result:
-
 ```
 3
 ```
@@ -74,7 +64,6 @@ POV-Ray include file for working with matrices
 ## M_NoOfColsStr(AA)
 
 #### Example:
-
 ```
 #declare S =
     M_NoOfColsStr(
@@ -85,27 +74,178 @@ POV-Ray include file for working with matrices
         }
     )
 ;
-
 #debug S
 ```
-
 #### Result:
-
 ```
 4
 ```
 
 ## M_SizeStr(AA)
 
+#### Example:
+```
+#declare S =
+    M_SizeStr(
+        array[3][4] {
+            {  2.0,  4.0,  5.0,  4.0 },
+            { -4.0,  7.0, -2.0, -0.5 },
+            {  1.0,  3.0,  1.0,  0.0 }
+        }
+    )
+;
+#debug S
+```
+#### Result:
+```
+[3][4]
+```
+
 ## M_PrintSize(AA)
+
+#### Example:
+```
+M_PrintSize(
+    array[3][2] {
+        {  2,  4 },
+        {  5,  3 },
+        { -3,  0 }
+    }
+)
+```
+#### Result:
+```
+[3][2]
+```
 
 ## M_CustomStr(AA, L, P, Compact)
 
+#### Example:
+```
+#declare S =
+    M_CustomStr(
+        array[3][4] {
+            {  2.0,  4.0,  5.0,  4.0 },
+            { -4.0,  7.0, -2.0, -0.5 },
+            {  1.0,  3.0,  1.0,  0.0 }
+        }
+        0, 2, false
+    )
+;
+#debug S
+```
+#### Result:
+```
+array[3][4] {
+    {  2.00,  4.00,  5.00,  4.00 },
+    { -4.00,  7.00, -2.00, -0.50 },
+    {  1.00,  3.00,  1.00,  0.00 }
+}
+```
+
+#### Example:
+```
+#declare S =
+    M_CustomStr(
+        array[3][4] {
+            {  2.0,  4.0,  5.0,  4.0 },
+            { -4.0,  7.0, -2.0, -0.5 },
+            {  1.0,  3.0,  1.0,  0.0 }
+        }
+        0, 1, true
+    )
+#debug S
+```
+#### Result:
+```
+array[3][4]{{2.0,4.0,5.0,4.0},{-4.0,7.0,-2.0,-0.5 },{1.0,3.0,1.0,0.0}}
+```
+
 ## M_Str(AA)
+
+#### Example:
+```
+#declare S =
+    M_Str(
+        array[3][4] {
+            {  2.0,  4.0,  5.0,  4.0 },
+            { -4.0,  7.0, -2.0, -0.5 },
+            {  1.0,  3.0,  1.0,  0.0 }
+        }
+    )
+;
+#debug S
+```
+#### Result:
+```
+array[3][4] {
+    {  2.000000,  4.000000,  5.000000,  4.000000 },
+    { -4.000000,  7.000000, -2.000000, -0.500000 },
+    {  1.000000,  3.000000,  1.000000,  0.000000 }
+}
+```
 
 ## M_CustomPrint(AA, L, P, Compact)
 
+#### Example:
+```
+M_CustomPrint(
+    array[3][4] {
+        {  2.0,  4.0,  5.0,  4.0 },
+        { -4.0,  7.0, -2.0, -0.5 },
+        {  1.0,  3.0,  1.0,  0.0 }
+    }
+    0, 2, false
+)
+```
+
+#### Result:
+```
+array[3][4] {
+    {  2.00,  4.00,  5.00,  4.00 },
+    { -4.00,  7.00, -2.00, -0.50 },
+    {  1.00,  3.00,  1.00,  0.00 }
+}
+```
+
+#### Example:
+```
+M_CustomPrint(
+    array[3][4] {
+        {  2.0,  4.0,  5.0,  4.0 },
+        { -4.0,  7.0, -2.0, -0.5 },
+        {  1.0,  3.0,  1.0,  0.0 }
+    }
+    0, 1, true
+)
+```
+
+#### Result:
+```
+array[3][4]{{2.0,4.0,5.0,4.0},{-4.0,7.0,-2.0,-0.5 },{1.0,3.0,1.0,0.0}}
+```
+
 ## M_Print(AA)
+
+#### Example:
+```
+M_Print(
+    array[3][4] {
+        {  2.0,  4.0,  5.0,  4.0 },
+        { -4.0,  7.0, -2.0, -0.5 },
+        {  1.0,  3.0,  1.0,  0.0 }
+    }
+)
+```
+
+#### Result:
+```
+array[3][4] {
+    {  2.000000,  4.000000,  5.000000,  4.000000 },
+    { -4.000000,  7.000000, -2.000000, -0.500000 },
+    {  1.000000,  3.000000,  1.000000,  0.000000 }
+}
+```
 
 ## M_Zero(SizeI, SizeJ)
 
