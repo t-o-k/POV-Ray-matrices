@@ -4,7 +4,7 @@ POV-Ray include file for working with matrices
 ## M_NoOfRows(AA)
 
 #### Example:
-```
+```povray
 #declare N =
     M_NoOfRows(
         array[3][4] {
@@ -17,14 +17,14 @@ POV-Ray include file for working with matrices
 #debug str(N, 0, 0)
 ```
 #### Result:
-```
+```povray
 3
 ```
 
 ## M_NoOfCols(AA)
 
 #### Example:
-```
+```povray
 #declare N =
     M_NoOfCols(
         array[3][4] {
@@ -37,14 +37,14 @@ POV-Ray include file for working with matrices
 #debug str(N, 0, 0)
 ```
 #### Result:
-```
+```povray
 4
 ```
 
 ## M_NoOfRowsStr(AA)
 
 #### Example:
-```
+```povray
 #declare S =
     M_NoOfRowsStr(
         array[3][4] {
@@ -57,14 +57,14 @@ POV-Ray include file for working with matrices
 #debug S
 ```
 #### Result:
-```
+```povray
 3
 ```
 
 ## M_NoOfColsStr(AA)
 
 #### Example:
-```
+```povray
 #declare S =
     M_NoOfColsStr(
         array[3][4] {
@@ -77,14 +77,14 @@ POV-Ray include file for working with matrices
 #debug S
 ```
 #### Result:
-```
+```povray
 4
 ```
 
 ## M_SizeStr(AA)
 
 #### Example:
-```
+```povray
 #declare S =
     M_SizeStr(
         array[3][4] {
@@ -97,14 +97,14 @@ POV-Ray include file for working with matrices
 #debug S
 ```
 #### Result:
-```
+```povray
 [3][4]
 ```
 
 ## M_PrintSize(AA)
 
 #### Example:
-```
+```povray
 M_PrintSize(
     array[3][2] {
         {  2,  4 },
@@ -114,14 +114,14 @@ M_PrintSize(
 )
 ```
 #### Result:
-```
+```povray
 [3][2]
 ```
 
 ## M_CustomStr(AA, L, P, Compact)
 
 #### Example:
-```
+```povray
 #declare S =
     M_CustomStr(
         array[3][4] {
@@ -135,7 +135,7 @@ M_PrintSize(
 #debug S
 ```
 #### Result:
-```
+```povray
 array[3][4] {
     {  2.00,  4.00,  5.00,  4.00 },
     { -4.00,  7.00, -2.00, -0.50 },
@@ -144,7 +144,7 @@ array[3][4] {
 ```
 
 #### Example:
-```
+```povray
 #declare S =
     M_CustomStr(
         array[3][4] {
@@ -157,14 +157,14 @@ array[3][4] {
 #debug S
 ```
 #### Result:
-```
+```povray
 array[3][4]{{2.0,4.0,5.0,4.0},{-4.0,7.0,-2.0,-0.5 },{1.0,3.0,1.0,0.0}}
 ```
 
 ## M_Str(AA)
 
 #### Example:
-```
+```povray
 #declare S =
     M_Str(
         array[3][4] {
@@ -177,7 +177,7 @@ array[3][4]{{2.0,4.0,5.0,4.0},{-4.0,7.0,-2.0,-0.5 },{1.0,3.0,1.0,0.0}}
 #debug S
 ```
 #### Result:
-```
+```povray
 array[3][4] {
     {  2.000000,  4.000000,  5.000000,  4.000000 },
     { -4.000000,  7.000000, -2.000000, -0.500000 },
@@ -188,7 +188,7 @@ array[3][4] {
 ## M_CustomPrint(AA, L, P, Compact)
 
 #### Example:
-```
+```povray
 M_CustomPrint(
     array[3][4] {
         {  2.0,  4.0,  5.0,  4.0 },
@@ -198,9 +198,8 @@ M_CustomPrint(
     0, 2, false
 )
 ```
-
 #### Result:
-```
+```povray
 array[3][4] {
     {  2.00,  4.00,  5.00,  4.00 },
     { -4.00,  7.00, -2.00, -0.50 },
@@ -209,7 +208,7 @@ array[3][4] {
 ```
 
 #### Example:
-```
+```povray
 M_CustomPrint(
     array[3][4] {
         {  2.0,  4.0,  5.0,  4.0 },
@@ -219,16 +218,15 @@ M_CustomPrint(
     0, 1, true
 )
 ```
-
 #### Result:
-```
+```povray
 array[3][4]{{2.0,4.0,5.0,4.0},{-4.0,7.0,-2.0,-0.5 },{1.0,3.0,1.0,0.0}}
 ```
 
 ## M_Print(AA)
 
 #### Example:
-```
+```povray
 M_Print(
     array[3][4] {
         {  2.0,  4.0,  5.0,  4.0 },
@@ -237,9 +235,8 @@ M_Print(
     }
 )
 ```
-
 #### Result:
-```
+```povray
 array[3][4] {
     {  2.000000,  4.000000,  5.000000,  4.000000 },
     { -4.000000,  7.000000, -2.000000, -0.500000 },
@@ -250,13 +247,12 @@ array[3][4] {
 ## M_Zero(SizeI, SizeJ)
 
 #### Example:
-```
+```povray
 #declare MM = M_Zero(4, 3)
 M_Print(MM)
 ```
-
 #### Result:
-```
+```povray
 array[4][3] {
     {  0.000000,  0.000000,  0.000000 },
     {  0.000000,  0.000000,  0.000000 },
@@ -268,13 +264,12 @@ array[4][3] {
 ## M_Constant(SizeI, SizeJ, Const)
 
 #### Example:
-```
+```povray
 #declare MM = M_Constant(4, 3, -pi)
 M_Print(MM)
 ```
-
 #### Result:
-```
+```povray
 array[4][3] {
     { -3.141593, -3.141593, -3.141593 },
     { -3.141593, -3.141593, -3.141593 },
@@ -286,13 +281,12 @@ array[4][3] {
 ## M_Identity(Size)
 
 #### Example:
-```
+```povray
 #declare MM = M_Identity(3)
 M_Print(MM)
 ```
-
 #### Result:
-```
+```povray
 array[3][3] {
     {  1.000000,  0.000000,  0.000000 },
     {  0.000000,  1.000000,  0.000000 },
@@ -303,7 +297,7 @@ array[3][3] {
 ## M_Neg(AA)
 
 #### Example:
-```
+```povray
 #declare MM =
     M_Neg(
         array[3][4] {
@@ -315,9 +309,8 @@ array[3][3] {
 ;
 M_Print(MM)
 ```
-
 #### Result:
-```
+```povray
 array[3][4] {
     { -2.000000, -4.000000, -5.000000, -4.000000 },
     {  4.000000, -7.000000,  2.000000,  0.500000 },
@@ -328,7 +321,7 @@ array[3][4] {
 ## M_Pos(AA)
 
 #### Example:
-```
+```povray
 #declare MM =
     M_Pos(
         array[3][4] {
@@ -340,9 +333,8 @@ array[3][4] {
 ;
 M_Print(MM)
 ```
-
 #### Result:
-```
+```povray
 array[3][4] {
     {  2.000000,  4.000000,  5.000000,  4.000000 },
     { -4.000000,  7.000000, -2.000000, -0.500000 },
@@ -353,7 +345,7 @@ array[3][4] {
 ## M_Scale(AA, Scale)
 
 #### Example:
-```
+```povray
 #declare MM =
     M_Scale(
         array[3][2] {
@@ -366,9 +358,8 @@ array[3][4] {
 ;
 M_Print(MM)
 ```
-
 #### Result:
-```
+```povray
 array[3][2] {
     {  2.718282, -5.436564 },
     {  5.436564,  8.154845 },
