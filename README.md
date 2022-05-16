@@ -1,140 +1,226 @@
 # POV-Ray-matrices
 POV-Ray include file for working with matrices
 
-M_NoOfRows(AA)
+## M_NoOfRows(AA)
 
-M_NoOfCols(AA)
+#### Example:
 
-M_NoOfRowsStr(AA)
+```
+#declare N =
+    M_NoOfRows(
+        array[3][4] {
+            {  2.0,  4.0,  5.0,  4.0 },
+            { -4.0,  7.0, -2.0, -0.5 },
+            {  1.0,  3.0,  1.0,  0.0 }
+        }
+    )
+;
 
-M_NoOfColsStr(AA)
+#debug str(N, 0, 0)
+```
 
-M_SizeStr(AA)
+#### Result:
 
-M_PrintSize(AA)
+```
+3
+```
 
-M_CustomStr(AA, L, P, Compact)
+## M_NoOfCols(AA)
 
-M_Str(AA)
+#### Example:
 
-M_CustomPrint(AA, L, P, Compact)
+```
+#declare N =
+    M_NoOfCols(
+        array[3][4] {
+            {  2.0,  4.0,  5.0,  4.0 },
+            { -4.0,  7.0, -2.0, -0.5 },
+            {  1.0,  3.0,  1.0,  0.0 }
+        }
+    )
+;
 
-M_Print(AA)
+#debug str(N, 0, 0)
+```
 
-M_Zero(SizeI, SizeJ)
+#### Result:
 
-M_Constant(SizeI, SizeJ, Const)
+```
+4
+```
 
-M_Identity(Size)
+## M_NoOfRowsStr(AA)
 
-M_Neg(AA)
+```
+#declare S =
+    M_NoOfRowsStr(
+        array[3][4] {
+            {  2.0,  4.0,  5.0,  4.0 },
+            { -4.0,  7.0, -2.0, -0.5 },
+            {  1.0,  3.0,  1.0,  0.0 }
+        }
+    )
+;
 
-M_Pos(AA)
+#debug S
+```
 
-M_Scale(AA, Scale)
+#### Result:
 
-M_ApplyCheckerSigns(AA)
+```
+3
+```
 
-M_ScaleRow(AA, RowNo, Scale)
+## M_NoOfColsStr(AA)
 
-M_ScaleCol(AA, ColNo, Scale)
+#### Example:
 
-M_Transpose(AA)
+```
+#declare S =
+    M_NoOfColsStr(
+        array[3][4] {
+            {  2.0,  4.0,  5.0,  4.0 },
+            { -4.0,  7.0, -2.0, -0.5 },
+            {  1.0,  3.0,  1.0,  0.0 }
+        }
+    )
+;
 
-M_SwapRows(AA, RowNo, Row_No)
+#debug S
+```
 
-M_SwapCols(AA, ColNo, Col_No)
+#### Result:
 
-M_Add(AA, BB)
+```
+4
+```
 
-M_Sub(AA, BB)
+## M_SizeStr(AA)
 
-M_Trace(AA)
+## M_PrintSize(AA)
 
-M_Mult(AA, BB)
+## M_CustomStr(AA, L, P, Compact)
 
-M_DelRow(AA, RowNo)
+## M_Str(AA)
 
-M_DelCol(AA, ColNo)
+## M_CustomPrint(AA, L, P, Compact)
 
-M_DelRowAndCol(AA, RowNo, ColNo)
+## M_Print(AA)
 
-M_AddScaledRowToRow(AA, Scale, RowNo, ToRowNo)
+## M_Zero(SizeI, SizeJ)
 
-M_AddScaledColToCol(AA, Scale, ColNo, ToColNo)
+## M_Constant(SizeI, SizeJ, Const)
 
-M_SubMatrix(AA, RowNo, NoOfRows, ColNo, NoOfCols)
+## M_Identity(Size)
 
-M_Stack(AAAA)
+## M_Neg(AA)
 
-M_Det_11(AA)
+## M_Pos(AA)
 
-M_Det_22(AA)
+## M_Scale(AA, Scale)
 
-M_Det_33(AA)
+## M_ApplyCheckerSigns(AA)
 
-M_Det_44(AA)
+## M_ScaleRow(AA, RowNo, Scale)
 
-M_Det_55(AA)
+## M_ScaleCol(AA, ColNo, Scale)
 
-M_Det_66(AA)
+## M_Transpose(AA)
 
-M_Det_SS(AA)
+## M_SwapRows(AA, RowNo, Row_No)
 
-M_Det(AA)
+## M_SwapCols(AA, ColNo, Col_No)
 
-M_Minors(AA)
+## M_Add(AA, BB)
 
-M_Cofactors(AA)
+## M_Sub(AA, BB)
 
-M_Adjoint(AA)
+## M_Trace(AA)
 
-M_Inv_11(AA)
+## M_Mult(AA, BB)
 
-M_Inv_22(AA)
+## M_DelRow(AA, RowNo)
 
-M_Inv_33(AA)
+## M_DelCol(AA, ColNo)
 
-M_Inv_44(AA)
+## M_DelRowAndCol(AA, RowNo, ColNo)
 
-M_Inv_SS(AA)
+## M_AddScaledRowToRow(AA, Scale, RowNo, ToRowNo)
 
-M_Inv(AA)
+## M_AddScaledColToCol(AA, Scale, ColNo, ToColNo)
 
-M_FromTransformFn(TransformFn)
+## M_SubMatrix(AA, RowNo, NoOfRows, ColNo, NoOfCols)
 
-M_FromTransform(Transform)
+## M_Stack(AAAA)
 
-M_RowFromPosition2D(p0)
+## M_Det_11(AA)
 
-M_ColFromPosition2D(p0)
+## M_Det_22(AA)
 
-M_RowFromVector2D(v0)
+## M_Det_33(AA)
 
-M_ColFromVector2D(v0)
+## M_Det_44(AA)
 
-M_RowFromPosition3D(p0)
+## M_Det_55(AA)
 
-M_ColFromPosition3D(p0)
+## M_Det_66(AA)
 
-M_RowFromVector3D(v0)
+## M_Det_SS(AA)
 
-M_ColFromVector3D(v0)
+## M_Det(AA)
 
-M_SkewFromVector3D(v0)
+## M_Minors(AA)
 
-M_Position2D_FromRow(AA, RowNo)
+## M_Cofactors(AA)
 
-M_Position2D_FromCol(AA, ColNo)
+## M_Adjoint(AA)
 
-M_Vector2D_FromRow(AA, RowNo)
+## M_Inv_11(AA)
 
-M_Vector2D_FromCol(AA, ColNo)
+## M_Inv_22(AA)
 
-M_Position3D_FromRow(AA, RowNo)
+## M_Inv_33(AA)
 
-M_Position3D_FromCol(AA, ColNo)
+## M_Inv_44(AA)
 
-M_Vector3D_FromRow(AA, RowNo)
+## M_Inv_SS(AA)
 
-M_Vector3D_FromCol(AA, ColNo)
+## M_Inv(AA)
+
+## M_FromTransformFn(TransformFn)
+
+## M_FromTransform(Transform)
+
+## M_RowFromPosition2D(p0)
+
+## M_ColFromPosition2D(p0)
+
+## M_RowFromVector2D(v0)
+
+## M_ColFromVector2D(v0)
+
+## M_RowFromPosition3D(p0)
+
+## M_ColFromPosition3D(p0)
+
+## M_RowFromVector3D(v0)
+
+## M_ColFromVector3D(v0)
+
+## M_SkewFromVector3D(v0)
+
+## M_Position2D_FromRow(AA, RowNo)
+
+## M_Position2D_FromCol(AA, ColNo)
+
+## M_Vector2D_FromRow(AA, RowNo)
+
+## M_Vector2D_FromCol(AA, ColNo)
+
+## M_Position3D_FromRow(AA, RowNo)
+
+## M_Position3D_FromCol(AA, ColNo)
+
+## M_Vector3D_FromRow(AA, RowNo)
+
+## M_Vector3D_FromCol(AA, ColNo)
