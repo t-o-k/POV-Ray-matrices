@@ -243,7 +243,7 @@ array[3][4] {
 
 #### Example:
 ```povray
-#declare MM = M_Zero(4, 3)
+#declare MM = M_Zero(4, 3);
 M_Print(MM)
 ```
 #### Result:
@@ -260,7 +260,7 @@ array[4][3] {
 
 #### Example:
 ```povray
-#declare MM = M_Constant(4, 3, -pi)
+#declare MM = M_Constant(4, 3, -pi);
 M_Print(MM)
 ```
 #### Result:
@@ -277,7 +277,7 @@ array[4][3] {
 
 #### Example:
 ```povray
-#declare MM = M_Identity(3)
+#declare MM = M_Identity(3);
 M_Print(MM)
 ```
 #### Result:
