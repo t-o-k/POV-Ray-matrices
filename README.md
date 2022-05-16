@@ -417,6 +417,32 @@ array[4][5] {
 
 ## M_DelRowAndCol(AA, RowNo, ColNo)
 
+#### Example:
+```povray
+#declare MM =
+    M_DelRowAndCol(
+        array[5][4] {
+            {   0,  1,  2,  3 },
+            {  10, 11, 12, 13 },
+            {  20, 21, 22, 23 },
+            {  30, 31, 32, 33 },
+            {  40, 41, 42, 43 },
+        },
+        0, 2
+    )
+;
+M_Print(MM)
+```
+#### Result:
+```povray
+array[4][3] {
+    {  10.000000, 11.000000, 13.000000 },
+    {  20.000000, 21.000000, 23.000000 },
+    {  30.000000, 31.000000, 33.000000 },
+    {  40.000000, 41.000000, 43.000000 }
+}
+```
+
 ## M_AddScaledRowToRow(AA, Scale, RowNo, ToRowNo)
 
 ## M_AddScaledColToCol(AA, Scale, ColNo, ToColNo)
