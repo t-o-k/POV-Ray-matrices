@@ -397,8 +397,6 @@ array[4][5] {
 
 ## M_ScaleCol(AA, ColNo, Scale)
 
-## M_Transpose(AA)
-
 ## M_SwapRows(AA, RowNo, Row_No)
 
 ## M_SwapCols(AA, ColNo, Col_No)
@@ -408,6 +406,8 @@ array[4][5] {
 ## M_Sub(AA, BB)
 
 ## M_Trace(AA)
+
+## M_Transpose(AA)
 
 ## M_Mult(AA, BB)
 
