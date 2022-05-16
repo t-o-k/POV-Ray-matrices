@@ -244,7 +244,7 @@ array[3][4] {
 }
 ```
 
-## M_Zero(SizeI, SizeJ)
+## M_Zero(NoOfRows, NoOfCols)
 
 #### Example:
 ```povray
@@ -261,7 +261,7 @@ array[4][3] {
 }
 ```
 
-## M_Constant(SizeI, SizeJ, Const)
+## M_Constant(NoOfRows, NoOfCols, Const)
 
 #### Example:
 ```povray
