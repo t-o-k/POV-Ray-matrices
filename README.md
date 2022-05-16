@@ -53,7 +53,6 @@ POV-Ray include file for working with matrices
             {  1.0,  3.0,  1.0,  0.0 }
         }
     )
-;
 #debug S
 ```
 #### Result:
@@ -73,7 +72,6 @@ POV-Ray include file for working with matrices
             {  1.0,  3.0,  1.0,  0.0 }
         }
     )
-;
 #debug S
 ```
 #### Result:
@@ -93,7 +91,6 @@ POV-Ray include file for working with matrices
             {  1.0,  3.0,  1.0,  0.0 }
         }
     )
-;
 #debug S
 ```
 #### Result:
@@ -131,7 +128,6 @@ M_PrintSize(
         }
         0, 2, false
     )
-;
 #debug S
 ```
 #### Result:
@@ -173,7 +169,6 @@ array[3][4]{{2.0,4.0,5.0,4.0},{-4.0,7.0,-2.0,-0.5 },{1.0,3.0,1.0,0.0}}
             {  1.0,  3.0,  1.0,  0.0 }
         }
     )
-;
 #debug S
 ```
 #### Result:
