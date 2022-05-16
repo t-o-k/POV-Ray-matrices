@@ -159,17 +159,6 @@ which can be found in the LICENSE file.
 #end // macro _M_Rearrange
 
 
-#macro M_Transpose(AA)
-
-    _M_Rearrange(
-        AA,
-        function(_i, _j) { _j },
-        function(_i, _j) { _i }
-    )
-
-#end // macro M_Transpose
-
-
 #macro M_SwapRows(AA, RowNo, Row_No)
 
     _M_Rearrange(
@@ -274,6 +263,22 @@ which can be found in the LICENSE file.
     Sum
 
 #end // macro M_Trace
+
+
+#macro M_Transpose(AA)
+
+    #local SizeI = dimension_size(AA, 1);
+    #local SizeJ = dimension_size(AA, 2);
+    #local MM = array[SizeJ][SizeI];
+    #for (I, 0, SizeI-1)
+        #for (J, 0, SizeJ-1)
+            #local MM[J][I] = AA[I][J];
+        #end // for
+    #end // for
+
+    MM
+
+#end // macro M_Transpose
 
 
 #macro M_Mult(AA, BB)
