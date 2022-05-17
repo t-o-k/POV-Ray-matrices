@@ -1432,6 +1432,11 @@ TODO:
 
 #macro M_CustomStr(AA, L, P, Compact)
 
+    #if (L = 0)
+        #local PosStr = " "
+    #else
+        #local PosStr = ""
+    #end // if
     #if (Compact)
         #local IndentStr = ""
         #local EndStr = ""
@@ -1452,7 +1457,7 @@ TODO:
         #for (J, 0, SizeJ-1)
             #local M = AA[I][J];
             #if (M >= 0)
-                #local Str = concat(Str, PadStr)
+                #local Str = concat(Str, PosStr)
             #end // if
             #local Str = concat(Str, str(M, L, P))
             #if (J < SizeJ-1)
