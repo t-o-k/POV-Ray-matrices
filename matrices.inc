@@ -536,7 +536,7 @@ which can be found in the LICENSE file.
             #if (A != 0)
                 #local D =
                     M_Det(
-                        M_DeleteRowAndCol(AA, 0, J)
+                        M_DelRowAndCol(AA, 0, J)
                     )
                 ;
                 #local Det = Det + pow(-1, J)*A*D;
@@ -877,7 +877,7 @@ which can be found in the LICENSE file.
         #for (J, 0, SizeJ-1)
             #local MM[I][J] =
                 M_Det(
-                    M_DeleteRowAndCol(AA, I, J)
+                    M_DelRowAndCol(AA, I, J)
                 )
             ;
         #end // for
