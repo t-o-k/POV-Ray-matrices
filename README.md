@@ -675,9 +675,69 @@ array[3][4] {
 
 ## M_Inv_11(AA)
 
+#### Example:
+```povray
+#declare MM =
+    M_Inv_11(
+        array[1][1] {
+            {  2 }
+        }
+    )
+;
+M_Print(MM)
+```
+#### Result:
+```povray
+array[1][1] {
+    {  0.500000 }
+}
+```
+
 ## M_Inv_22(AA)
 
+#### Example:
+```povray
+#declare MM =
+    M_Inv_22(
+        array[2][2] {
+            {  2,  0 },
+            { -4,  2 }
+        }
+    )
+;
+M_Print(MM)
+```
+#### Result:
+```povray
+array[2][2] {
+    {  0.500000,  -0.000000 },
+    {  1.000000,  0.500000 }
+}
+```
+
 ## M_Inv_33(AA)
+
+#### Example:
+```povray
+#declare MM =
+    M_Inv_33(
+        array[3][3] {
+            {  2,  0,  1 },
+            { -4,  2, -2 },
+            {  1,  2,  1 }
+        }
+    )
+;
+M_Print(MM)
+```
+#### Result:
+```povray
+array[3][3] {
+    {  3.000000,  1.000000, -1.000000 },
+    {  1.000000,  0.500000,  0.000000 },
+    { -5.000000, -2.000000,  2.000000 }
+}
+```
 
 ## M_Inv_44(AA)
 
