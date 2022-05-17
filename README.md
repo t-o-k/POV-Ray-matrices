@@ -669,6 +669,28 @@ array[3][4] {
 
 ## M_Minors(AA)
 
+#### Example:
+```povray
+#declare MM =
+    M_Minors(
+        array[3][3] {
+            { -2,  4,  5 },
+            {  3, -3,  0 },
+            { -4,  6, -2 }
+        }
+    )
+;
+M_CustomPrint(MM, 3, 0, false)
+```
+#### Result:
+```povray
+array[3][3] {
+    {   6,  -6,   6 },
+    { -38,  24,   4 },
+    {  15, -15,  -6 }
+}
+```
+
 ## M_Cofactors(AA)
 
 ## M_Adjoint(AA)
