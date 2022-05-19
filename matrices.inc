@@ -551,21 +551,21 @@ which can be found in the LICENSE file.
 #end // macro M_Det
 */
 
-#macro M_Det_11(AA)
+#macro _M_Det_11(AA)
 
     (AA[0][0])
 
-#end // macro M_Det_11
+#end // macro _M_Det_11
 
 
-#macro M_Det_22(AA)
+#macro _M_Det_22(AA)
 
     (AA[0][0]*AA[1][1] - AA[0][1]*AA[1][0])
 
-#end // macro M_Det_22
+#end // macro _M_Det_22
 
 
-#macro M_Det_33(AA)
+#macro _M_Det_33(AA)
 
     vdot(
         <AA[0][0], AA[0][1], AA[0][2]>,
@@ -575,10 +575,10 @@ which can be found in the LICENSE file.
         )
     )
 
-#end // macro M_Det_33
+#end // macro _M_Det_33
 
 
-#macro M_Det_44(AA)
+#macro _M_Det_44(AA)
 
     #local A10 = AA[1][0];
     #local A11 = AA[1][1];
@@ -602,10 +602,10 @@ which can be found in the LICENSE file.
         -AA[0][3]*vdot(<A10, A11, A12>, vcross(<A20, A21, A22>, <A30, A31, A32>))
     )
 
-#end // macro M_Det_44
+#end // macro _M_Det_44
 
 
-#macro M_Det_55(AA)
+#macro _M_Det_55(AA)
 
     #local A10 = AA[1][0];
     #local A11 = AA[1][1];
@@ -650,10 +650,10 @@ which can be found in the LICENSE file.
         +AA[0][4]*(+A10*SD -A11*SG +A12*SI -A13*SJ)
     )
 
-#end // macro M_Det_55
+#end // macro _M_Det_55
 
 
-#macro M_Det_66(AA)
+#macro _M_Det_66(AA)
 
     #local A00 = AA[0][0];
     #local A01 = AA[0][1];
@@ -742,7 +742,7 @@ which can be found in the LICENSE file.
           vdot(<A30, A31, A32>, vcross(<A40, A41, A42>, <A50, A51, A52>))
     )
 
-#end // macro M_Det_66
+#end // macro _M_Det_66
 
 
 #macro _M_DetAlongRow(AA, RowNo)
@@ -841,22 +841,22 @@ which can be found in the LICENSE file.
     ;
     #switch (Size)
         #case (1)
-            #local Det = M_Det_11(AA);
+            #local Det = _M_Det_11(AA);
             #break
         #case (2)
-            #local Det = M_Det_22(AA);
+            #local Det = _M_Det_22(AA);
             #break
         #case (3)
-            #local Det = M_Det_33(AA);
+            #local Det = _M_Det_33(AA);
             #break
         #case (4)
-            #local Det = M_Det_44(AA);
+            #local Det = _M_Det_44(AA);
             #break
         #case (5)
-            #local Det = M_Det_55(AA);
+            #local Det = _M_Det_55(AA);
             #break
         #case (6)
-            #local Det = M_Det_66(AA);
+            #local Det = _M_Det_66(AA);
             #break
         #else
             #local Det = M_Det_SS(AA);
@@ -906,7 +906,7 @@ which can be found in the LICENSE file.
 #end // macro M_Adjoint
 
 
-#macro M_Inv_11(AA)
+#macro _M_Inv_11(AA)
 
     #local Det = AA[0][0];
     #if (Det = 0)
@@ -918,10 +918,10 @@ which can be found in the LICENSE file.
 
     MM
 
-#end // macro M_Inv_11
+#end // macro _M_Inv_11
 
 
-#macro M_Inv_22(AA)
+#macro _M_Inv_22(AA)
 
     #local Det =
         +AA[0][0]*AA[1][1]
@@ -939,10 +939,10 @@ which can be found in the LICENSE file.
 
     MM
 
-#end // macro M_Inv_22
+#end // macro _M_Inv_22
 
 
-#macro M_Inv_33(AA)
+#macro _M_Inv_33(AA)
 
     #local vA = <AA[0][0], AA[0][1], AA[0][2]>;
     #local vB = <AA[1][0], AA[1][1], AA[1][2]>;
@@ -974,10 +974,10 @@ which can be found in the LICENSE file.
 
     MM
 
-#end // macro M_Inv_33
+#end // macro _M_Inv_33
 
 
-#macro M_Inv_44(AA)
+#macro _M_Inv_44(AA)
 
     #local A00 = AA[0][0];
     #local A01 = AA[0][1];
@@ -1042,20 +1042,20 @@ which can be found in the LICENSE file.
 
     MM
 
-#end // macro M_Inv_44
+#end // macro _M_Inv_44
 
 
 /*
 TODO:
 
-#macro M_Inv_55(AA)
+#macro _M_Inv_55(AA)
 
-#end // macro M_Inv_55
+#end // macro _M_Inv_55
 
 
-#macro M_Inv_66(AA)
+#macro _M_Inv_66(AA)
 
-#end // macro M_Inv_66
+#end // macro _M_Inv_66
 
 */
 
@@ -1092,23 +1092,23 @@ TODO:
     ;
     #switch (Size)
         #case (1)
-            #local Det = M_Inv_11(AA);
+            #local Det = _M_Inv_11(AA);
             #break
         #case (2)
-            #local Det = M_Inv_22(AA);
+            #local Det = _M_Inv_22(AA);
             #break
         #case (3)
-            #local Det = M_Inv_33(AA);
+            #local Det = _M_Inv_33(AA);
             #break
         #case (4)
-            #local Det = M_Inv_44(AA);
+            #local Det = _M_Inv_44(AA);
             #break
 /*
         #case (5)
-            #local Det = M_Inv_55(AA);
+            #local Det = _M_Inv_55(AA);
             #break
         #case (6)
-            #local Det = M_Inv_66(AA);
+            #local Det = _M_Inv_66(AA);
             #break
 */
         #else
