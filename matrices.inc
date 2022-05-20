@@ -1399,25 +1399,25 @@ TODO:
 #end // M_NoOfCols
 
 
-#macro M_NoOfRowsStr(AA)
+#macro _M_NoOfRowsStr(AA)
 
     str(M_NoOfRows(AA), 0, 0)
 
-#end // M_NoOfRowsStr
+#end // _M_NoOfRowsStr
 
 
-#macro M_NoOfColsStr(AA)
+#macro _M_NoOfColsStr(AA)
 
     str(M_NoOfCols(AA), 0, 0)
 
-#end // M_NoOfColsStr
+#end // _M_NoOfColsStr
 
 
 #macro M_SizeStr(AA)
 
     concat(
-        "[", M_NoOfRowsStr(AA), "]",
-        "[", M_NoOfColsStr(AA), "]"
+        "[", _M_NoOfRowsStr(AA), "]",
+        "[", _M_NoOfColsStr(AA), "]"
     )
 
 #end // M_SizeStr
@@ -1502,3 +1502,4 @@ TODO:
 #end // macro M_Print
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
+
