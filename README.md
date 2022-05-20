@@ -41,44 +41,6 @@ POV-Ray include file for working with matrices
 4
 ```
 
-## M_NoOfRowsStr(AA)
-
-#### Example:
-```povray
-#declare S =
-    M_NoOfRowsStr(
-        array[3][4] {
-            {  2.0,  4.0,  5.0,  4.0 },
-            { -4.0,  7.0, -2.0, -0.5 },
-            {  1.0,  3.0,  1.0,  0.0 }
-        }
-    )
-#debug S
-```
-#### Result:
-```povray
-3
-```
-
-## M_NoOfColsStr(AA)
-
-#### Example:
-```povray
-#declare S =
-    M_NoOfColsStr(
-        array[3][4] {
-            {  2.0,  4.0,  5.0,  4.0 },
-            { -4.0,  7.0, -2.0, -0.5 },
-            {  1.0,  3.0,  1.0,  0.0 }
-        }
-    )
-#debug S
-```
-#### Result:
-```povray
-4
-```
-
 ## M_SizeStr(AA)
 
 #### Example:
