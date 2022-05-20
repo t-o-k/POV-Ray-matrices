@@ -867,10 +867,11 @@ array[4][6] {
 ```povray
 #declare MM =
     M_Minors(
-        array[3][3] {
-            { -2,  4,  5 },
-            {  3, -3,  0 },
-            { -4,  6, -2 }
+        array[4][4] {
+            {  2,  0,  1,  4 },
+            { -4,  2, -2,  0 },
+            {  1,  2,  1, -2 },
+            {  0, -2, -1, -4 }
         }
     )
 ;
@@ -878,18 +879,74 @@ M_CustomPrint(MM, 3, 0, false)
 ```
 #### Result:
 ```povray
-array[3][3] {
-    {   6,  -6,   6 },
-    { -38,  24,   4 },
-    {  15, -15,  -6 }
+array[4][4] {
+    { -36,  16,  56,   6 },
+    {  12, -12, -32,  -2 },
+    { -16,  16,  16,  -4 },
+    {  28,  -8, -48,   2 }
 }
 ```
 
 ## M_Cofactors(AA)
 
+#### Example:
+```povray
+#declare MM =
+    M_Cofactors(
+        array[4][4] {
+            {  2,  0,  1,  4 },
+            { -4,  2, -2,  0 },
+            {  1,  2,  1, -2 },
+            {  0, -2, -1, -4 }
+        }
+    )
+;
+M_CustomPrint(MM, 3, 0, false)
+```
+#### Result:
+```povray
+array[4][4] {
+    { -36, -16,  56,  -6 },
+    { -12, -12,  32,  -2 },
+    { -16, -16,  16,   4 },
+    { -28,  -8,  48,   2 }
+}
+```
+
 ## M_Adjoint(AA)
 
+#### Example:
+```povray
+#declare MM =
+    M_Adjoint(
+        array[4][4] {
+            {  2,  0,  1,  4 },
+            { -4,  2, -2,  0 },
+            {  1,  2,  1, -2 },
+            {  0, -2, -1, -4 }
+        }
+    )
+;
+M_CustomPrint(MM, 3, 0, false)
+```
+#### Result:
+```povray
+array[4][4] {
+    { -36, -12, -16, -28 },
+    { -16, -12, -16,  -8 },
+    {  56,  32,  16,  48 },
+    {  -6,  -2,   4,   2 }
+}
+```
+
 ## M_Inv_SS(AA)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
 
 ## M_Inv(AA)
 
@@ -919,38 +976,171 @@ array[4][4] {
 
 ## M_FromTransformFn(TransformFn)
 
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_FromTransform(Transform)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
 
 ## M_RowFromPosition2D(p0)
 
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_ColFromPosition2D(p0)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
 
 ## M_RowFromVector2D(v0)
 
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_ColFromVector2D(v0)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
 
 ## M_RowFromPosition3D(p0)
 
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_ColFromPosition3D(p0)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
 
 ## M_RowFromVector3D(v0)
 
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_ColFromVector3D(v0)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
 
 ## M_SkewFromVector3D(v0)
 
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_Position2D_FromRow(AA, RowNo)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
 
 ## M_Position2D_FromCol(AA, ColNo)
 
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_Vector2D_FromRow(AA, RowNo)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
 
 ## M_Vector2D_FromCol(AA, ColNo)
 
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_Position3D_FromRow(AA, RowNo)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
 
 ## M_Position3D_FromCol(AA, ColNo)
 
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_Vector3D_FromRow(AA, RowNo)
 
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_Vector3D_FromCol(AA, ColNo)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
