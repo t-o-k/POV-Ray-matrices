@@ -607,129 +607,6 @@ array[3][4] {
 
 ## M_Stack(AAAA)
 
-## M_Det_11(AA)
-
-#### Example:
-```povray
-#declare R =
-    M_Det_11(
-        array[1][1] {
-            { -2 },
-        }
-    )
-;
-#debug str(R, 0, -1)
-```
-#### Result:
-```povray
--2.000000
-```
-
-## M_Det_22(AA)
-
-#### Example:
-```povray
-#declare R =
-    M_Det_22(
-        array[2][2] {
-            { -2,  4 },
-            {  3, -3 }
-        }
-    )
-;
-#debug str(R, 0, -1)
-```
-#### Result:
-```povray
--6.000000
-```
-
-## M_Det_33(AA)
-
-#### Example:
-```povray
-#declare R =
-    M_Det_33(
-        array[3][3] {
-            { -2,  4,  5 },
-            {  3, -3,  0 },
-            { -4,  6, -2 }
-        }
-    )
-;
-#debug str(R, 0, -1)
-```
-#### Result:
-```povray
-42.000000
-```
-
-## M_Det_44(AA)
-
-#### Example:
-```povray
-#declare R =
-    M_Det_44(
-        array[4][4] {
-            { -2,  4,  5,  0 },
-            {  3, -3,  0, -1 },
-            { -4,  6, -2,  4 },
-            {  1,  3, -1,  0 }
-        }
-    )
-;
-#debug str(R, 0, -1)
-```
-#### Result:
-```povray
--150.000000
-```
-
-## M_Det_55(AA)
-
-#### Example:
-```povray
-#declare R =
-    M_Det_55(
-        array[5][5] {
-            { -2,  4,  5,  0, -4 },
-            {  3, -3,  0, -1, -2 },
-            { -4,  6, -2,  4,  0 },
-            {  1,  3, -1,  0,  3 },
-            {  2,  0,  5,  4,  1 }
-        }
-    )
-;
-#debug str(R, 0, -1)
-```
-#### Result:
-```povray
--3422.000000
-```
-
-## M_Det_66(AA)
-
-#### Example:
-```povray
-#declare R =
-    M_Det_66(
-        array[6][6] {
-            { -2,  4,  5,  0, -4, -5 },
-            {  3, -3,  0, -1, -2,  0 },
-            { -4,  6, -2,  4,  0, -3 },
-            {  1,  3, -1,  0,  3,  2 },
-            {  2,  0,  5,  4,  1,  0 },
-            {  1,  3, -3,  1,  0,  3 }
-        }
-    )
-;
-#debug str(R, 0, -1)
-```
-#### Result:
-```povray
--11786.000000
-```
-
 ## M_Det_SS(AA)
 
 #### Example:
@@ -807,78 +684,14 @@ array[3][3] {
 
 ## M_Adjoint(AA)
 
-## M_Inv_11(AA)
+## M_Inv_SS(AA)
+
+## M_Inv(AA)
 
 #### Example:
 ```povray
 #declare MM =
-    M_Inv_11(
-        array[1][1] {
-            {  2 }
-        }
-    )
-;
-M_Print(MM)
-```
-#### Result:
-```povray
-array[1][1] {
-    {  0.500000 }
-}
-```
-
-## M_Inv_22(AA)
-
-#### Example:
-```povray
-#declare MM =
-    M_Inv_22(
-        array[2][2] {
-            {  2,  0 },
-            { -4,  2 }
-        }
-    )
-;
-M_Print(MM)
-```
-#### Result:
-```povray
-array[2][2] {
-    {  0.500000,  -0.000000 },
-    {  1.000000,  0.500000 }
-}
-```
-
-## M_Inv_33(AA)
-
-#### Example:
-```povray
-#declare MM =
-    M_Inv_33(
-        array[3][3] {
-            {  2,  0,  1 },
-            { -4,  2, -2 },
-            {  1,  2,  1 }
-        }
-    )
-;
-M_Print(MM)
-```
-#### Result:
-```povray
-array[3][3] {
-    {  3.000000,  1.000000, -1.000000 },
-    {  1.000000,  0.500000,  0.000000 },
-    { -5.000000, -2.000000,  2.000000 }
-}
-```
-
-## M_Inv_44(AA)
-
-#### Example:
-```povray
-#declare MM =
-    M_Inv_44(
+    M_Inv(
         array[4][4] {
             {  2,  0,  1,  4 },
             { -4,  2, -2,  0 },
@@ -887,21 +700,17 @@ array[3][3] {
         }
     )
 ;
-M_Print(MM)
+M_CustomPrint(MM, 0, 2, false)
 ```
 #### Result:
 ```povray
 array[4][4] {
-    {  0.900000,  0.300000,  0.400000,  0.700000 },
-    {  0.400000,  0.300000,  0.400000,  0.200000 },
-    { -1.400000, -0.800000, -0.400000, -1.200000 },
-    {  0.150000,  0.050000, -0.100000, -0.050000 }
+    {  0.90,  0.30,  0.40,  0.70 },
+    {  0.40,  0.30,  0.40,  0.20 },
+    { -1.40, -0.80, -0.40, -1.20 },
+    {  0.15,  0.05, -0.10, -0.05 }
 }
 ```
-
-## M_Inv_SS(AA)
-
-## M_Inv(AA)
 
 ## M_FromTransformFn(TransformFn)
 
