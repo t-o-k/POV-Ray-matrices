@@ -527,6 +527,24 @@ array[3][4] {
 
 ## M_Trace(AA)
 
+#### Example:
+```povray
+#declare R =
+    M_Trace(
+        array[3][3] {
+            {  2.0,  4.5, -5.7 },
+            {  3.6, -3.0,  0.1 },
+            { -4.3,  6.4, -2.0 }
+        }
+    )
+;
+#debug str(R, 0, -1)
+```
+#### Result:
+```povray
+-3.000000
+```
+
 ## M_Transpose(AA)
 
 #### Example:
