@@ -449,7 +449,61 @@ array[5][4] {
 
 ## M_SwapRows(AA, RowNo, Row_No)
 
+#### Example:
+```povray
+#declare MM =
+    M_SwapRows(
+        array[5][4] {
+            {   0,   1,  -2,   3 },
+            { -10,  11,  12, -13 },
+            {  20, -21,  22,  23 },
+            { -30,  31,  32, -33 },
+            {  40,  41, -42,  43 }
+        },
+        1, 3
+    )
+;
+M_CustomPrint(MM, 3, 0, false)
+```
+#### Result:
+```povray
+array[5][4] {
+    {   0,   1,  -2,   3 },
+    { -30,  31,  32, -33 },
+    {  20, -21,  22,  23 },
+    { -10,  11,  12, -13 },
+    {  40,  41, -42,  43 }
+}
+```
+
 ## M_SwapCols(AA, ColNo, Col_No)
+
+#### Example:
+```povray
+#declare MM =
+    M_SwapCols(
+        array[5][4] {
+            {   0,   1,  -2,   3 },
+            { -10,  11,  12, -13 },
+            {  20, -21,  22,  23 },
+            { -30,  31,  32, -33 },
+            {  40,  41, -42,  43 }
+        },
+        2, 0
+    )
+;
+M_CustomPrint(MM, 3, 0, false)
+```
+#### Result:
+```povray
+array[5][4] {
+    {  -2,   1,   0,   3 },
+    {  12,  11, -10, -13 },
+    {  22, -21,  20,  23 },
+    {  32,  31, -30, -33 },
+    { -42,  41,  40,  43 }
+}
+```
 
 ## M_Add(AA, BB)
 
@@ -715,7 +769,53 @@ array[3][4] {
 
 ## M_Stack(AAAA)
 
+#### Example:
+```povray
+#declare AA =
+    array[3][4] {
+        { 00, 01, 02, 03 },
+        { 10, 11, 12, 13 },
+        { 20, 21, 22, 23 }
+    }
+;
+#declare BB =
+    array[3][2] {
+        { 04, 05 },
+        { 14, 15 },
+        { 24, 25 }
+    }
+;
+#declare CC =
+    array[1][4] {
+        { 30, 31, 32, 33 }
+    }
+;
+#declare DD =
+    array[1][2] {
+        { 34, 35 }
+    }
+;
+#declare MM =
+    M_Stack(
+        array[2][2] {
+            { AA, BB },
+            { CC, DD }
+        }
+    )
+;
+M_CustomPrint(MM, 2, 0, false)
+```
+#### Result:
+```povray
+array[4][6] {
+    {  0,  1,  2,  3,  4,  5 },
+    { 10, 11, 12, 13, 14, 15 },
+    { 20, 21, 22, 23, 24, 25 },
+    { 30, 31, 32, 33, 34, 35 }
+}
+
 ## M_Det_SS(AA)
+```
 
 #### Example:
 ```povray
