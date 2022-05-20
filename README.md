@@ -390,7 +390,62 @@ array[4][5] {
 
 ## M_ScaleRow(AA, RowNo, Scale)
 
+#### Example:
+```povray
+#declare MM =
+    M_ScaleRow(
+        array[5][4] {
+            {   0,   1,  -2,   3 },
+            { -10,  11,  12, -13 },
+            {  20, -21,  22,  23 },
+            { -30,  31,  32, -33 },
+            {  40,  41, -42,  43 }
+        },
+        3, -15
+    )
+;
+M_CustomPrint(MM, 4, 0, false)
+```
+#### Result:
+```povray
+array[5][4] {
+    {    0,    1,   -2,    3 },
+    {  -10,   11,   12,  -13 },
+    {   20,  -21,   22,   23 },
+    {  450, -465, -480,  495 },
+    {   40,   41,  -42,   43 }
+}
+
+```
+
 ## M_ScaleCol(AA, ColNo, Scale)
+
+#### Example:
+```povray
+#declare MM =
+    M_ScaleCol(
+        array[5][4] {
+            {   0,   1,  -2,   3 },
+            { -10,  11,  12, -13 },
+            {  20, -21,  22,  23 },
+            { -30,  31,  32, -33 },
+            {  40,  41, -42,  43 }
+        },
+        0, 22
+    )
+;
+M_CustomPrint(MM, 4, 0, false)
+```
+#### Result:
+```povray
+array[5][4] {
+    {    0,    1,   -2,    3 },
+    { -220,   11,   12,  -13 },
+    {  440,  -21,   22,   23 },
+    { -660,   31,   32,  -33 },
+    {  880,   41,  -42,   43 }
+}
+```
 
 ## M_SwapRows(AA, RowNo, Row_No)
 
@@ -544,7 +599,60 @@ array[4][4] {
 
 ## M_DelRow(AA, RowNo)
 
+#### Example:
+```povray
+#declare MM =
+    M_DelRow(
+        array[5][4] {
+            {  0,  1,  2,  3 },
+            { 10, 11, 12, 13 },
+            { 20, 21, 22, 23 },
+            { 30, 31, 32, 33 },
+            { 40, 41, 42, 43 }
+        },
+        1
+    )
+;
+M_CustomPrint(MM, 2, 0, false)
+```
+#### Result:
+```povray
+array[4][4] {
+    {  0,  1,  2,  3 },
+    { 20, 21, 22, 23 },
+    { 30, 31, 32, 33 },
+    { 40, 41, 42, 43 }
+}
+```
+
 ## M_DelCol(AA, ColNo)
+
+#### Example:
+```povray
+#declare MM =
+    M_DelCol(
+        array[5][4] {
+            {  0,  1,  2,  3 },
+            { 10, 11, 12, 13 },
+            { 20, 21, 22, 23 },
+            { 30, 31, 32, 33 },
+            { 40, 41, 42, 43 }
+        },
+        2
+    )
+;
+M_CustomPrint(MM, 2, 0, false)
+```
+#### Result:
+```povray
+array[5][3] {
+    {  0,  1,  3 },
+    { 10, 11, 13 },
+    { 20, 21, 23 },
+    { 30, 31, 33 },
+    { 40, 41, 43 }
+}
+```
 
 ## M_DelRowAndCol(AA, RowNo, ColNo)
 
