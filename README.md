@@ -718,7 +718,57 @@ array[4][3] {
 
 ## M_AddScaledRowToRow(AA, Scale, RowNo, ToRowNo)
 
+#### Example:
+```povray
+#declare MM =
+    M_AddScaledRowToRow(
+        array[4][4] {
+            {  1,  2, -1,  0 },
+            { -5, -3,  0,  6 },
+            { -6,  5,  7, -4 },
+            {  4,  0, -2,  3 }
+        }
+        -4, 0, 3
+    )
+;
+M_CustomPrint(MM, 2, 0, false)
+```
+#### Result:
+```povray
+array[4][4] {
+    {  1,  2, -1,  0 },
+    { -5, -3,  0,  6 },
+    { -6,  5,  7, -4 },
+    {  0, -8,  2,  3 }
+}
+```
+
 ## M_AddScaledColToCol(AA, Scale, ColNo, ToColNo)
+
+#### Example:
+```povray
+#declare MM =
+    M_AddScaledColToCol(
+        array[4][4] {
+            { -5,  1, -4, -6 },
+            { -3,  2,  0,  5 },
+            {  0, -1,  2,  7 },
+            {  6,  0, -3, -4 }
+        }
+        4, 1, 2
+    )
+;
+M_CustomPrint(MM, 2, 0, false)
+```
+#### Result:
+```povray
+array[4][4] {
+    { -5,  1,  0, -6 },
+    { -3,  2,  8,  5 },
+    {  0, -1, -2,  7 },
+    {  6,  0, -3, -4 }
+}
+```
 
 ## M_SubMatrix(AA, RowNo, NoOfRows, ColNo, NoOfCols)
 
