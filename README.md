@@ -1160,7 +1160,7 @@ array[4][4] {
             translate <-4,  6, -8>
         }
     }
-
+;
 #declare MM = M_FromTransformFn(TrFn);
 M_Print(MM)
 ```
