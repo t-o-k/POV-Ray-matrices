@@ -1200,18 +1200,16 @@ array[4][4] {
 
 #### Example:
 ```povray
-#declare MM =
-    M_FromTransform(
-        transform {
-            matrix <
-                 3,  5, -7,
-                -3, -2,  1,
-                 0,  0,  2,
-                -4,  6, -8
-            >
-        }
-    )
-;
+#declare Tr =
+    transform {
+        matrix <
+             3,  5, -7,
+            -3, -2,  1,
+             0,  0,  2,
+            -4,  6, -8
+        >
+    }
+#declare MM = M_FromTransform(Tr);
 M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
