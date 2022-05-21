@@ -106,6 +106,20 @@ which can be found in the LICENSE file.
 #end // macro M_Scale
 
 
+#macro M_Round(AA, N)
+
+    #local S = pow(10, N);
+
+    _M_ApplyFnToElements(
+        AA,
+        function(_i, _j, _a) {
+            int(_a*S + select(_a, -0.5, 0.5))/S
+        }
+    )
+
+#end // macro M_Round
+
+
 #macro M_ApplyCheckerSigns(AA)
 
     _M_ApplyFnToElements(
