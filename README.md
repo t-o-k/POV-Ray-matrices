@@ -801,26 +801,26 @@ array[3][4] {
 
 #### Example:
 ```povray
-#declare AA =
+#declare BB =
     array[3][4] {
-        {  0,  1,  2,  3 },
+        { 00, 01, 02, 03 },
         { 10, 11, 12, 13 },
         { 20, 21, 22, 23 }
     }
 ;
-#declare BB =
+#declare CC =
     array[3][2] {
-        {  4,  5 },
+        { 04, 05 },
         { 14, 15 },
         { 24, 25 }
     }
 ;
-#declare CC =
+#declare DD =
     array[1][4] {
         { 30, 31, 32, 33 }
     }
 ;
-#declare DD =
+#declare EE =
     array[1][2] {
         { 34, 35 }
     }
@@ -828,8 +828,8 @@ array[3][4] {
 #declare MM =
     M_Stack(
         array[2][2] {
-            { AA, BB },
-            { CC, DD }
+            { BB, CC },
+            { DD, EE }
         }
     )
 ;
