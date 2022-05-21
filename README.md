@@ -1132,18 +1132,96 @@ array[4][4] {
 
 #### Example:
 ```povray
+#declare MM =
+    M_FromTransformFn(
+        function {
+            transform { }
+        }
+    )
+;
+M_Print(MM)
 ```
 #### Result:
 ```povray
+array[4][4] {
+    {  1.000000,  0.000000,  0.000000,  0.000000 },
+    {  0.000000,  1.000000,  0.000000,  0.000000 },
+    {  0.000000,  0.000000,  1.000000,  0.000000 },
+    {  0.000000,  0.000000,  0.000000,  1.000000 }
+}
+```
+
+#### Example:
+```povray
+#declare TrFn =
+    function {
+        transform {
+            rotate -60*y
+            translate <-4,  6, -8>
+        }
+    }
+
+#declare MM = M_FromTransformFn(TrFn);
+M_Print(MM)
+```
+#### Result:
+```povray
+array[4][4] {
+    {  0.500000,  0.000000, -0.866025, -4.000000 },
+    {  0.000000,  1.000000,  0.000000,  6.000000 },
+    {  0.866025,  0.000000,  0.500000, -8.000000 },
+    {  0.000000,  0.000000,  0.000000,  1.000000 }
+}
 ```
 
 ## M_FromTransform(Transform)
 
 #### Example:
 ```povray
+#declare MM =
+    M_FromTransform(
+        transform {
+            scale < 3, -2,  2>
+            translate <-4,  6, -8>
+        }
+    )
+;
+M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
 ```povray
+array[4][4] {
+    {  3,  0,  0, -4 },
+    {  0, -2,  0,  6 },
+    {  0,  0,  2, -8 },
+    {  0,  0,  0,  1 }
+}
+```
+
+#### Example:
+```povray
+#declare MM =
+    M_FromTransform(
+        transform {
+            matrix <
+                 3,  5, -7,
+                -3, -2,  1,
+                 0,  0,  2,
+                -4,  6, -8
+            >
+        }
+    )
+;
+M_CustomPrint(MM, 2, 0, false)
+```
+#### Result:
+```povray
+array[4][4] {
+    {  3, -3,  0, -4 },
+    {  5, -2,  0,  6 },
+    { -7,  1,  2, -8 },
+    {  0,  0,  0,  1 }
+}
 ```
 
 ## M_RowFromPosition2D(p0)
