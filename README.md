@@ -1549,17 +1549,81 @@ array[4][4] {
 
 #### Example:
 ```povray
+#declare v0 =
+    M_Dir3D_FromRow(
+        array[3][4] {
+            { -5, -3,  5,  1 },
+            {  4,  0, -6, -2 },
+            { -3,  6,  4,  0 }
+        },
+        2
+    )
+;
+#debug concat("<", vstr(3, v0, ", ", 4, 1), ">")
 ```
 #### Result:
 ```povray
+<-3.0,  6.0,  4.0>
+```
+
+#### Example:
+```povray
+#declare v0 =
+    M_Dir3D_FromRow(
+        array[3][4] {
+            { -5, -3,  5,  1 },
+            {  4,  0, -6, -2 },
+            { -3,  6,  4,  0 }
+        },
+        1
+    )
+;
+#debug concat("<", vstr(3, v0, ", ", 4, 1), ">")
+```
+#### Result:
+```povray
+W is not 0. Not possible to convert to 3D direction vector.
 ```
 
 ## M_Dir3D_FromCol(AA, ColNo)
 
 #### Example:
 ```povray
+#declare v0 =
+    M_Dir3D_FromCol(
+        array[4][3] {
+            { -5,  4, -3 },
+            { -3,  0,  6 },
+            {  5, -6,  4 },
+            {  1, -2,  0 }
+        },
+        2
+    )
+;
+#debug concat("<", vstr(3, v0, ", ", 4, 1), ">")
 ```
 #### Result:
 ```povray
+<-3.0,  6.0,  4.0>
+```
+
+#### Example:
+```povray
+#declare v0 =
+    M_Dir3D_FromCol(
+        array[4][3] {
+            { -5,  4, -3 },
+            { -3,  0,  5 },
+            {  6, -6,  4 },
+            {  1, -2,  0 }
+        },
+        1
+    )
+;
+#debug concat("<", vstr(3, v0, ", ", 4, 1), ">")
+```
+#### Result:
+```povray
+W is not 0. Not possible to convert to 3D direction vector.
 ```
 
