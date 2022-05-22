@@ -1462,9 +1462,33 @@ array[4][1] {
 
 #### Example:
 ```povray
+#declare v0 = < 3, -4,  2>;
+#declare MM = M_SkewSymFromDir3D(v0);
+M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
 ```povray
+array[4][4] {
+    {  0, -2, -4,  0 },
+    {  2,  0, -3,  0 },
+    {  4,  3,  0,  0 },
+    {  0,  0,  0,  1 }
+}
+```
+
+#### Example:
+```povray
+#declare MM = M_SkewSymFromDir3D(-5*x +2*y -3*z);
+M_CustomPrint(MM, 2, 0, false)
+```
+#### Result:
+```povray
+array[4][4] {
+    {  0,  3,  2,  0 },
+    { -3,  0,  5,  0 },
+    { -2, -5,  0,  0 },
+    {  0,  0,  0,  1 }
+}
 ```
 
 ## M_Pos2D_FromRow(AA, RowNo)
