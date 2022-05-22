@@ -1012,6 +1012,24 @@ array[4][6] {
 -150.000000
 ```
 
+#### Example:
+```povray
+#declare R =
+    M_Det(
+        array[3][3] {
+            { -0.4,  1.7, -1.5 },
+            {  3.3, -2.4,  2.1 },
+            {  1.2, -5.1,  4.5 }
+        }
+    )
+;
+#debug str(R, 0, -1)
+```
+#### Result:
+```povray
+0.000000
+```
+
 ## M_Minors(AA)
 
 #### Example:
