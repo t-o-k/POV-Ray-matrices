@@ -29,24 +29,24 @@ which can be found in the LICENSE file.
 #end // macro _M_FromFn
 
 
-#macro M_Zero(NoOfRows, NoOfCols)
+#macro M_Zeros(NoOfRows, NoOfCols)
 
     _M_FromFn(
         NoOfRows, NoOfCols,
         function(_i, _j) { 0 }
     )
 
-#end // macro M_Zero
+#end // macro M_Zeros
 
 
-#macro M_Constant(NoOfRows, NoOfCols, Const)
+#macro M_Full(NoOfRows, NoOfCols, Const)
 
     _M_FromFn(
         NoOfRows, NoOfCols,
         function(_i, _j) { Const }
     )
 
-#end // macro M_Constant
+#end // macro M_Full
 
 
 #macro M_Identity(Size)
