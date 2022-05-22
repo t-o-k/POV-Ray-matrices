@@ -1284,8 +1284,8 @@ array[3][1] {
 
 #### Example:
 ```povray
-#declare p0 = < 3, -4>;
-#declare MM = M_RowFromDir2D(p0);
+#declare v0 = < 3, -4>;
+#declare MM = M_RowFromDir2D(v0);
 M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
@@ -1311,8 +1311,8 @@ array[1][3] {
 
 #### Example:
 ```povray
-#declare p0 = < 3, -4>;
-#declare MM = M_ColFromDir2D(p0);
+#declare v0 = < 3, -4>;
+#declare MM = M_ColFromDir2D(v0);
 M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
@@ -1402,8 +1402,8 @@ array[4][1] {
 
 #### Example:
 ```povray
-#declare p0 = < 3, -4,  2>;
-#declare MM = M_RowFromDir3D(p0);
+#declare v0 = < 3, -4,  2>;
+#declare MM = M_RowFromDir3D(v0);
 M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
@@ -1429,8 +1429,8 @@ array[1][4] {
 
 #### Example:
 ```povray
-#declare p0 = < 3, -4,  2>;
-#declare MM = M_ColFromDir3D(p0);
+#declare v0 = < 3, -4,  2>;
+#declare MM = M_ColFromDir3D(v0);
 M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
