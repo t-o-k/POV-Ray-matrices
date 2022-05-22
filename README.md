@@ -1346,18 +1346,62 @@ array[3][1] {
 
 #### Example:
 ```povray
+#declare p0 = < 3, -4,  2>;
+#declare MM = M_RowFromPosition3D(p0);
+M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
 ```povray
+array[1][4] {
+    {  3, -4,  2,  1 }
+}
+```
+
+#### Example:
+```povray
+#declare MM = M_RowFromPosition3D(-5*x +2*y -3*z);
+M_CustomPrint(MM, 2, 0, false)
+```
+#### Result:
+```povray
+array[1][4] {
+    { -5,  2, -3,  1 }
+}
 ```
 
 ## M_ColFromPosition3D(p0)
 
 #### Example:
 ```povray
+#declare p0 = < 3, -4,  2>;
+#declare MM = M_ColFromPosition3D(p0);
+M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
 ```povray
+array[4][1] {
+    {
+        {  3 },
+        { -4 },
+        {  2 },
+        {  1 }
+    }
+```
+
+#### Example:
+```povray
+#declare MM = M_ColFromPosition3D(-5*x +2*y -3*z);
+M_CustomPrint(MM, 2, 0, false)
+```
+#### Result:
+```povray
+array[4][1] {
+    {
+        { -5 },
+        {  2 },
+        { -3 },
+        {  1 }
+    }
 ```
 
 ## M_RowFromDirection3D(v0)
