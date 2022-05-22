@@ -203,11 +203,11 @@ array[3][4] {
 }
 ```
 
-## M_Zero(NoOfRows, NoOfCols)
+## M_Zeros(NoOfRows, NoOfCols)
 
 #### Example:
 ```povray
-#declare MM = M_Zero(4, 3);
+#declare MM = M_Zeros(4, 3);
 M_Print(MM)
 ```
 #### Result:
@@ -220,11 +220,11 @@ array[4][3] {
 }
 ```
 
-## M_Constant(NoOfRows, NoOfCols, Const)
+## M_Full(NoOfRows, NoOfCols, Const)
 
 #### Example:
 ```povray
-#declare MM = M_Constant(4, 3, -pi);
+#declare MM = M_Full(4, 3, -pi);
 M_Print(MM)
 ```
 #### Result:
