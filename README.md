@@ -25,11 +25,11 @@ POV-Ray include file for working with matrices
 ## M_Print(AA)
 [Example(s)](EXAMPLES.md#m_printaa)
 
-## M_Zero(NoOfRows, NoOfCols)
-[Example(s)](EXAMPLES.md#m_zeronoofrows-noofcols)
+## M_Zeros(NoOfRows, NoOfCols)
+[Example(s)](EXAMPLES.md#m_zerosnoofrows-noofcols)
 
-## M_Constant(NoOfRows, NoOfCols, Const)
-[Example(s)](EXAMPLES.md#m_constantnoofrows-noofcols-const)
+## M_Full(NoOfRows, NoOfCols, Const)
+[Example(s)](EXAMPLES.md#m_fullnoofrows-noofcols-const)
 
 ## M_Identity(Size)
 [Example(s)](EXAMPLES.md#m_identitysize)
