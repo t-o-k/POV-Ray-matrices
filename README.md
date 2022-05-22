@@ -1495,9 +1495,58 @@ array[4][4] {
 
 #### Example:
 ```povray
+#declare p0 =
+    M_Pos2D_FromRow(
+        array[3][3] {
+            { -5,  5,  1 },
+            {  4, -6, -2 },
+            { -3,  4,  0 }
+        },
+        0
+    )
+;
+#debug concat("<", vstr(2, p0, ", ", 4, 1), ">")
 ```
 #### Result:
 ```povray
+<-5.0,  5.0>
+```
+
+#### Example:
+```povray
+#declare p0 =
+    M_Pos2D_FromRow(
+        array[3][3] {
+            { -5,  5,  1 },
+            {  4, -6, -2 },
+            { -3,  4,  0 }
+        },
+        1
+    )
+;
+#debug concat("<", vstr(2, p0, ", ", 4, 1), ">")
+```
+#### Result:
+```povray
+<-2.0,  3.0>
+```
+
+#### Example:
+```povray
+#declare p0 =
+    M_Pos2D_FromRow(
+        array[3][3] {
+            { -5,  5,  1 },
+            {  4, -6, -2 },
+            { -3,  4,  0 }
+        },
+        2
+    )
+;
+```
+#### Result:
+```povray
+W is 0. Not possible to convert to 2D position vector.
 ```
 
 ## M_Pos2D_FromCol(AA, ColNo)
