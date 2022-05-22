@@ -1128,6 +1128,23 @@ array[4][4] {
 }
 ```
 
+#### Example:
+```povray
+#declare MM =
+    M_Inv(
+        array[3][3] {
+            { -0.4,  1.7, -1.5 },
+            {  3.3, -2.4,  2.1 },
+            {  1.2, -5.1,  4.5 }
+        }
+    )
+;
+```
+#### Result:
+```
+...Error:... Singular matrix. Not invertible.
+```
+
 ## M_FromTransformFn(TransformFn)
 
 #### Example:
