@@ -1260,11 +1260,10 @@ M_CustomPrint(MM, 2, 0, false)
 #### Result:
 ```povray
 array[3][1] {
-    {
-        {  3 },
-        { -4 },
-        {  1 }
-    }
+    {  3 },
+    { -4 },
+    {  1 }
+}
 ```
 
 #### Example:
@@ -1275,11 +1274,10 @@ M_CustomPrint(MM, 2, 0, false)
 #### Result:
 ```povray
 array[3][1] {
-    {
-        { -5 },
-        {  2 },
-        {  1 }
-    }
+    { -5 },
+    {  2 },
+    {  1 }
+}
 ```
 
 ## M_RowFromDir2D(v0)
@@ -1320,11 +1318,10 @@ M_CustomPrint(MM, 2, 0, false)
 #### Result:
 ```povray
 array[3][1] {
-    {
-        {  3 },
-        { -4 },
-        {  0 }
-    }
+    {  3 },
+    { -4 },
+    {  0 }
+}
 ```
 
 #### Example:
@@ -1335,11 +1332,10 @@ M_CustomPrint(MM, 2, 0, false)
 #### Result:
 ```povray
 array[3][1] {
-    {
-        { -5 },
-        {  2 },
-        {  0 }
-    }
+    { -5 },
+    {  2 },
+    {  0 }
+}
 ```
 
 ## M_RowFromPos3D(p0)
@@ -1380,12 +1376,11 @@ M_CustomPrint(MM, 2, 0, false)
 #### Result:
 ```povray
 array[4][1] {
-    {
-        {  3 },
-        { -4 },
-        {  2 },
-        {  1 }
-    }
+    {  3 },
+    { -4 },
+    {  2 },
+    {  1 }
+}
 ```
 
 #### Example:
@@ -1396,12 +1391,11 @@ M_CustomPrint(MM, 2, 0, false)
 #### Result:
 ```povray
 array[4][1] {
-    {
-        { -5 },
-        {  2 },
-        { -3 },
-        {  1 }
-    }
+    { -5 },
+    {  2 },
+    { -3 },
+    {  1 }
+}
 ```
 
 ## M_RowFromDir3D(v0)
@@ -1442,12 +1436,11 @@ M_CustomPrint(MM, 2, 0, false)
 #### Result:
 ```povray
 array[4][1] {
-    {
-        {  3 },
-        { -4 },
-        {  2 },
-        {  0 }
-    }
+    {  3 },
+    { -4 },
+    {  2 },
+    {  0 }
+}
 ```
 
 #### Example:
@@ -1458,12 +1451,11 @@ M_CustomPrint(MM, 2, 0, false)
 #### Result:
 ```povray
 array[4][1] {
-    {
-        { -5 },
-        {  2 },
-        { -3 },
-        {  0 }
-    }
+    { -5 },
+    {  2 },
+    { -3 },
+    {  0 }
+}
 ```
 
 ## M_SkewSymFromDir3D(v0)
