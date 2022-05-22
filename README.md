@@ -1226,18 +1226,60 @@ array[4][4] {
 
 #### Example:
 ```povray
+#declare p0 = < 3, -4>;
+#declare MM = M_RowFromPosition2D(p0);
+M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
 ```povray
+array[1][3] {
+    {  3, -4,  1 }
+}
+```
+
+#### Example:
+```povray
+#declare MM = M_RowFromPosition2D(-5*u +2*v);
+M_CustomPrint(MM, 2, 0, false)
+```
+#### Result:
+```povray
+array[1][3] {
+    { -5,  2,  1 }
+}
 ```
 
 ## M_ColFromPosition2D(p0)
 
 #### Example:
 ```povray
+#declare p0 = < 3, -4>;
+#declare MM = M_ColFromPosition2D(p0);
+M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
 ```povray
+array[3][1] {
+    {
+        {  3 },
+        { -4 },
+        {  1 }
+    }
+```
+
+#### Example:
+```povray
+#declare MM = M_ColFromPosition2D(-5*u +2*v);
+M_CustomPrint(MM, 2, 0, false)
+```
+#### Result:
+```povray
+array[3][1] {
+    {
+        { -5 },
+        {  2 },
+        {  1 }
+    }
 ```
 
 ## M_RowFromVector2D(v0)
