@@ -220,6 +220,22 @@ array[4][3] {
 }
 ```
 
+## M_Ones(NoOfRows, NoOfCols)
+
+#### Example:
+```povray
+#declare MM = M_Ones(3, 4);
+M_Print(MM)
+```
+#### Result:
+```povray
+array[3][4] {
+    {  1.000000,  1.000000,  1.000000,  1.000000 },
+    {  1.000000,  1.000000,  1.000000,  1.000000 },
+    {  1.000000,  1.000000,  1.000000,  1.000000 }
+}
+```
+
 ## M_Full(NoOfRows, NoOfCols, Const)
 
 #### Example:
