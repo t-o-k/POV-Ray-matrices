@@ -1454,9 +1454,9 @@ TODO:
 #end // M_PrintSize
 
 
-#macro M_CustomStr(AA, L, P, Compact)
+#macro M_CustomStr(AA, Length, Precision, Compact)
 
-    #if (L = 0)
+    #if (Length = 0)
         #local PosStr = " "
     #else
         #local PosStr = ""
@@ -1483,7 +1483,7 @@ TODO:
             #if (M >= 0)
                 #local Str = concat(Str, PosStr)
             #end // if
-            #local Str = concat(Str, str(M, L, P))
+            #local Str = concat(Str, str(M, Length, Precision))
             #if (J < SizeJ-1)
                 #local Str = concat(Str, ",", PadStr)
             #end // if
@@ -1508,10 +1508,10 @@ TODO:
 #end // macro M_Str
 
 
-#macro M_CustomPrint(AA, L, P, Compact)
+#macro M_CustomPrint(AA, Length, Precision, Compact)
 
     _M_DebugLongStr(
-        M_CustomStr(AA, L, P, Compact)
+        M_CustomStr(AA, Length, Precision, Compact)
     )
 
 #end // macro M_CustomPrint
