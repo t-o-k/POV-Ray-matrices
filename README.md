@@ -1583,7 +1583,7 @@ array[4][4] {
 ```
 #### Result:
 ```
-W is 0. Not possible to convert to 3D position vector.
+...Error:... W is 0. Not possible to convert to 3D position vector.
 ```
 
 ## M_Pos3D_FromCol(AA, ColNo)
@@ -1645,7 +1645,7 @@ W is 0. Not possible to convert to 3D position vector.
 ```
 #### Result:
 ```
-W is not 0. Not possible to convert to 3D direction vector.
+...Error:... W is not 0. Not possible to convert to 3D direction vector.
 ```
 
 ## M_Dir3D_FromRow(AA, RowNo)
@@ -1685,7 +1685,7 @@ W is not 0. Not possible to convert to 3D direction vector.
 ```
 #### Result:
 ```
-W is not 0. Not possible to convert to 3D direction vector.
+...Error:... W is not 0. Not possible to convert to 3D direction vector.
 ```
 
 ## M_Dir3D_FromCol(AA, ColNo)
@@ -1727,6 +1727,6 @@ W is not 0. Not possible to convert to 3D direction vector.
 ```
 #### Result:
 ```
-W is not 0. Not possible to convert to 3D direction vector.
+...Error:... W is not 0. Not possible to convert to 3D direction vector.
 ```
 
