@@ -1645,7 +1645,7 @@ array[4][4] {
 ```
 #### Result:
 ```
-...Error:... W is not 0. Not possible to convert to 3D direction vector.
+...Error:... W is 0. Not possible to convert to 3D position vector.
 ```
 
 ## M_Dir3D_FromRow(AA, RowNo)
