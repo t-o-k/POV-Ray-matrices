@@ -1282,7 +1282,7 @@ array[3][1] {
     }
 ```
 
-## M_RowFromVector2D(v0)
+## M_RowFromDirection2D(v0)
 
 #### Example:
 ```povray
@@ -1291,7 +1291,7 @@ array[3][1] {
 ```povray
 ```
 
-## M_ColFromVector2D(v0)
+## M_ColFromDirection2D(v0)
 
 #### Example:
 ```povray
@@ -1318,7 +1318,7 @@ array[3][1] {
 ```povray
 ```
 
-## M_RowFromVector3D(v0)
+## M_RowFromDirection3D(v0)
 
 #### Example:
 ```povray
@@ -1327,7 +1327,7 @@ array[3][1] {
 ```povray
 ```
 
-## M_ColFromVector3D(v0)
+## M_ColFromDirection3D(v0)
 
 #### Example:
 ```povray
@@ -1336,7 +1336,7 @@ array[3][1] {
 ```povray
 ```
 
-## M_SkewFromVector3D(v0)
+## M_SkewFromDirection3D(v0)
 
 #### Example:
 ```povray
@@ -1363,7 +1363,7 @@ array[3][1] {
 ```povray
 ```
 
-## M_Vector2D_FromRow(AA, RowNo)
+## M_Direction2D_FromRow(AA, RowNo)
 
 #### Example:
 ```povray
@@ -1372,7 +1372,7 @@ array[3][1] {
 ```povray
 ```
 
-## M_Vector2D_FromCol(AA, ColNo)
+## M_Direction2D_FromCol(AA, ColNo)
 
 #### Example:
 ```povray
@@ -1399,7 +1399,7 @@ array[3][1] {
 ```povray
 ```
 
-## M_Vector3D_FromRow(AA, RowNo)
+## M_Direction3D_FromRow(AA, RowNo)
 
 #### Example:
 ```povray
@@ -1408,7 +1408,7 @@ array[3][1] {
 ```povray
 ```
 
-## M_Vector3D_FromCol(AA, ColNo)
+## M_Direction3D_FromCol(AA, ColNo)
 
 #### Example:
 ```povray
