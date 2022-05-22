@@ -1545,8 +1545,8 @@ array[4][4] {
 ;
 ```
 #### Result:
-```povray
-W is 0. Not possible to convert to 2D position vector.
+```
+...Error:... W is 0. Not possible to convert to 2D position vector.
 ```
 
 ## M_Pos2D_FromCol(AA, ColNo)
