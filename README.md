@@ -1409,7 +1409,7 @@ array[4][1] {
 #### Example:
 ```povray
 #declare p0 = < 3, -4,  2>;
-#declare MM = RowFromDir3D(p0);
+#declare MM = M_RowFromDir3D(p0);
 M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
@@ -1421,7 +1421,7 @@ array[1][4] {
 
 #### Example:
 ```povray
-#declare MM = RowFromDir3D(-5*x +2*y -3*z);
+#declare MM = M_RowFromDir3D(-5*x +2*y -3*z);
 M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
