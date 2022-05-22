@@ -39,6 +39,16 @@ which can be found in the LICENSE file.
 #end // macro M_Zeros
 
 
+#macro M_Ones(NoOfRows, NoOfCols)
+
+    _M_FromFn(
+        NoOfRows, NoOfCols,
+        function(_i, _j) { 1 }
+    )
+
+#end // macro M_Ones
+
+
 #macro M_Full(NoOfRows, NoOfCols, Const)
 
     _M_FromFn(
