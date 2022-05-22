@@ -1199,7 +1199,7 @@ TODO:
 #end // macro M_ColFromPosition2D
 
 
-#macro M_RowFromVector2D(v0)
+#macro M_RowFromDirection2D(v0)
 
     #local MM = array[1][3];
     #local MM[0][0] = v0.u;
@@ -1208,10 +1208,10 @@ TODO:
 
     MM
 
-#end // macro M_RowFromVector2D
+#end // macro M_RowFromDirection2D
 
 
-#macro M_ColFromVector2D(v0)
+#macro M_ColFromDirection2D(v0)
 
     #local MM = array[3][1];
     #local MM[0][0] = v0.u;
@@ -1220,7 +1220,7 @@ TODO:
 
     MM
 
-#end // macro M_ColFromVector2D
+#end // macro M_ColFromDirection2D
 
 
 #macro M_RowFromPosition3D(p0)
@@ -1249,7 +1249,7 @@ TODO:
 #end // macro M_ColFromPosition3D
 
 
-#macro M_RowFromVector3D(v0)
+#macro M_RowFromDirection3D(v0)
 
     #local MM = array[1][4];
     #local MM[0][0] = v0.x;
@@ -1259,10 +1259,10 @@ TODO:
 
     MM
 
-#end // macro M_RowFromVector3D
+#end // macro M_RowFromDirection3D
 
 
-#macro M_ColFromVector3D(v0)
+#macro M_ColFromDirection3D(v0)
 
     #local MM = array[4][1];
     #local MM[0][0] = v0.x;
@@ -1272,10 +1272,10 @@ TODO:
 
     MM
 
-#end // macro M_ColFromVector3D
+#end // macro M_ColFromDirection3D
 
 
-#macro M_SkewFromVector3D(v0)
+#macro M_SkewFromDirection3D(v0)
 
     #local X = v0.x;
     #local Y = v0.y;
@@ -1288,7 +1288,7 @@ TODO:
         {  0,  0,  0,  1 }
     }
 
-#end // macro M_SkewFromVector3D
+#end // macro M_SkewFromDirection3D
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
@@ -1314,7 +1314,7 @@ TODO:
 #end // macro M_Position2D_FromCol
 
 
-#macro M_Vector2D_FromRow(AA, RowNo)
+#macro M_Direction2D_FromRow(AA, RowNo)
 
     #local U = AA[RowNo][0];
     #local V = AA[RowNo][1];
@@ -1322,10 +1322,10 @@ TODO:
 
     <U, V>
 
-#end // macro M_Vector2D_FromRow
+#end // macro M_Direction2D_FromRow
 
 
-#macro M_Vector2D_FromCol(AA, ColNo)
+#macro M_Direction2D_FromCol(AA, ColNo)
 
     #local U = AA[0][ColNo];
     #local V = AA[1][ColNo];
@@ -1333,7 +1333,7 @@ TODO:
 
     <U, V>
 
-#end // macro M_Vector2D_FromCol
+#end // macro M_Direction2D_FromCol
 
 
 #macro M_Position3D_FromRow(AA, RowNo)
@@ -1360,7 +1360,7 @@ TODO:
 #end // macro M_Position3D_FromCol
 
 
-#macro M_Vector3D_FromRow(AA, RowNo)
+#macro M_Direction3D_FromRow(AA, RowNo)
 
     #local X = AA[RowNo][0];
     #local Y = AA[RowNo][1];
@@ -1369,10 +1369,10 @@ TODO:
 
     <X, Y, Z>
 
-#end // macro M_Vector3D_FromRow
+#end // macro M_Direction3D_FromRow
 
 
-#macro M_Vector3D_FromCol(AA, ColNo)
+#macro M_Direction3D_FromCol(AA, ColNo)
 
     #local X = AA[0][ColNo];
     #local Y = AA[1][ColNo];
@@ -1381,7 +1381,7 @@ TODO:
 
     <X, Y, Z>
 
-#end // M_macro Vector3D_FromCol
+#end // M_macro Direction3D_FromCol
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
