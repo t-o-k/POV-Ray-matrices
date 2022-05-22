@@ -1581,7 +1581,7 @@ array[4][4] {
 #debug concat("<", vstr(3, v0, ", ", 4, 1), ">")
 ```
 #### Result:
-```povray
+```
 W is not 0. Not possible to convert to 3D direction vector.
 ```
 
@@ -1623,7 +1623,7 @@ W is not 0. Not possible to convert to 3D direction vector.
 #debug concat("<", vstr(3, v0, ", ", 4, 1), ">")
 ```
 #### Result:
-```povray
+```
 W is not 0. Not possible to convert to 3D direction vector.
 ```
 
