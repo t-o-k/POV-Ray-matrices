@@ -2,32 +2,46 @@
 POV-Ray include file for working with matrices
 
 ## M_NoOfRows(AA)
+[Example(s)](EXAMPLES.md#m_noofrowsaa)
 
 ## M_NoOfCols(AA)
+[Example(s)](EXAMPLES.md#m_noofcolsaa)
 
 ## M_SizeStr(AA)
+[Example(s)](EXAMPLES.md#m_sizestraa)
 
 ## M_PrintSize(AA)
+[Example(s)](EXAMPLES.md#m_printsizeaa)
 
 ## M_CustomStr(AA, L, P, Compact)
+[Example(s)](EXAMPLES.md#m_customstraa-l-p-compact)
 
 ## M_Str(AA)
+[Example(s)](EXAMPLES.md#m_straa)
 
 ## M_CustomPrint(AA, L, P, Compact)
+[Example(s)](EXAMPLES.md#m_customprintaa-l-p-compact)
 
 ## M_Print(AA)
+[Example(s)](EXAMPLES.md#m_printaa)
 
 ## M_Zero(NoOfRows, NoOfCols)
+[Example(s)](EXAMPLES.md#m_zeronoofrows-noofcols)
 
 ## M_Constant(NoOfRows, NoOfCols, Const)
+[Example(s)](EXAMPLES.md#m_constantnoofrows-noofcols-const)
 
 ## M_Identity(Size)
+[Example(s)](EXAMPLES.md#m_identitysize)
 
 ## M_Neg(AA)
+[Example(s)](EXAMPLES.md#m_negaa)
 
 ## M_Pos(AA)
+[Example(s)](EXAMPLES.md#m_posaa)
 
 ## M_Scale(AA, Scale)
+[Example(s)](EXAMPLES.md#m_scaleaa-scale)
 
 ## M_Round(AA, N)
 
