@@ -1613,8 +1613,8 @@ W is not 0. Not possible to convert to 3D direction vector.
     M_Dir3D_FromCol(
         array[4][3] {
             { -5,  4, -3 },
-            { -3,  0,  5 },
-            {  6, -6,  4 },
+            { -3,  0,  6 },
+            {  5, -6,  4 },
             {  1, -2,  0 }
         },
         1
