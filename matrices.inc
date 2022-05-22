@@ -356,14 +356,14 @@ which can be found in the LICENSE file.
     #local SizeI = dimension_size(AA, 1);
     #local SizeJ = max(ColNo, dimension_size(AA, 2) - 1);
     #local MM = array[SizeI][SizeJ];
-    #for (I, 0, SizeI-1)
-        #local L = 0;
-        #for (J, 0, SizeJ)
-            #if (J != ColNo)
+    #local L = 0;
+    #for (J, 0, SizeJ)
+        #if (J != ColNo)
+            #for (I, 0, SizeI-1)
                 #local MM[I][L] = AA[I][J];
-                #local L = L + 1;
-            #end // if
-        #end // for
+            #end // for
+            #local L = L + 1;
+        #end // if
     #end // for
 
     MM
