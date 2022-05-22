@@ -1408,18 +1408,62 @@ array[4][1] {
 
 #### Example:
 ```povray
+#declare p0 = < 3, -4,  2>;
+#declare MM = RowFromDirection3D(p0);
+M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
 ```povray
+array[1][4] {
+    {  3, -4,  2,  0 }
+}
+```
+
+#### Example:
+```povray
+#declare MM = RowFromDirection3D(-5*x +2*y -3*z);
+M_CustomPrint(MM, 2, 0, false)
+```
+#### Result:
+```povray
+array[1][4] {
+    { -5,  2, -3,  0 }
+}
 ```
 
 ## M_ColFromDirection3D(v0)
 
 #### Example:
 ```povray
+#declare p0 = < 3, -4,  2>;
+#declare MM = M_ColFromDirection3D(p0);
+M_CustomPrint(MM, 2, 0, false)
 ```
 #### Result:
 ```povray
+array[4][1] {
+    {
+        {  3 },
+        { -4 },
+        {  2 },
+        {  0 }
+    }
+```
+
+#### Example:
+```povray
+#declare MM = M_ColFromDirection3D(-5*x +2*y -3*z);
+M_CustomPrint(MM, 2, 0, false)
+```
+#### Result:
+```povray
+array[4][1] {
+    {
+        { -5 },
+        {  2 },
+        { -3 },
+        {  0 }
+    }
 ```
 
 ## M_SkewFromDirection3D(v0)
