@@ -1611,18 +1611,78 @@ array[4][4] {
 
 #### Example:
 ```povray
+#declare v0 =
+    M_Dir2D_FromRow(
+        array[3][3] {
+            { -5,  5,  1 },
+            {  4, -6, -2 },
+            { -3,  4,  0 }
+        },
+        2
+    )
+;
+#debug concat("<", vstr(2, v0, ", ", 4, 1), ">")
 ```
 #### Result:
 ```povray
+<-3.0,  4.0>
+```
+
+#### Example:
+```povray
+#declare v0 =
+    M_Dir2D_FromRow(
+        array[3][3] {
+            { -5,  5,  1 },
+            {  4, -6, -2 },
+            { -3,  4,  0 }
+        },
+        1
+    )
+;
+```
+#### Result:
+```
+...Error:... W is not 0. Not possible to convert to 2D direction vector.
 ```
 
 ## M_Dir2D_FromCol(AA, ColNo)
 
 #### Example:
 ```povray
+#declare v0 =
+    M_Dir2D_FromCol(
+        array[3][3] {
+            { -5,  4, -3 },
+            {  5, -6,  4 },
+            {  1, -2,  0 }
+        },
+        2
+    )
+;
+#debug concat("<", vstr(2, v0, ", ", 4, 1), ">")
 ```
 #### Result:
 ```povray
+<-3.0,  4.0>
+```
+
+#### Example:
+```povray
+#declare v0 =
+    M_Dir2D_FromCol(
+        array[3][3] {
+            { -5,  4, -3 },
+            {  5, -6,  4 },
+            {  1, -2,  0 }
+        },
+        1
+    )
+;
+```
+#### Result:
+```
+...Error:... W is not 0. Not possible to convert to 2D direction vector.
 ```
 
 ## M_Pos3D_FromRow(AA, RowNo)
