@@ -14,13 +14,13 @@ POV-Ray include file for working with matrices
 [Example(s)](EXAMPLES.md#m_printsizeaa)
 
 ## M_CustomStr(AA, L, P, Compact)
-[Example(s)](EXAMPLES.md#m_customstraa-l-p-compact)
+[Example(s)](EXAMPLES.md#m_customstraa-length-precision-compact)
 
 ## M_Str(AA)
 [Example(s)](EXAMPLES.md#m_straa)
 
 ## M_CustomPrint(AA, L, P, Compact)
-[Example(s)](EXAMPLES.md#m_customprintaa-l-p-compact)
+[Example(s)](EXAMPLES.md#m_customprintaa-length-precision-compact)
 
 ## M_Print(AA)
 [Example(s)](EXAMPLES.md#m_printaa)
