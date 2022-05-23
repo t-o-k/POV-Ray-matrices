@@ -79,7 +79,7 @@ M_PrintSize(
 [3][2]
 ```
 
-## M_CustomStr(AA, L, P, Compact)
+## M_CustomStr(AA, Length, Precision, Compact)
 
 #### Example:
 ```povray
@@ -144,7 +144,7 @@ array[3][4] {
 }
 ```
 
-## M_CustomPrint(AA, L, P, Compact)
+## M_CustomPrint(AA, Length, Precision, Compact)
 
 #### Example:
 ```povray
