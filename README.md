@@ -26,12 +26,15 @@ POV-Ray include file for working with matrices
 [Example(s)](EXAMPLES.md#m_printaa)
 
 ## M_Zeros(NoOfRows, NoOfCols)
+Return a matrix with given numer of rows and columns, filled with zeros.
 [Example(s)](EXAMPLES.md#m_zerosnoofrows-noofcols)
 
 ## M_Ones(NoOfRows, NoOfCols)
+Return a matrix with given numer of rows and columns, filled with ones.
 [Example(s)](EXAMPLES.md#m_onesnoofrows-noofcols)
 
 ## M_Full(NoOfRows, NoOfCols, Const)
+Return a matrix with given numer of rows and columns, filled with a constant.
 [Example(s)](EXAMPLES.md#m_fullnoofrows-noofcols-const)
 
 ## M_Identity(Size)
