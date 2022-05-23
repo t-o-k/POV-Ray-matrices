@@ -28,6 +28,9 @@ POV-Ray include file for working with matrices
 ## M_Zeros(NoOfRows, NoOfCols)
 [Example(s)](EXAMPLES.md#m_zerosnoofrows-noofcols)
 
+## M_Ones(NoOfRows, NoOfCols)
+[Example(s)](EXAMPLES.md#m_onesnoofrows-noofcols)
+
 ## M_Full(NoOfRows, NoOfCols, Const)
 [Example(s)](EXAMPLES.md#m_fullnoofrows-noofcols-const)
 
