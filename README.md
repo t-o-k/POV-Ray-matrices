@@ -134,6 +134,9 @@ Return a matrix that is the difference of matrix AA and matrix BB.
 [Example(s)](EXAMPLES.md#m_inv_ssaa)
 
 ## M_Inv(AA)
+
+Return a matrix that is the inverse of matrix AA.
+
 [Example(s)](EXAMPLES.md#m_invaa)
 
 ## M_FromTransformFn(TransformFn)
