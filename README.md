@@ -1,6 +1,8 @@
 # POV-Ray-matrices
 POV-Ray include file for working with matrices
 
+NB: At the moment this library is Work In Progress, so it is not yet complete and things may suddenly change.
+
 ## M_NoOfRows(AA)
 [Example(s)](EXAMPLES.md#m_noofrowsaa)
 
