@@ -39,7 +39,7 @@ Return the matrix AA (as a 2 dimensional array) in a string. The elements are pr
 
 ## M_CustomPrint(AA, Length, Precision, Compact)
 
-Print the matrix AA (as a 2 dimensional array). The formatting of each element is defined by the Length an Precision paramenters in the same way that the L and P parameters defines the format in POV-Ray built in str() function. The Compact parameter is boolean and controls if the matrix is printed with minimal white space. 
+Print the matrix AA (as a 2 dimensional array). The formatting of each element is defined by the Length and Precision paramenters in the same way that the L and P parameters defines the format in POV-Ray built in str() function. The Compact parameter is boolean and controls if the matrix is printed with minimal white space. 
 
 See also http://www.povray.org/documentation/view/3.7.1/232/
 
