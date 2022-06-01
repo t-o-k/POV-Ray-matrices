@@ -173,7 +173,7 @@ which can be found in the LICENSE file.
         }
     )
 
-#end // macro M_ScaleRow
+#end // macro M_ScaleCol
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
@@ -1427,7 +1427,7 @@ TODO:
 
     <X, Y, Z>
 
-#end // M_macro Dir3D_FromCol
+#end // macro M_Dir3D_FromCol
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
