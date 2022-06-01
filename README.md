@@ -148,7 +148,7 @@ Return a matrix that is the entrywise difference of the matrices AA and BB.
 
 ## M_Trace(AA)
 
-Return the sum of alle the elements along the main diagonal in the matrix AA.
+Return the sum of all the elements along the main diagonal in the matrix AA.
 
 [Example(s)](EXAMPLES.md#m_traceaa)
 
@@ -198,6 +198,9 @@ See also https://en.wikipedia.org/wiki/Elementary_matrix#Row-multiplying_transfo
 [Example(s)](EXAMPLES.md#m_submatrixaa-rowno-noofrows-colno-noofcols)
 
 ## M_Stack(AAAA)
+
+Assemble the matrices in the 2-dimensional array AAAA into a single matrix. Matrices in the same column within AAAA must have the same number of columns, and matrices in the same row within AAA must have the same number of rows.
+
 [Example(s)](EXAMPLES.md#m_stackaaaa)
 
 ## M_Det_SS(AA)
@@ -223,13 +226,13 @@ See also https://en.wikipedia.org/wiki/Minor_(linear_algebra)
 
 ## M_Cofactors(AA)
 
-Return a matrix formed by all of the cofactors of the square matrix AA.
+Return a square matrix formed by all of the cofactors of the square matrix AA.
  
 [Example(s)](EXAMPLES.md#m_cofactorsaa)
 
 ## M_Adjoint(AA)
 
-Return a matrix that is the classical adjoint of a the square matrix AA.
+Return a square matrix that is the classical adjoint of a the square matrix AA.
 
 See also https://en.wikipedia.org/wiki/Adjugate_matrix
 
@@ -237,7 +240,7 @@ See also https://en.wikipedia.org/wiki/Adjugate_matrix
 
 ## M_Inv_SS(AA)
 
-Return a matrix that is the inverse of the square matrix AA. Use this if AA is large and if many of its elements are zero.
+Return a square matrix that is the inverse of the square matrix AA. Use this if AA is large and if many of its elements are zero.
 
 Also see https://en.wikipedia.org/wiki/Minor_(linear_algebra)#Inverse_of_a_matrix
 
@@ -245,7 +248,7 @@ Also see https://en.wikipedia.org/wiki/Minor_(linear_algebra)#Inverse_of_a_matri
 
 ## M_Inv(AA)
 
-Return a matrix that is the inverse of the square matrix AA
+Return a square matrix that is the inverse of the square matrix AA.
 
 See also https://en.wikipedia.org/wiki/Minor_(linear_algebra)#Inverse_of_a_matrix
 
