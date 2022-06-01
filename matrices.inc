@@ -144,7 +144,9 @@ which can be found in the LICENSE file.
 
     _M_ApplyFnToElements(
         AA,
-        function(_i, _j, _a) { pow(-1, _i + _j)*_a }
+        function(_i, _j, _a) {
+            select(pow(-1, _i + _j), -_a, +_a)
+        }
     )
 
 #end // macro M_ApplyCheckerSigns
