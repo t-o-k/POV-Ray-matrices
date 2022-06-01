@@ -86,6 +86,16 @@ which can be found in the LICENSE file.
 #end // macro _M_ApplyFnToElements
 
 
+#macro _M_RemoveZeroSigns(AA)
+
+    _M_ApplyFnToElements(
+        AA,
+        function(_i, _j, _a) { select(_a, _a, 0, _a) }
+    )
+
+#end // macro _M_RemoveZeroSigns
+
+
 #macro M_Neg(AA)
 
     _M_ApplyFnToElements(
@@ -1456,6 +1466,7 @@ TODO:
 
 #macro M_CustomStr(AA, Length, Precision, Compact)
 
+    #local BB = _M_RemoveZeroSigns(AA);
     #if (Length = 0)
         #local PosStr = " "
     #else
@@ -1470,8 +1481,8 @@ TODO:
         #local EndStr = "\n"
         #local PadStr = " "
     #end // if
-    #local SizeI = dimension_size(AA, 1);
-    #local SizeJ = dimension_size(AA, 2);
+    #local SizeI = dimension_size(BB, 1);
+    #local SizeJ = dimension_size(BB, 2);
     #local StrI = str(SizeI, 0, 0)
     #local StrJ = str(SizeJ, 0, 0)
     #local Str = concat("array[", StrI, "][", StrJ, "]")
@@ -1479,7 +1490,7 @@ TODO:
     #for (I, 0, SizeI-1)
         #local Str = concat(Str, IndentStr, "{", PadStr)
         #for (J, 0, SizeJ-1)
-            #local M = AA[I][J];
+            #local M = BB[I][J];
             #if (M >= 0)
                 #local Str = concat(Str, PosStr)
             #end // if
