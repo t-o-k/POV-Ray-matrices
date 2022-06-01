@@ -1319,6 +1319,9 @@ TODO:
     #local U = AA[RowNo][0];
     #local V = AA[RowNo][1];
     #local W = AA[RowNo][2];
+    #if (W = 0)
+        #error "W is 0. Not possible to convert to 2D position vector"
+    #end // if
 
     (<U, V>/W)
 
@@ -1330,6 +1333,9 @@ TODO:
     #local U = AA[0][ColNo];
     #local V = AA[1][ColNo];
     #local W = AA[2][ColNo];
+    #if (W = 0)
+        #error "W is 0. Not possible to convert to 2D position vector"
+    #end // if
 
     (<U, V>/W)
 
@@ -1341,6 +1347,9 @@ TODO:
     #local U = AA[RowNo][0];
     #local V = AA[RowNo][1];
     #local W = AA[RowNo][2];
+    #if (W != 0)
+        #error "W is not 0. Not possible to convert to 2D direction vector"
+    #end // if
 
     <U, V>
 
@@ -1352,6 +1361,9 @@ TODO:
     #local U = AA[0][ColNo];
     #local V = AA[1][ColNo];
     #local W = AA[2][ColNo];
+    #if (W != 0)
+        #error "W is not 0. Not possible to convert to 2D direction vector"
+    #end // if
 
     <U, V>
 
@@ -1364,6 +1376,9 @@ TODO:
     #local Y = AA[RowNo][1];
     #local Z = AA[RowNo][2];
     #local W = AA[RowNo][3];
+    #if (W = 0)
+        #error "W is 0. Not possible to convert to 3D position vector"
+    #end // if
 
     (<X, Y, Z>/W)
 
@@ -1376,6 +1391,9 @@ TODO:
     #local Y = AA[1][ColNo];
     #local Z = AA[2][ColNo];
     #local W = AA[3][ColNo];
+    #if (W = 0)
+        #error "W is 0. Not possible to convert to 3D position vector"
+    #end // if
 
     (<X, Y, Z>/W)
 
@@ -1388,6 +1406,9 @@ TODO:
     #local Y = AA[RowNo][1];
     #local Z = AA[RowNo][2];
     #local W = AA[RowNo][3];
+    #if (W != 0)
+        #error "W is not 0. Not possible to convert to 3D direction vector"
+    #end // if
 
     <X, Y, Z>
 
@@ -1400,6 +1421,9 @@ TODO:
     #local Y = AA[1][ColNo];
     #local Z = AA[2][ColNo];
     #local W = AA[3][ColNo];
+    #if (W != 0)
+        #error "W is not 0. Not possible to convert to 3D direction vector"
+    #end // if
 
     <X, Y, Z>
 
