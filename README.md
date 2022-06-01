@@ -25,7 +25,7 @@ Return the number of columns in the matrix AA.
 
 ## M_CustomStr(AA, Length, Precision, Compact)
 
-Return the matrix AA (as a 2 dimensional array) in a string. The formatting of each element is defined by the Length an Precision paramenters in the same way that the L and P parameters defines the format in POV-Ray built in str() function. The Compact parameter is boolean and controls if the return string contains minimal white space.
+Return the matrix AA (as a 2 dimensional array) in a string. The formatting of each element is defined by the Length and Precision paramenters in the same way that the L and P parameters defines the format in POV-Ray built in str() function. The Compact parameter is boolean and controls if the return string contains minimal white space.
 
 See also http://www.povray.org/documentation/view/3.7.1/232/
 
