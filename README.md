@@ -148,7 +148,7 @@ Return a matrix that is the entrywise difference of the matrices AA and BB.
 
 ## M_Trace(AA)
 
-Return the sum of alle the elements alon the main diagonal in the matrix AA.
+Return the sum of alle the elements along the main diagonal in the matrix AA.
 
 [Example(s)](EXAMPLES.md#m_traceaa)
 
