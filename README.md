@@ -53,19 +53,19 @@ Print the matrix AA (as a 2 dimensional array). The elements are printed with pl
 
 ## M_Zeros(NoOfRows, NoOfCols)
 
-Return a matrix with given numer of size NoOfRows x NoOfCols, filled with zeros.
+Return a matrix with size NoOfRows x NoOfCols, filled with zeros.
 
 [Example(s)](EXAMPLES.md#m_zerosnoofrows-noofcols)
 
 ## M_Ones(NoOfRows, NoOfCols)
 
-Return a matrix with given numer of size NoOfRows x NoOfCols, filled with ones.
+Return a matrix with size NoOfRows x NoOfCols, filled with ones.
 
 [Example(s)](EXAMPLES.md#m_onesnoofrows-noofcols)
 
 ## M_Full(NoOfRows, NoOfCols, Const)
 
-Return a matrix with given numer of size NoOfRows x NoOfCols, filled with the number Const.
+Return a matrix with size NoOfRows x NoOfCols, filled with the number Const.
 
 [Example(s)](EXAMPLES.md#m_fullnoofrows-noofcols-const)
 
@@ -99,6 +99,9 @@ Return a matrix where all the elements of the matrix AA has been multipled by th
 [Example(s)](EXAMPLES.md#m_roundaa-n)
 
 ## M_ApplyCheckerSigns(AA)
+
+Return a matrix where the unary minus and unary plus operators has been applied to the elements of AA in a checkerboard pattern.
+
 [Example(s)](EXAMPLES.md#m_applycheckersignsaa)
 
 ## M_ScaleRow(AA, RowNo, Scale)
