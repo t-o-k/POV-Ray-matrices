@@ -79,13 +79,13 @@ See also https://en.wikipedia.org/wiki/Identity_matrix
 
 ## M_Neg(AA)
 
-Return a matrix where the unary minus operator has been applied to alle the elements of the matrix AA.
+Return a matrix where the unary minus operator has been applied to the elements of the matrix AA.
 
 [Example(s)](EXAMPLES.md#m_negaa)
 
 ## M_Pos(AA)
 
-Return a matrix where the unary plus operator has been applied to alle the elements of the matrix AA.
+Return a matrix where the unary plus operator has been applied to the elements of the matrix AA.
 
 [Example(s)](EXAMPLES.md#m_posaa)
 
