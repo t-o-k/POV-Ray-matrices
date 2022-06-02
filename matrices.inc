@@ -133,7 +133,8 @@ which can be found in the LICENSE file.
     _M_ApplyFnToElements(
         AA,
         function(_i, _j, _a) {
-            int(_a*S + select(_a, -0.5, 0.5))/S
+            // int(_a*S + select(_a, -0.5, +0.5))/S
+            select(_a, ceil(_a*S - 0.5)/S, 0, floor(_a*S + 0.5)/S)
         }
     )
 
