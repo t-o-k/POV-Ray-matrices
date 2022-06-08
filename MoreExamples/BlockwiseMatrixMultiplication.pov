@@ -93,7 +93,7 @@ global_settings { assumed_gamma 1.0 }
 ;
 
 #debug "\n\n"
-M_CustomPrint(II, 9, 6, false)
+M_CustomPrint(II, 9, 6, "", false)
 #debug "\n\n"
 
 #error "No error, just finished!"

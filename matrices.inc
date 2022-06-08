@@ -1491,7 +1491,7 @@ TODO:
 #end // M_PrintSize
 
 
-#macro M_CustomStr(AA, Length, Precision, Compact)
+#macro M_CustomStr(AA, Length, Precision, ExtraIndentStr, Compact)
 
     #local BB = _M_RemoveZeroSigns(AA);
     #if (Length = 0)
@@ -1501,10 +1501,12 @@ TODO:
     #end // if
     #if (Compact)
         #local IndentStr = ""
+        #local XtraIndStr = ""
         #local EndStr = ""
         #local PadStr = ""
     #else
         #local IndentStr = "    "
+        #local XtraIndStr = ExtraIndentStr
         #local EndStr = "\n"
         #local PadStr = " "
     #end // if
@@ -1512,10 +1514,10 @@ TODO:
     #local SizeJ = dimension_size(BB, 2);
     #local StrI = str(SizeI, 0, 0)
     #local StrJ = str(SizeJ, 0, 0)
-    #local Str = concat("array[", StrI, "][", StrJ, "]")
+    #local Str = concat(ExtraIndentStr, "array[", StrI, "][", StrJ, "]")
     #local Str = concat(Str, PadStr, "{", EndStr)
     #for (I, 0, SizeI-1)
-        #local Str = concat(Str, IndentStr, "{", PadStr)
+        #local Str = concat(Str, XtraIndStr, IndentStr, "{", PadStr)
         #for (J, 0, SizeJ-1)
             #local M = BB[I][J];
             #if (M >= 0)
@@ -1532,7 +1534,7 @@ TODO:
         #end // if
         #local Str = concat(Str, EndStr)
     #end // for
-    #local Str = concat(Str, "}")
+    #local Str = concat(Str, XtraIndStr, "}")
 
     Str
 
@@ -1541,15 +1543,15 @@ TODO:
 
 #macro M_Str(AA)
 
-    M_CustomStr(AA, 0, -1, false)
+    M_CustomStr(AA, 0, -1, "", false)
 
 #end // macro M_Str
 
 
-#macro M_CustomPrint(AA, Length, Precision, Compact)
+#macro M_CustomPrint(AA, Length, Precision, ExtraIndentStr, Compact)
 
     _M_DebugLongStr(
-        M_CustomStr(AA, Length, Precision, Compact)
+        M_CustomStr(AA, Length, Precision, ExtraIndentStr, Compact)
     )
 
 #end // macro M_CustomPrint
@@ -1564,4 +1566,3 @@ TODO:
 #end // macro M_Print
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
-

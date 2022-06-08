@@ -23,13 +23,13 @@ Return the number of columns in the matrix AA.
 ## M_PrintSize(AA)
 [Example(s)](EXAMPLES.md#m_printsizeaa)
 
-## M_CustomStr(AA, Length, Precision, Compact)
+## M_CustomStr(AA, Length, Precision, ExtraIndentStr, Compact)
 
 Return the matrix AA (as a 2 dimensional array) in a string. The formatting of each element is defined by the Length and Precision paramenters in the same way that the L and P parameters defines the format in POV-Ray built in str() function. The Compact parameter is boolean and controls if the return string contains minimal white space.
 
 See also http://www.povray.org/documentation/view/3.7.1/232/
 
-[Example(s)](EXAMPLES.md#m_customstraa-length-precision-compact)
+[Example(s)](EXAMPLES.md#m_customstraa-length-precision-extraindentstr-compact)
 
 ## M_Str(AA)
 
@@ -37,13 +37,13 @@ Return the matrix AA (as a 2 dimensional array) in a string. The elements are pr
 
 [Example(s)](EXAMPLES.md#m_straa)
 
-## M_CustomPrint(AA, Length, Precision, Compact)
+## M_CustomPrint(AA, Length, Precision, ExtraIndentStr, Compact)
 
 Print the matrix AA (as a 2 dimensional array). The formatting of each element is defined by the Length and Precision paramenters in the same way that the L and P parameters defines the format in POV-Ray built in str() function. The Compact parameter is boolean and controls if the matrix is printed with minimal white space. 
 
 See also http://www.povray.org/documentation/view/3.7.1/232/
 
-[Example(s)](EXAMPLES.md#m_customprintaa-length-precision-compact)
+[Example(s)](EXAMPLES.md#m_customprintaa-length-precision-extraindentstr-compact)
 
 ## M_Print(AA)
 
