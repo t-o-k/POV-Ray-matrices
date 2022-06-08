@@ -158,7 +158,7 @@ array[3][4] {
 
 ## M_CustomPrint(AA, Length, Precision, ExtraIndentStr, Compact)
 
-[Description](README.md#m_customprintaa-length-precision-extraindenstr-compact)
+[Description](README.md#m_customprintaa-length-precision-extraindentstr-compact)
 
 #### Example:
 ```povray
