@@ -1494,17 +1494,15 @@ TODO:
 #macro M_CustomStr(AA, Length, Precision, ExtraIndentStr, Compact)
 
     #local BB = _M_RemoveZeroSigns(AA);
-    #if (Length = 0)
-        #local PosStr = " "
-    #else
-        #local PosStr = ""
-    #end // if
-    #if (Compact)
-        #local IndentStr = ""
-        #local XtraIndStr = ""
-        #local EndStr = ""
-        #local PadStr = ""
-    #else
+    #local PosStr = ""
+    #local IndentStr = ""
+    #local XtraIndStr = ""
+    #local EndStr = ""
+    #local PadStr = ""
+    #if (! Compact)
+        #if (Length - Precision <= 2)
+            #local PosStr = " "
+        #end // if
         #local IndentStr = "    "
         #local XtraIndStr = ExtraIndentStr
         #local EndStr = "\n"
