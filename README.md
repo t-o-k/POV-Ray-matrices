@@ -71,7 +71,7 @@ Return a matrix with size NoOfRows x NoOfCols, filled with the number Const.
 
 ## M_Identity(Size)
 
-Return an identity matrix of size Size x Size square matrix with ones on the main diagonal and zeros elsewhere.
+Return an identity matrix of size Size x Size with ones on the main diagonal and zeros elsewhere.
 
 See also https://en.wikipedia.org/wiki/Identity_matrix
 
