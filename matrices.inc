@@ -1500,8 +1500,14 @@ TODO:
     #local EndStr = ""
     #local PadStr = ""
     #if (! Compact)
-        #if (Length - Precision <= 2)
-            #local PosStr = " "
+        #if (Precision <= 0)
+            #if (Length <= 1)
+                #local PosStr = " "
+            #end // if
+        #else
+            #if (Length - Precision <= 2)
+                #local PosStr = " "
+            #end // if
         #end // if
         #local IndentStr = "    "
         #local XtraIndStr = ExtraIndentStr
