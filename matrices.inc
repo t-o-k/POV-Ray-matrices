@@ -1474,23 +1474,6 @@ TODO:
 #end // _M_NoOfColsStr
 
 
-#macro M_SizeStr(AA)
-
-    concat(
-        "[", _M_NoOfRowsStr(AA), "]",
-        "[", _M_NoOfColsStr(AA), "]"
-    )
-
-#end // M_SizeStr
-
-
-#macro M_PrintSize(AA)
-
-    #debug M_SizeStr(AA)
-
-#end // M_PrintSize
-
-
 #macro M_CustomStr(AA, Length, Precision, ExtraIndentStr, Compact)
 
     #local BB = _M_RemoveZeroSigns(AA);

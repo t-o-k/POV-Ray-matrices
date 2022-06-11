@@ -47,46 +47,6 @@ Below are short examples illustrating how to use each of the macros in this libr
 4
 ```
 
-## M_SizeStr(AA)
-
-[Description](README.md#m_sizestraa)
-
-#### Example:
-```povray
-#declare S =
-    M_SizeStr(
-        array[3][4] {
-            {  2.0,  4.0,  5.0,  4.0 },
-            { -4.0,  7.0, -2.0, -0.5 },
-            {  1.0,  3.0,  1.0,  0.0 }
-        }
-    )
-#debug S
-```
-#### Result:
-```povray
-[3][4]
-```
-
-## M_PrintSize(AA)
-
-[Description](README.md#m_sizestraa)
-
-#### Example:
-```povray
-M_PrintSize(
-    array[3][2] {
-        {  2,  4 },
-        {  5,  3 },
-        { -3,  0 }
-    }
-)
-```
-#### Result:
-```povray
-[3][2]
-```
-
 ## M_CustomStr(AA, Length, Precision, ExtraIndentStr, Compact)
 
 [Description](README.md#m_customstraa-length-precision-extraindentstr-compact)
