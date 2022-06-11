@@ -1156,6 +1156,21 @@ TODO:
 
 #end // macro M_Inv
 
+
+#macro M_PseudoInv(AA)
+
+    M_Mult(
+        M_Inv(
+            M_Mult(
+                M_Transpose(AA),
+                AA
+            )
+        ),
+        M_Transpose(AA)
+    )
+
+#end // macro M_PseudoInv
+
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
 #macro M_FromTransformFn(TransformFn)

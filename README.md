@@ -250,6 +250,14 @@ See also https://en.wikipedia.org/wiki/Minor_(linear_algebra)#Inverse_of_a_matri
 
 [Example(s)](EXAMPLES.md#m_invaa)
 
+## M_PseudoInv(AA)
+
+Return a square matrix that is the pseudoinverse of the matrix AA.
+
+See also https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
+
+[Example(s)](EXAMPLES.md#m_pseudoinvaa)
+
 ## M_FromTransformFn(TransformFn)
 [Example(s)](EXAMPLES.md#m_fromtransformfntransformfn)
 

@@ -1382,6 +1382,17 @@ array[4][4] {
 ...Error:... Singular matrix. Not invertible.
 ```
 
+## M_PseudoInv(AA)
+
+[Description](README.md#m_pseudoinvaa)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_FromTransformFn(TransformFn)
 
 [Description](README.md#m_fromtransformfntransformfn)
