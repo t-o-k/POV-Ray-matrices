@@ -1159,14 +1159,13 @@ TODO:
 
 #macro M_PseudoInv(AA)
 
+    #local AAtr = M_Transpose(AA);
+
     M_Mult(
         M_Inv(
-            M_Mult(
-                M_Transpose(AA),
-                AA
-            )
+            M_Mult(AAtr, AA)
         ),
-        M_Transpose(AA)
+        AAtr
     )
 
 #end // macro M_PseudoInv
