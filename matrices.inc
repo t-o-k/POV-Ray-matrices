@@ -1178,26 +1178,29 @@ TODO:
     #local vX = TransformFn(1, 0, 0) - pT;
     #local vY = TransformFn(0, 1, 0) - pT;
     #local vZ = TransformFn(0, 0, 1) - pT;
+    #local Xx = vX.x;
+    #local Xy = vX.y;
+    #local Xz = vX.z;
+    #local Xw = 0;
+    #local Yx = vY.x;
+    #local Yy = vY.y;
+    #local Yz = vY.z;
+    #local Yw = 0;
+    #local Zx = vZ.x;
+    #local Zy = vZ.y;
+    #local Zz = vZ.z;
+    #local Zw = 0;
+    #local Tx = pT.x;
+    #local Ty = pT.y;
+    #local Tz = pT.z;
+    #local Tw = 1;
 
-    #local MM = array[4][4];
-    #local MM[0][0] = vX.x;
-    #local MM[0][1] = vY.x;
-    #local MM[0][2] = vZ.x;
-    #local MM[0][3] = pT.x;
-    #local MM[1][0] = vX.y;
-    #local MM[1][1] = vY.y;
-    #local MM[1][2] = vZ.y;
-    #local MM[1][3] = pT.y;
-    #local MM[2][0] = vX.z;
-    #local MM[2][1] = vY.z;
-    #local MM[2][2] = vZ.z;
-    #local MM[2][3] = pT.z;
-    #local MM[3][0] = 0;
-    #local MM[3][1] = 0;
-    #local MM[3][2] = 0;
-    #local MM[3][3] = 1;
-
-    MM
+    array[4][4] {
+        { Xx, Xy, Xz, Xw },
+        { Yx, Yy, Yz, Yw },
+        { Zx, Zy, Zz, Zw },
+        { Tx, Ty, Tz, Tw }
+    }
 
 #end // macro M_FromTransformFn
 
