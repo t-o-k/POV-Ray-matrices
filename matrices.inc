@@ -1214,100 +1214,118 @@ TODO:
 
 #macro M_Row_FromPos2D(p0)
 
-    #local MM = array[1][3];
-    #local MM[0][0] = p0.u;
-    #local MM[0][1] = p0.v;
-    #local MM[0][2] = 1;
+    #local U = p0.u;
+    #local V = p0.v;
+    #local W = 1;
 
-    MM
+    array[1][3] {
+        { U, V, W }
+    }
 
 #end // macro M_Row_FromPos2D
 
 
 #macro M_Col_FromPos2D(p0)
 
-    #local MM = array[3][1];
-    #local MM[0][0] = p0.u;
-    #local MM[1][0] = p0.v;
-    #local MM[2][0] = 1;
+    #local U = p0.u;
+    #local V = p0.v;
+    #local W = 1;
 
-    MM
+    array[3][1] {
+        { U },
+        { V },
+        { W }
+    }
 
 #end // macro M_Col_FromPos2D
 
 
 #macro M_Row_FromDir2D(v0)
 
-    #local MM = array[1][3];
-    #local MM[0][0] = v0.u;
-    #local MM[0][1] = v0.v;
-    #local MM[0][2] = 0;
+    #local U = v0.u;
+    #local V = v0.v;
+    #local W = 0;
 
-    MM
+    array[1][3] {
+        { U, V, W }
+    }
 
 #end // macro M_Row_FromDir2D
 
 
 #macro M_Col_FromDir2D(v0)
 
-    #local MM = array[3][1];
-    #local MM[0][0] = v0.u;
-    #local MM[1][0] = v0.v;
-    #local MM[2][0] = 0;
+    #local U = v0.u;
+    #local V = v0.v;
+    #local W = 0;
 
-    MM
+    array[3][1] {
+        { U },
+        { V },
+        { W }
+    }
 
 #end // macro M_Col_FromDir2D
 
 
 #macro M_Row_FromPos3D(p0)
 
-    #local MM = array[1][4];
-    #local MM[0][0] = p0.x;
-    #local MM[0][1] = p0.y;
-    #local MM[0][2] = p0.z;
-    #local MM[0][3] = 1;
+    #local X = p0.x;
+    #local Y = p0.y;
+    #local Z = p0.z;
+    #local W = 1;
 
-    MM
+    array[1][4] {
+        { X, Y, Z, W }
+    }
 
 #end // macro M_Row_FromPos3D
 
 
 #macro M_Col_FromPos3D(p0)
 
-    #local MM = array[4][1];
-    #local MM[0][0] = p0.x;
-    #local MM[1][0] = p0.y;
-    #local MM[2][0] = p0.z;
-    #local MM[3][0] = 1;
+    #local X = p0.x;
+    #local Y = p0.y;
+    #local Z = p0.z;
+    #local W = 1;
 
-    MM
+    array[4][1] {
+        { X },
+        { Y },
+        { Z },
+        { W }
+    }
 
 #end // macro M_Col_FromPos3D
 
 
 #macro M_Row_FromDir3D(v0)
 
-    #local MM = array[1][4];
-    #local MM[0][0] = v0.x;
-    #local MM[0][1] = v0.y;
-    #local MM[0][2] = v0.z;
-    #local MM[0][3] = 0;
+    #local X = v0.x;
+    #local Y = v0.y;
+    #local Z = v0.z;
+    #local W = 0;
 
-    MM
+    array[1][4] {
+        { X, Y, Z, W }
+    }
 
 #end // macro M_Row_FromDir3D
 
 
 #macro M_Col_FromDir3D(v0)
 
-    #local MM = array[4][1];
-    #local MM[0][0] = v0.x;
-    #local MM[1][0] = v0.y;
-    #local MM[2][0] = v0.z;
-    #local MM[3][0] = 0;
+    #local X = v0.x;
+    #local Y = v0.y;
+    #local Z = v0.z;
+    #local W = 0;
 
-    MM
+    array[4][1] {
+        { X },
+        { Y },
+        { Z },
+        { W }
+    }
 
 #end // macro M_Col_FromDir3D
 
