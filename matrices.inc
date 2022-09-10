@@ -1212,7 +1212,7 @@ TODO:
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
-#macro M_RowFromPos2D(p0)
+#macro M_Row_FromPos2D(p0)
 
     #local MM = array[1][3];
     #local MM[0][0] = p0.u;
@@ -1221,10 +1221,10 @@ TODO:
 
     MM
 
-#end // macro M_RowFromPos2D
+#end // macro M_Row_FromPos2D
 
 
-#macro M_ColFromPos2D(p0)
+#macro M_Col_FromPos2D(p0)
 
     #local MM = array[3][1];
     #local MM[0][0] = p0.u;
@@ -1233,10 +1233,10 @@ TODO:
 
     MM
 
-#end // macro M_ColFromPos2D
+#end // macro M_Col_FromPos2D
 
 
-#macro M_RowFromDir2D(v0)
+#macro M_Row_FromDir2D(v0)
 
     #local MM = array[1][3];
     #local MM[0][0] = v0.u;
@@ -1245,10 +1245,10 @@ TODO:
 
     MM
 
-#end // macro M_RowFromDir2D
+#end // macro M_Row_FromDir2D
 
 
-#macro M_ColFromDir2D(v0)
+#macro M_Col_FromDir2D(v0)
 
     #local MM = array[3][1];
     #local MM[0][0] = v0.u;
@@ -1257,10 +1257,10 @@ TODO:
 
     MM
 
-#end // macro M_ColFromDir2D
+#end // macro M_Col_FromDir2D
 
 
-#macro M_RowFromPos3D(p0)
+#macro M_Row_FromPos3D(p0)
 
     #local MM = array[1][4];
     #local MM[0][0] = p0.x;
@@ -1270,10 +1270,10 @@ TODO:
 
     MM
 
-#end // macro M_RowFromPos3D
+#end // macro M_Row_FromPos3D
 
 
-#macro M_ColFromPos3D(p0)
+#macro M_Col_FromPos3D(p0)
 
     #local MM = array[4][1];
     #local MM[0][0] = p0.x;
@@ -1283,10 +1283,10 @@ TODO:
 
     MM
 
-#end // macro M_ColFromPos3D
+#end // macro M_Col_FromPos3D
 
 
-#macro M_RowFromDir3D(v0)
+#macro M_Row_FromDir3D(v0)
 
     #local MM = array[1][4];
     #local MM[0][0] = v0.x;
@@ -1296,10 +1296,10 @@ TODO:
 
     MM
 
-#end // macro M_RowFromDir3D
+#end // macro M_Row_FromDir3D
 
 
-#macro M_ColFromDir3D(v0)
+#macro M_Col_FromDir3D(v0)
 
     #local MM = array[4][1];
     #local MM[0][0] = v0.x;
@@ -1309,10 +1309,10 @@ TODO:
 
     MM
 
-#end // macro M_ColFromDir3D
+#end // macro M_Col_FromDir3D
 
 
-#macro M_SkewSymFromDir3D(v0)
+#macro M_SkewSym_FromDir3D(v0)
 
     #local X = v0.x;
     #local Y = v0.y;
@@ -1325,7 +1325,7 @@ TODO:
         {  0,  0,  0,  1 }
     }
 
-#end // macro M_SkewSymFromDir3D
+#end // macro M_SkewSym_FromDir3D
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 

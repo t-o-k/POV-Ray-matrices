@@ -1492,14 +1492,14 @@ array[4][4] {
 }
 ```
 
-## M_RowFromPos2D(p0)
+## M_Row_FromPos2D(p0)
 
-[Description](README.md#m_rowfrompos2dp0)
+[Description](README.md#m_row_frompos2dp0)
  
 #### Example:
 ```povray
 #declare p0 = < 3, -4>;
-#declare MM = M_RowFromPos2D(p0);
+#declare MM = M_Row_FromPos2D(p0);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1511,7 +1511,7 @@ array[1][3] {
 
 #### Example:
 ```povray
-#declare MM = M_RowFromPos2D(-5*u +2*v);
+#declare MM = M_Row_FromPos2D(-5*u +2*v);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1521,14 +1521,14 @@ array[1][3] {
 }
 ```
 
-## M_ColFromPos2D(p0)
+## M_Col_FromPos2D(p0)
 
-[Description](README.md#m_colfrompos2dp0)
+[Description](README.md#m_col_frompos2dp0)
 
 #### Example:
 ```povray
 #declare p0 = < 3, -4>;
-#declare MM = M_ColFromPos2D(p0);
+#declare MM = M_Col_FromPos2D(p0);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1542,7 +1542,7 @@ array[3][1] {
 
 #### Example:
 ```povray
-#declare MM = M_ColFromPos2D(-5*u +2*v);
+#declare MM = M_Col_FromPos2D(-5*u +2*v);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1554,14 +1554,14 @@ array[3][1] {
 }
 ```
 
-## M_RowFromDir2D(v0)
+## M_Row_FromDir2D(v0)
 
-[Description](README.md#m_rowfromdir2dv0)
+[Description](README.md#m_row_fromdir2dv0)
 
 #### Example:
 ```povray
 #declare v0 = < 3, -4>;
-#declare MM = M_RowFromDir2D(v0);
+#declare MM = M_Row_FromDir2D(v0);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1573,7 +1573,7 @@ array[1][3] {
 
 #### Example:
 ```povray
-#declare MM = M_RowFromDir2D(-5*u +2*v);
+#declare MM = M_Row_FromDir2D(-5*u +2*v);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1583,14 +1583,14 @@ array[1][3] {
 }
 ```
 
-## M_ColFromDir2D(v0)
+## M_Col_FromDir2D(v0)
 
-[Description](README.md#m_colfromdir2dv0)
+[Description](README.md#m_col_fromdir2dv0)
 
 #### Example:
 ```povray
 #declare v0 = < 3, -4>;
-#declare MM = M_ColFromDir2D(v0);
+#declare MM = M_Col_FromDir2D(v0);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1604,7 +1604,7 @@ array[3][1] {
 
 #### Example:
 ```povray
-#declare MM = M_ColFromDir2D(-5*u +2*v);
+#declare MM = M_Col_FromDir2D(-5*u +2*v);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1616,14 +1616,14 @@ array[3][1] {
 }
 ```
 
-## M_RowFromPos3D(p0)
+## M_Row_FromPos3D(p0)
 
-[Description](README.md#m_rowfrompos3dp0)
+[Description](README.md#m_row_frompos3dp0)
 
 #### Example:
 ```povray
 #declare p0 = < 3, -4,  2>;
-#declare MM = M_RowFromPos3D(p0);
+#declare MM = M_Row_FromPos3D(p0);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1635,7 +1635,7 @@ array[1][4] {
 
 #### Example:
 ```povray
-#declare MM = M_RowFromPos3D(-5*x +2*y -3*z);
+#declare MM = M_Row_FromPos3D(-5*x +2*y -3*z);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1645,14 +1645,14 @@ array[1][4] {
 }
 ```
 
-## M_ColFromPos3D(p0)
+## M_Col_FromPos3D(p0)
 
-[Description](README.md#m_colfrompos3dp0)
+[Description](README.md#m_col_frompos3dp0)
 
 #### Example:
 ```povray
 #declare p0 = < 3, -4,  2>;
-#declare MM = M_ColFromPos3D(p0);
+#declare MM = M_Col_FromPos3D(p0);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1667,7 +1667,7 @@ array[4][1] {
 
 #### Example:
 ```povray
-#declare MM = M_ColFromPos3D(-5*x +2*y -3*z);
+#declare MM = M_Col_FromPos3D(-5*x +2*y -3*z);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1680,14 +1680,14 @@ array[4][1] {
 }
 ```
 
-## M_RowFromDir3D(v0)
+## M_Row_FromDir3D(v0)
 
-[Description](README.md#m_rowfromdir3dv0)
+[Description](README.md#m_row_fromdir3dv0)
 
 #### Example:
 ```povray
 #declare v0 = < 3, -4,  2>;
-#declare MM = M_RowFromDir3D(v0);
+#declare MM = M_Row_FromDir3D(v0);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1699,7 +1699,7 @@ array[1][4] {
 
 #### Example:
 ```povray
-#declare MM = M_RowFromDir3D(-5*x +2*y -3*z);
+#declare MM = M_Row_FromDir3D(-5*x +2*y -3*z);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1709,14 +1709,14 @@ array[1][4] {
 }
 ```
 
-## M_ColFromDir3D(v0)
+## M_Col_FromDir3D(v0)
 
-[Description](README.md#m_colfromdir3dv0)
+[Description](README.md#m_col_fromdir3dv0)
 
 #### Example:
 ```povray
 #declare v0 = < 3, -4,  2>;
-#declare MM = M_ColFromDir3D(v0);
+#declare MM = M_Col_FromDir3D(v0);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1731,7 +1731,7 @@ array[4][1] {
 
 #### Example:
 ```povray
-#declare MM = M_ColFromDir3D(-5*x +2*y -3*z);
+#declare MM = M_Col_FromDir3D(-5*x +2*y -3*z);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1744,14 +1744,14 @@ array[4][1] {
 }
 ```
 
-## M_SkewSymFromDir3D(v0)
+## M_SkewSym_FromDir3D(v0)
 
-[Description](README.md#m_skewsymfromdir3dv0)
+[Description](README.md#m_skewsym_fromdir3dv0)
 
 #### Example:
 ```povray
 #declare v0 = < 3, -4,  2>;
-#declare MM = M_SkewSymFromDir3D(v0);
+#declare MM = M_SkewSym_FromDir3D(v0);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:
@@ -1766,7 +1766,7 @@ array[4][4] {
 
 #### Example:
 ```povray
-#declare MM = M_SkewSymFromDir3D(-5*x +2*y -3*z);
+#declare MM = M_SkewSym_FromDir3D(-5*x +2*y -3*z);
 M_CustomPrint(MM, 2, 0, "", false)
 ```
 #### Result:

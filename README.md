@@ -264,32 +264,32 @@ See also https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
 ## M_FromTransform(Transform)
 [Example(s)](EXAMPLES.md#m_fromtransformtransform)
 
-## M_RowFromPos2D(p0)
-[Example(s)](EXAMPLES.md#m_rowfrompos2dp0)
+## M_Row_FromPos2D(p0)
+[Example(s)](EXAMPLES.md#m_row_frompos2dp0)
 
-## M_ColFromPos2D(p0)
-[Example(s)](EXAMPLES.md#m_colfrompos2dp0)
+## M_Col_FromPos2D(p0)
+[Example(s)](EXAMPLES.md#m_col_frompos2dp0)
 
-## M_RowFromDir2D(v0)
-[Example(s)](EXAMPLES.md#m_rowfromdir2dv0)
+## M_Row_FromDir2D(v0)
+[Example(s)](EXAMPLES.md#m_row_fromdir2dv0)
 
-## M_ColFromDir2D(v0)
-[Example(s)](EXAMPLES.md#m_colfromdir2dv0)
+## M_Col_FromDir2D(v0)
+[Example(s)](EXAMPLES.md#m_col_fromdir2dv0)
 
-## M_RowFromPos3D(p0)
-[Example(s)](EXAMPLES.md#m_rowfrompos3dp0)
+## M_Row_FromPos3D(p0)
+[Example(s)](EXAMPLES.md#m_row_frompos3dp0)
 
-## M_ColFromPos3D(p0)
-[Example(s)](EXAMPLES.md#m_colfrompos3dp0)
+## M_Col_FromPos3D(p0)
+[Example(s)](EXAMPLES.md#m_col_frompos3dp0)
 
-## M_RowFromDir3D(v0)
-[Example(s)](EXAMPLES.md#m_rowfromdir3dv0)
+## M_Row_FromDir3D(v0)
+[Example(s)](EXAMPLES.md#m_row_fromdir3dv0)
 
-## M_ColFromDir3D(v0)
-[Example(s)](EXAMPLES.md#m_colfromdir3dv0)
+## M_Col_FromDir3D(v0)
+[Example(s)](EXAMPLES.md#m_col_fromdir3dv0)
 
-## M_SkewSymFromDir3D(v0)
-[Example(s)](EXAMPLES.md#m_skewsymfromdir3dv0)
+## M_SkewSym_FromDir3D(v0)
+[Example(s)](EXAMPLES.md#m_skewsym_fromdir3dv0)
 
 ## M_Pos2D_FromRow(AA, RowNo)
 [Example(s)](EXAMPLES.md#m_pos2d_fromrowaa-rowno)
