@@ -407,3 +407,51 @@ The returned vector is considered to be a homogenous vector whose W component eq
 
 [Example(s)](EXAMPLES.md#m_dir3d_fromcolaa-colno)
 
+## M_FromVectors2D(vU, vV, pT)
+
+[Example(s)](EXAMPLES.md#m_fromvectors2dvu-vv-pt)
+
+## M_FromVectors3D(vX, vY, vZ, pT)
+
+[Example(s)](EXAMPLES.md#m_fromvectors3dvx-vy-vz-pt)
+
+## M_Translate2D(pT)
+
+[Example(s)](EXAMPLES.md#m_translate2dpt)
+
+## M_Scale2D(vS)
+
+[Example(s)](EXAMPLES.md#m_scale2dvs)
+
+## M_Rotate2D(Angle)
+
+[Example(s)](EXAMPLES.md#m_rotate2dangle)
+
+## M_Translate3D(pT)
+
+[Example(s)](EXAMPLES.md#m_translate3dpt)
+
+## M_Scale3D(vS)
+
+[Example(s)](EXAMPLES.md#m_scale3dvs)
+
+## M_Rotate3D_AroundX(Angle)
+
+[Example(s)](EXAMPLES.md#m_rotate3d_aroundxangle)
+
+## M_Rotate3D_AroundY(Angle)
+
+[Example(s)](EXAMPLES.md#m_rotate3d_aroundyangle)
+
+## M_Rotate3D_AroundZ(Angle)
+
+[Example(s)](EXAMPLES.md#m_rotate3d_aroundzangle)
+
+## M_Rotate3D_AroundAxis(vAxis, Angle)
+
+[Example(s)](EXAMPLES.md#m_rotate3d_aroundaxisvaxis-angle)
+
+## M_Reorient3D(vFrom, vTo)
+
+[Example(s)](EXAMPLES.md#m_reorient3dvfrom-vto)
+

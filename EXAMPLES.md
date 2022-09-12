@@ -2211,3 +2211,127 @@ array[4][4] {
 ...Error:... W is not 0. Not possible to convert to 3D direction vector.
 ```
 
+## M_FromVectors2D(vU, vV, pT)
+
+[Description](README.md#m_fromvectors2dvu-vv-pt)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
+## M_FromVectors3D(vX, vY, vZ, pT)
+
+[Description](README.md#m_fromvectors3dvx-vy-vz-pt)
+
+## M_Translate2D(pT)
+
+[Description](README.md#m_translate2dpt)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
+## M_Scale2D(vS)
+
+[Description](README.md#m_scale2dvs)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
+## M_Rotate2D(Angle)
+
+[Description](README.md#m_rotate2dangle)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
+## M_Translate3D(pT)
+
+[Description](README.md#m_translate3dpt)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
+## M_Scale3D(vS)
+
+[Description](README.md#m_scale3dvs)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
+## M_Rotate3D_AroundX(Angle)
+
+[Description](README.md#m_rotate3d_aroundxangle)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
+## M_Rotate3D_AroundY(Angle)
+
+[Description](README.md#m_rotate3d_aroundyangle)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
+## M_Rotate3D_AroundZ(Angle)
+
+[Description](README.md#m_rotate3d_aroundzangle)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
+## M_Rotate3D_AroundAxis(vAxis, Angle)
+
+[Description](README.md#m_rotate3d_aroundaxisvaxis-angle)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
+## M_Reorient3D(vFrom, vTo)
+
+[Description](README.md#m_reorient3dvfrom-vto)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```

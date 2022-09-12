@@ -1391,6 +1391,187 @@ TODO:
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
+#macro M_FromVectors2D(vU, vV, pT)
+
+    #local Uu = vU.u;
+    #local Uv = vU.v;
+    #local Uw = 0;
+    #local Vu = vV.u;
+    #local Vv = vV.v;
+    #local Vw = 0;
+    #local Tu = pT.u;
+    #local Tv = pT.v;
+    #local TW = 1;
+
+    array[3][3] {
+        { Uu, Uv, Uw },
+        { Vu, Vv, Vw },
+        { Tu, Tv, Tw }
+    }
+
+#end // macro M_FromVectors2D
+
+
+#macro M_FromVectors3D(vX, vY, vZ, pT)
+
+    #local Xx = vX.x;
+    #local Xy = vX.y;
+    #local Xz = vX.z;
+    #local Xw = 0;
+    #local Yx = vY.x;
+    #local Yy = vY.y;
+    #local Yz = vY.z;
+    #local Yw = 0;
+    #local Zx = vZ.x;
+    #local Zy = vZ.y;
+    #local Zz = vZ.z;
+    #local Zw = 0;
+    #local Tx = pT.x;
+    #local Ty = pT.y;
+    #local Tz = pT.z;
+    #local Tw = 1;
+
+    array[4][4] {
+        { Xx, Xy, Xz, Xw },
+        { Yx, Yy, Yz, Yw },
+        { Zx, Zy, Zz, Zw },
+        { Tx, Ty, Tz, Tw }
+    }
+
+#end // macro M_FromVectors3D
+
+
+#macro M_Translate2D(pT)
+
+    M_FromVectors2D(u, v, pT)
+
+#end // macro M_Translate2D
+
+
+#macro M_Scale2D(vS)
+
+    M_FromVectors2D(vS*u, vS*v, <0, 0>)
+
+#end // macro M_Scale2D
+
+
+#macro M_Rotate2D(Angle)
+
+    #local C = cos(Angle);
+    #local S = sin(Angle);
+
+    M_FromVectors2D(
+        <+C, +S>,
+        <-S, +C>,
+        < 0,  0>
+    )
+
+#end // macro M_Rotate2D
+
+
+/*
+
+TODO:
+
+#macro M_Reorient2D(vFrom, vTo)
+
+#end // macro M_Reorient2D
+
+*/
+
+
+#macro M_Translate3D(pT)
+
+    M_FromVectors3D(x, y, z, pT)
+
+#end // macro M_Translate3D
+
+
+#macro M_Scale3D(vS)
+
+    M_FromVectors2D(vS*x, vS*y, vS*z, <0, 0, 0>)
+
+#end // macro M_Scale3D
+
+
+#macro M_Rotate3D_AroundX(Angle)
+
+    #local C = cos(Angle);
+    #local S = sin(Angle);
+
+    M_FromVectors3D(
+        < 1,  0,  0>,
+        < 0, +C, +S>,
+        < 0, -S, +C>,
+        < 0,  0,  0>
+    )
+
+#end // macro M_Rotate3D_AroundX
+
+
+#macro M_Rotate3D_AroundY(Angle)
+
+    #local C = cos(Angle);
+    #local S = sin(Angle);
+
+    M_FromVectors3D(
+        <+C,  0, -S>,
+        < 0,  1,  0>,
+        <+S,  0, +C>,
+        < 0,  0,  0>
+    )
+
+#end // macro M_Rotate3D_AroundY
+
+
+#macro M_Rotate3D_AroundZ(Angle)
+
+    #local C = cos(Angle);
+    #local S = sin(Angle);
+
+    M_FromVectors3D(
+        <+C, +S,  0>,
+        <-S, +C,  0>,
+        < 0,  0,  1>,
+        < 0,  0,  0>
+    )
+
+#end // macro M_Rotate3D_AroundZ
+
+
+#macro M_Rotate3D_AroundAxis(vAxis, Angle)
+
+    #local A = degrees(Angle);
+
+    M_FromVectors3D(
+        vaxis_rotate(x, vAxis, A),
+        vaxis_rotate(y, vAxis, A),
+        vaxis_rotate(z, vAxis, A),
+        <0, 0, 0>
+    )
+
+#end // macro M_Rotate3D_AroundAxis
+
+
+#macro M_Reorient3D(vFrom, vTo)
+
+    #local vF = vnormalize(vFrom);
+    #local vT = vnormalize(vTo);
+    #local vAxis = vcross(vF, vT);
+    #local Dot = min(max(-1, vdot(vF, vT)), +1);
+    #local A = degrees(acos(Dot));
+
+    M_FromVectors3D(
+        vaxis_rotate(x, vAxis, A),
+        vaxis_rotate(y, vAxis, A),
+        vaxis_rotate(z, vAxis, A),
+        <0, 0, 0>
+    )
+
+#end // macro M_Reorient3D
+
+// ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
+
 #macro M_Pos2D_FromRow(AA, RowNo)
 
     #local U = AA[RowNo][0];
