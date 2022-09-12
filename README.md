@@ -216,9 +216,9 @@ See also https://en.wikipedia.org/wiki/Determinant
 [Example(s)](EXAMPLES.md#m_detaa)
 
 ## M_Minors(AA)
-[Example(s)](EXAMPLES.md#m_minorsaa)
-
 See also https://en.wikipedia.org/wiki/Minor_(linear_algebra)
+
+[Example(s)](EXAMPLES.md#m_minorsaa)
 
 ## M_Cofactors(AA)
 
