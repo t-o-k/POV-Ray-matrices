@@ -268,6 +268,7 @@ See also https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
 [Example(s)](EXAMPLES.md#m_row_frompos2dp0)
 
 Return a matrix with a single row and 3 columns with values from the U, V and W components from the 2D position vector p0.
+
 The vector p0 is considered to be a homogeneous vector with it's W component equal to 1.
 
 ## M_Col_FromPos2D(p0)
