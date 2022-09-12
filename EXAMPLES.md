@@ -2226,6 +2226,13 @@ array[4][4] {
 
 [Description](README.md#m_fromvectors3dvx-vy-vz-pt)
 
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_Translate2D(pT)
 
 [Description](README.md#m_translate2dpt)
