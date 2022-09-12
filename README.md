@@ -254,6 +254,8 @@ See also https://en.wikipedia.org/wiki/Minor_(linear_algebra)#Inverse_of_a_matri
 
 Return a square matrix that is the pseudoinverse of the matrix AA.
 
+At the moment this library can only calculate the pseudoinverse of matrices which have full rank.
+
 See also https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
 
 [Example(s)](EXAMPLES.md#m_pseudoinvaa)
