@@ -1213,6 +1213,47 @@ TODO:
 
 #end // macro M_FromTransform
 
+
+#macro M_ToTransform(AA)
+
+    #local Xw = AA[0][3];
+    #local Yw = AA[1][3];
+    #local Zw = AA[2][3];
+    #local Tw = AA[3][3];
+    #if ((Xw != 0) | (Yw != 0) | (Zw != 0) | (Tw = 0))
+        #error "Not possible to convert to 3D transform"
+    #end // if
+    #local Xx = AA[0][0];
+    #local Yx = AA[1][0];
+    #local Zx = AA[2][0];
+    #local Tx = AA[3][0]/Tw;
+    #local Xy = AA[0][1];
+    #local Yy = AA[1][1];
+    #local Zy = AA[2][1];
+    #local Ty = AA[3][1]/Tw;
+    #local Xz = AA[0][2];
+    #local Yz = AA[1][2];
+    #local Zz = AA[2][2];
+    #local Tz = AA[3][2]/Tw;
+
+    transform {
+        matrix <
+            Xx, Xy, Xz,
+            Yx, Yy, Yz,
+            Zx, Zy, Zz,
+            Tx, Ty, Tz
+        >
+    }
+
+#end // macro M_ToTransform
+
+
+#macro M_ToTransformFn(AA)
+
+    function { M_ToTransform(AA) }
+
+#end // macro M_ToTransformFn
+
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
 #macro M_Row_FromPos2D(p0)

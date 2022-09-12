@@ -1441,6 +1441,17 @@ array[4][4] {
 }
 ```
 
+## M_ToTransformFn(AA)
+
+[Description](README.md#m_totransformfnaa)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_FromTransform(Transform)
 
 [Description](README.md#m_fromtransformtransform)
@@ -1490,6 +1501,18 @@ array[4][4] {
     { -7,  1,  2, -8 },
     {  0,  0,  0,  1 }
 }
+```
+
+## M_ToTransform(AA)
+
+[Description](README.md#m_totransformaa)
+
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
 ```
 
 ## M_Row_FromPos2D(p0)

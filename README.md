@@ -263,8 +263,14 @@ See also https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
 ## M_FromTransformFn(TransformFn)
 [Example(s)](EXAMPLES.md#m_fromtransformfntransformfn)
 
+## M_ToTransformFn(AA)
+[Example(s)](EXAMPLES.md#m_totransformfnaa)
+
 ## M_FromTransform(Transform)
 [Example(s)](EXAMPLES.md#m_fromtransformtransform)
+
+## M_ToTransform(AA)
+[Example(s)](EXAMPLES.md#m_totransformaa)
 
 ## M_Row_FromPos2D(p0)
 [Example(s)](EXAMPLES.md#m_row_frompos2dp0)
