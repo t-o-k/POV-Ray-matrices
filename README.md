@@ -183,9 +183,9 @@ Return a matrix with the same elements as the matrix AA, except that both the ro
 [Example(s)](EXAMPLES.md#m_delrowandcolaa-rowno-colno)
 
 ## M_AddScaledRowToRow(AA, Scale, RowNo, ToRowNo)
-[Example(s)](EXAMPLES.md#m_addscaledrowtorowaa-scale-rowno-torowno)
-
 See also https://en.wikipedia.org/wiki/Elementary_matrix#Row-multiplying_transformations and https://en.wikipedia.org/wiki/Elementary_matrix#Row-addition_transformations
+
+[Example(s)](EXAMPLES.md#m_addscaledrowtorowaa-scale-rowno-torowno)
 
 ## M_AddScaledColToCol(AA, Scale, ColNo, ToColNo)
 [Example(s)](EXAMPLES.md#m_addscaledcoltocolaa-scale-colno-tocolno)
