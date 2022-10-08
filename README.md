@@ -168,7 +168,7 @@ See also https://en.wikipedia.org/wiki/Matrix_multiplication
 
 Return a matrix that is the product of the transpose of the matrix AA and the matrix AA.
 
-See also https://en.wikipedia.org/wiki/Gram_Matrix
+See also https://en.wikipedia.org/wiki/Gram_matrix
 
 [Example(s)](EXAMPLES.md#m_gramianaa)
 
