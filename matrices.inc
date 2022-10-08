@@ -344,6 +344,16 @@ which can be found in the LICENSE file.
 #end // macro M_Mult
 
 
+#macro M_Gramian(AA)
+
+    M_Mult(
+        M_Transpose(AA),
+        AA
+    )
+
+#end // macro M_Gramian
+
+
 #macro M_DelRow(AA, RowNo)
 
     #local SizeI = max(RowNo, dimension_size(AA, 1) - 1);

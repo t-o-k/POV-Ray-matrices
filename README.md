@@ -164,6 +164,14 @@ See also https://en.wikipedia.org/wiki/Matrix_multiplication
 
 [Example(s)](EXAMPLES.md#m_multaa-bb)
 
+## M_Gramian(AA)
+
+Return a matrix that is the product of the transpose of the matrix AA and the matrix AA.
+
+See also https://en.wikipedia.org/wiki/Gram_Matrix
+
+[Example(s)](EXAMPLES.md#m_gramianaa)
+
 ## M_DelRow(AA, RowNo)
 
 Return a matrix with the same elements as the matrix AA, except that the row RowNo has been removed.

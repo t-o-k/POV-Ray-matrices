@@ -826,6 +826,17 @@ array[4][4] {
 }
 ```
 
+## M_Gramian(AA)
+
+[Description](README.md#m_gramianaa)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_DelRow(AA, RowNo)
 
 [Description](README.md#m_delrowaa-rowno)
