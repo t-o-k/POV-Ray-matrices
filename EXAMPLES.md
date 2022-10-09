@@ -832,9 +832,43 @@ array[4][4] {
 
 #### Example:
 ```povray
+#declare MM =
+    M_Gramian(
+        array[2][3] {
+            { -3,  2,  1 },
+            {  4, -1,  0 }
+        }
+    )
+;
+M_CustomPrint(MM, 3, 0, "", false)
 ```
 #### Result:
 ```povray
+array[3][3] {
+    {  25, -10,  -3 },
+    { -10,   5,   2 },
+    {  -3,   2,   1 }
+}
+```
+
+#### Example:
+```povray
+#declare MM =
+    M_Gramian(
+        array[3][1] {
+            {  2 },
+            { -1 },
+            {  3 }
+        }
+    )
+;
+M_CustomPrint(MM, 3, 0, "", false)
+```
+#### Result:
+```povray
+array[1][1] {
+    {  14 }
+}
 ```
 
 ## M_DelRow(AA, RowNo)
