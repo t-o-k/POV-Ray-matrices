@@ -1452,6 +1452,26 @@ array[2][3] {
 }
 ```
 
+#### Example:
+```povray
+#declare CC =
+    array[3][2] {
+        { -3,  1 },
+        {  4, -2 },
+        { -5,  3 }
+    }
+;
+#declare MM = M_Mult(M_PseudoInv(CC), CC);
+M_Print(MM)
+```
+#### Result:
+```povray
+array[2][2] {
+    {  1.000000, -0.000000 },
+    { -0.000000,  1.000000 }
+}
+```
+
 ## M_FromTransformFn(TransformFn)
 
 [Description](README.md#m_fromtransformfntransformfn)
