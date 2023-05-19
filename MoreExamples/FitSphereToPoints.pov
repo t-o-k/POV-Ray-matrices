@@ -238,6 +238,11 @@ sphere {
     pigment { color rgbf <1.0, 0.3, 0.8, 0.4> }
 }   
 
+sphere {
+    pCtr, 0.08
+    pigment { color rgb <0.0, 0.5, 1.0>*2 }
+}
+
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
 background { color Blue/10 + Green/20 }
