@@ -3,7 +3,7 @@
 
 https://github.com/t-o-k/POV-Ray-matrices
 
-Copyright (c) 2022 Tor Olav Kristensen, http://subcube.com
+Copyright (c) 2022-2023 Tor Olav Kristensen, http://subcube.com
 
 Use of this source code is governed by the GNU Lesser General Public License version 3,
 which can be found in the LICENSE file.
@@ -18,7 +18,7 @@ which can be found in the LICENSE file.
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
 #version 3.7;
-#include "matrices.inc"
+#include "..\matrices.inc"
 
 global_settings { assumed_gamma 1.0 }
 
