@@ -5,6 +5,12 @@ NB: At the moment this library is Work In Progress, so it is not yet complete an
 
 See also https://en.wikipedia.org/wiki/Matrix_(mathematics)
 
+## Image created with one of the examples:
+
+### Fit circle to points
+[Source code](MoreExamples/FitCircleToPoints.pov)\
+![Fit circle to points image](MoreExamples/FitCircleToPoints.png)
+
 ## M_NoOfRows(AA)
 Return the number of rows in the matrix AA.
 
