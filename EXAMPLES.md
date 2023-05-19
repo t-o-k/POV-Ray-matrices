@@ -1433,9 +1433,23 @@ array[4][4] {
 
 #### Example:
 ```povray
+#declare MM =
+    M_PseudoInv(
+        array[3][2] {
+            { -3,  1 },
+            {  4, -2 },
+            { -5,  3 }
+        }
+    )
+;
+M_Print(MM)
 ```
 #### Result:
 ```povray
+array[2][3] {
+    { -0.666667,  0.166667,  0.333333 },
+    { -1.166667,  0.166667,  0.833333 }
+}
 ```
 
 ## M_FromTransformFn(TransformFn)
