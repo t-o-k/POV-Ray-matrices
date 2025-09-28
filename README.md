@@ -1,6 +1,8 @@
 # POV-Ray-matrices
 POV-Ray v3.7 include file for working with matrices
 
+All rotation matrices created with this library maintain consistency with POV-Ray's left-handed coordinate system convention.
+
 NB: At the moment this library is Work In Progress, so it is not yet complete and things may suddenly change.
 
 See also https://en.wikipedia.org/wiki/Matrix_(mathematics)
@@ -425,18 +427,22 @@ Return a 4x4 matrix created from the 3D vectors vX, vY, vZ and pT, used as row v
 [Example(s)](EXAMPLES.md#m_scale3dvs)
 
 ## M_Rotate3D_AroundX(Angle)
+Return a 4×4 rotation matrix for rotating around the X-axis. The angle Angle must be in radians.
 
 [Example(s)](EXAMPLES.md#m_rotate3d_aroundxangle)
 
 ## M_Rotate3D_AroundY(Angle)
+Return a 4×4 rotation matrix for rotating around the Y-axis. The angle Angle must be in radians.
 
 [Example(s)](EXAMPLES.md#m_rotate3d_aroundyangle)
 
 ## M_Rotate3D_AroundZ(Angle)
+Return a 4×4 rotation matrix for rotating around the Z-axis. The angle Angle must be in radians.
 
 [Example(s)](EXAMPLES.md#m_rotate3d_aroundzangle)
 
 ## M_Rotate3D_AroundAxis(vAxis, Angle)
+Return a 4×4 rotation matrix for rotating around an arbitrary 3D axis vAxis. The angle Angle must be in radians.
 
 [Example(s)](EXAMPLES.md#m_rotate3d_aroundaxisvaxis-angle)
 
