@@ -85,6 +85,8 @@ Return a matrix where all the elements of the matrix AA has been multipled by th
 [Example(s)](EXAMPLES.md#m_scaleaa-scale)
 
 ## M_Round(AA, N)
+Return a matrix where all elements of matrix AA have been rounded to N decimal places.
+
 [Example(s)](EXAMPLES.md#m_roundaa-n)
 
 ## M_ApplyCheckerSigns(AA)
@@ -172,14 +174,20 @@ Return a matrix with the same elements as the matrix AA, except that both the ro
 [Example(s)](EXAMPLES.md#m_delrowandcolaa-rowno-colno)
 
 ## M_AddScaledRowToRow(AA, Scale, RowNo, ToRowNo)
+Return a matrix with the same elements as matrix AA, except that the row RowNo multiplied by the number Scale has been added to the row ToRowNo.
+
 See also https://en.wikipedia.org/wiki/Elementary_matrix#Row-multiplying_transformations and https://en.wikipedia.org/wiki/Elementary_matrix#Row-addition_transformations
 
 [Example(s)](EXAMPLES.md#m_addscaledrowtorowaa-scale-rowno-torowno)
 
 ## M_AddScaledColToCol(AA, Scale, ColNo, ToColNo)
+Return a matrix with the same elements as matrix AA, except that the column ColNo multiplied by the number Scale has been added to the column ToColNo.
+
 [Example(s)](EXAMPLES.md#m_addscaledcoltocolaa-scale-colno-tocolno)
 
 ## M_SubMatrix(AA, RowNo, NoOfRows, ColNo, NoOfCols)
+Return a submatrix extracted from matrix AA, starting at row RowNo and column ColNo, with dimensions NoOfRows × NoOfCols.
+
 [Example(s)](EXAMPLES.md#m_submatrixaa-rowno-noofrows-colno-noofcols)
 
 ## M_Stack(AAAA)
@@ -202,6 +210,8 @@ See also https://en.wikipedia.org/wiki/Determinant
 [Example(s)](EXAMPLES.md#m_detaa)
 
 ## M_Minors(AA)
+Return a square matrix formed by all the minors of the square matrix AA.
+
 See also https://en.wikipedia.org/wiki/Minor_(linear_algebra)
 
 [Example(s)](EXAMPLES.md#m_minorsaa)
@@ -407,22 +417,27 @@ Return a 4x4 matrix created from the 3D vectors vX, vY, vZ and pT, used as row v
 [Example(s)](EXAMPLES.md#m_fromvectors3dvx-vy-vz-pt)
 
 ## M_Translate2D(pT)
+Return a 3×3 transformation matrix for translating in 2D space by the position vector pT.
 
 [Example(s)](EXAMPLES.md#m_translate2dpt)
 
 ## M_Scale2D(vS)
+Return a 3×3 transformation matrix for scaling in 2D space by the scaling vector vS.
 
 [Example(s)](EXAMPLES.md#m_scale2dvs)
 
 ## M_Rotate2D(Angle)
+Return a 3×3 transformation matrix for rotating in 2D space by the angle Angle in radians.
 
 [Example(s)](EXAMPLES.md#m_rotate2dangle)
 
 ## M_Translate3D(pT)
+Return a 4×4 transformation matrix for translating in 3D space by the position vector pT.
 
 [Example(s)](EXAMPLES.md#m_translate3dpt)
 
 ## M_Scale3D(vS)
+Return a 4×4 transformation matrix for scaling in 3D space by the scaling vector vS
 
 [Example(s)](EXAMPLES.md#m_scale3dvs)
 
