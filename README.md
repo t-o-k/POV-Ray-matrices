@@ -278,12 +278,16 @@ Return a matrix with a single row and 3 columns with values from the U, V and W 
 
 The vector p0 is considered to be a homogeneous vector with it's W component equal to 1.
 
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
+
 [Example(s)](EXAMPLES.md#m_row_frompos2dp0)
 
 ## M_Col_FromPos2D(p0)
 Return a matrix with a single column and 3 rows with values from the U, V and W components from the 2D position vector p0.
 
 The vector p0 is considered to be a homogeneous vector with it's W component equal to 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 [Example(s)](EXAMPLES.md#m_col_frompos2dp0)
 
@@ -292,12 +296,16 @@ Return a matrix with a single row and 3 columns with values from the U, V and W 
 
 The vector v0 is considered to be a homogeneous vector with it's W component equal to 0.
 
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
+
 [Example(s)](EXAMPLES.md#m_row_fromdir2dv0)
 
 ## M_Col_FromDir2D(v0)
 Return a matrix with a single column and 3 rows with values from the U, V and W components from the 2D direction vector v0.
 
 The vector v0 is considered to be a homogeneous vector with it's W component equal to 0.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 [Example(s)](EXAMPLES.md#m_col_fromdir2dv0)
 
@@ -306,12 +314,16 @@ Return a matrix with a single row and 4 columns with values from the X, Y, Z and
 
 The vector p0 is considered to be a homogeneous vector with it's W component equal to 1.
 
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
+
 [Example(s)](EXAMPLES.md#m_row_frompos3dp0)
 
 ## M_Col_FromPos3D(p0)
 Return a matrix with a single column and 4 rows with values from the X, Y, Z and W components from the 3D position vector p0.
 
 The vector p0 is considered to be a homogeneous vector with it's W component equal to 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 [Example(s)](EXAMPLES.md#m_col_frompos3dp0)
 
@@ -320,6 +332,8 @@ Return a matrix with a single row and 4 columns with values from the X, Y, Z and
 
 The vector v0 is considered to be a homogeneous vector with it's W component equal to 0.
 
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
+
 [Example(s)](EXAMPLES.md#m_row_fromdir3dv0)
 
 ## M_Col_FromDir3D(v0)
@@ -327,12 +341,16 @@ Return a matrix with a single column and 4 rows with values from the X, Y, Z and
 
 The vector v0 is considered to be a homogeneous vector with it's W component equal to 0.
 
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
+
 [Example(s)](EXAMPLES.md#m_col_fromdir3dv0)
 
 ## M_SkewSym_FromDir3D(v0)
 Return a skew symmetric matrix with values from the X, Y and Z components from the 3D direction vector v0.
 
 The vector v0 is considered to be a homogeneous vector. It's W component is not used.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 [Example(s)](EXAMPLES.md#m_skewsym_fromdir3dv0)
 
@@ -343,6 +361,8 @@ The values in the 3 columns in row number RowNo in the matrix AA are used for U,
 
 The returned vector is considered to be a homogenous vector whose W component equals 1.
 
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
+
 [Example(s)](EXAMPLES.md#m_pos2d_fromrowaa-rowno)
 
 ## M_Pos2D_FromCol(AA, ColNo)
@@ -351,6 +371,8 @@ Return a 2D position vector with the component values equal to U/W and V/W.
 The values in the 3 rows in column number ColNo in the matrix AA are used for U, V and W.
 
 The returned vector is considered to be a homogenous vector whose W component equals 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 [Example(s)](EXAMPLES.md#m_pos2d_fromcolaa-colno)
 
@@ -361,6 +383,8 @@ The values in the 3 columns in row number RowNo in the matrix AA are used for U,
 
 The returned vector is considered to be a homogenous vector whose W component equals 0.
 
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
+
 [Example(s)](EXAMPLES.md#m_dir2d_fromrowaa-rowno)
 
 ## M_Dir2D_FromCol(AA, ColNo)
@@ -369,6 +393,8 @@ Return a 2D direction vector with the component values U and V.
 The values in the 3 rows in column number ColNo in the matrix AA are used for U, V and W.
 
 The returned vector is considered to be a homogenous vector whose W component equals 0.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 [Example(s)](EXAMPLES.md#m_dir2d_fromcolaa-colno)
 
@@ -379,6 +405,8 @@ The values in the 4 columns in row number RowNo in the matrix AA are used for X,
 
 The returned vector is considered to be a homogenous vector whose W component equals 1.
 
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
+
 [Example(s)](EXAMPLES.md#m_pos3d_fromrowaa-rowno)
 
 ## M_Pos3D_FromCol(AA, ColNo)
@@ -387,6 +415,8 @@ Return a 3D position vector with the component values equal to X/W, Y/Z and Z/W.
 The values in the 4 rows in column number ColNo in the matrix AA are used for X, Y, Z and W.
 
 The returned vector is considered to be a homogenous vector whose W component equals 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 [Example(s)](EXAMPLES.md#m_pos3d_fromcolaa-colno)
 
@@ -397,6 +427,8 @@ The values in the 4 columns in row number RowNo in the matrix AA are used for X,
 
 The returned vector is considered to be a homogenous vector whose W component equals 0.
 
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
+
 [Example(s)](EXAMPLES.md#m_dir3d_fromrowaa-rowno)
 
 ## M_Dir3D_FromCol(AA, ColNo)
@@ -406,15 +438,21 @@ The values in the 4 rows in column number ColNo in the matrix AA are used for X,
 
 The returned vector is considered to be a homogenous vector whose W component equals 0.
 
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
+
 [Example(s)](EXAMPLES.md#m_dir3d_fromcolaa-colno)
 
 ## M_FromVectors2D(vU, vV, pT)
 Return a 3x3 matrix created from the 2D vectors vU, vV and pT, used as row vectors. Vu and vV are considered to be homogenous direction vectors whose W components equal 0, while pT is considered to be a homogenous position vector whose W component equals 1.
 
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
+
 [Example(s)](EXAMPLES.md#m_fromvectors2dvu-vv-pt)
 
 ## M_FromVectors3D(vX, vY, vZ, pT)
 Return a 4x4 matrix created from the 3D vectors vX, vY, vZ and pT, used as row vectors.  vX, vY and vZ are considered to be homogenous direction vectors whose W components equal 0, while pT is considered to be a homogenous position vector whose W component equals 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 [Example(s)](EXAMPLES.md#m_fromvectors3dvx-vy-vz-pt)
 
