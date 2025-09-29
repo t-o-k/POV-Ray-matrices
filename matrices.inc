@@ -1499,7 +1499,7 @@ TODO:
 
 #macro M_Scale3D(vS)
 
-    M_FromVectors2D(vS*x, vS*y, vS*z, <0, 0, 0>)
+    M_FromVectors3D(vS*x, vS*y, vS*z, <0, 0, 0>)
 
 #end // macro M_Scale3D
 
@@ -1820,3 +1820,4 @@ TODO:
 #end // macro M_Print
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
+
