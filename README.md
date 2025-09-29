@@ -447,6 +447,8 @@ Return a 4×4 rotation matrix for rotating around an arbitrary 3D axis vAxis. Th
 [Example(s)](EXAMPLES.md#m_rotate3d_aroundaxisvaxis-angle)
 
 ## M_Reorient3D(vFrom, vTo)
+Return a 4×4 rotation matrix that rotates the 3D direction vector vFrom to align with the 3D direction vector vTo.
+
+This is useful for aligning objects 3D space.
 
 [Example(s)](EXAMPLES.md#m_reorient3dvfrom-vto)
-
