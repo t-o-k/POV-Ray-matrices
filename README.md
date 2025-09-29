@@ -188,6 +188,8 @@ Return a matrix with the same elements as matrix AA, except that the column ColN
 ## M_SubMatrix(AA, RowNo, NoOfRows, ColNo, NoOfCols)
 Return a submatrix extracted from matrix AA, starting at row RowNo and column ColNo, with dimensions NoOfRows × NoOfCols.
 
+See also https://en.wikipedia.org/wiki/Block_matrix
+
 [Example(s)](EXAMPLES.md#m_submatrixaa-rowno-noofrows-colno-noofcols)
 
 ## M_Stack(AAAA)
@@ -429,6 +431,8 @@ Return a 3×3 transformation matrix for scaling in 2D space by the scaling vecto
 ## M_Rotate2D(Angle)
 Return a 3×3 transformation matrix for rotating in 2D space by the angle Angle in radians.
 
+See also https://en.wikipedia.org/wiki/Rotation_matrix
+
 [Example(s)](EXAMPLES.md#m_rotate2dangle)
 
 ## M_Translate3D(pT)
@@ -444,20 +448,28 @@ Return a 4×4 transformation matrix for scaling in 3D space by the scaling vecto
 ## M_Rotate3D_AroundX(Angle)
 Return a 4×4 rotation matrix for rotating around the X-axis. The angle Angle must be in radians.
 
+See also https://en.wikipedia.org/wiki/Rotation_matrix
+
 [Example(s)](EXAMPLES.md#m_rotate3d_aroundxangle)
 
 ## M_Rotate3D_AroundY(Angle)
 Return a 4×4 rotation matrix for rotating around the Y-axis. The angle Angle must be in radians.
+
+See also https://en.wikipedia.org/wiki/Rotation_matrix
 
 [Example(s)](EXAMPLES.md#m_rotate3d_aroundyangle)
 
 ## M_Rotate3D_AroundZ(Angle)
 Return a 4×4 rotation matrix for rotating around the Z-axis. The angle Angle must be in radians.
 
+See also https://en.wikipedia.org/wiki/Rotation_matrix
+
 [Example(s)](EXAMPLES.md#m_rotate3d_aroundzangle)
 
 ## M_Rotate3D_AroundAxis(vAxis, Angle)
 Return a 4×4 rotation matrix for rotating around an arbitrary 3D axis vAxis. The angle Angle must be in radians.
+
+See also https://en.wikipedia.org/wiki/Rotation_matrix and https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula
 
 [Example(s)](EXAMPLES.md#m_rotate3d_aroundaxisvaxis-angle)
 
@@ -466,4 +478,6 @@ Return a 4×4 rotation matrix that rotates the 3D direction vector vFrom to alig
 
 This is useful for aligning objects 3D space.
 
+See also https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula
+ 
 [Example(s)](EXAMPLES.md#m_reorient3dvfrom-vto)
