@@ -2390,7 +2390,7 @@ array[3][3] {
 
 #### Example:
 ```povray
-#declare MM = M_Translate3D(<2, -3, 5>);
+#declare MM = M_Translate3D(< 2, -3,  5>);
 
 M_Print(MM)
 ```
