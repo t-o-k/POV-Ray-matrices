@@ -2324,6 +2324,17 @@ array[4][4] {
 ```povray
 ```
 
+## M_FromColVectors2D(vU, vV, pT)
+
+[Description](README.md#m_fromcolvectors2dvu-vv-pt)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_FromRowVectors3D(vX, vY, vZ, pT)
 
 [Description](README.md#m_fromrowvectors3dvx-vy-vz-pt)
