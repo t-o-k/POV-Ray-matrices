@@ -2335,6 +2335,17 @@ array[4][4] {
 ```povray
 ```
 
+## M_FromColVectors3D(vX, vY, vZ, pT)
+
+[Description](README.md#m_fromcolvectors3dvx-vy-vz-pt)
+
+#### Example:
+```povray
+```
+#### Result:
+```povray
+```
+
 ## M_Translate2D(pT)
 
 [Description](README.md#m_translate2dpt)
