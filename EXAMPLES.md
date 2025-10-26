@@ -2313,9 +2313,9 @@ array[4][4] {
 ...Error:... W is not 0. Not possible to convert to 3D direction vector.
 ```
 
-## M_FromVectors2D(vU, vV, pT)
+## M_FromRowVectors2D(vU, vV, pT)
 
-[Description](README.md#m_fromvectors2dvu-vv-pt)
+[Description](README.md#m_fromrowvectors2dvu-vv-pt)
 
 #### Example:
 ```povray
@@ -2324,9 +2324,9 @@ array[4][4] {
 ```povray
 ```
 
-## M_FromVectors3D(vX, vY, vZ, pT)
+## M_FromRowVectors3D(vX, vY, vZ, pT)
 
-[Description](README.md#m_fromvectors3dvx-vy-vz-pt)
+[Description](README.md#m_fromrowvectors3dvx-vy-vz-pt)
 
 #### Example:
 ```povray
