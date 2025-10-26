@@ -1401,7 +1401,7 @@ TODO:
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
-#macro M_FromVectors2D(vU, vV, pT)
+#macro M_FromRowVectors2D(vU, vV, pT)
 
     #local Uu = vU.u;
     #local Uv = vU.v;
@@ -1419,7 +1419,7 @@ TODO:
         { Tu, Tv, Tw }
     }
 
-#end // macro M_FromVectors2D
+#end // macro M_FromRowVectors2D
 
 
 #macro M_FromRowVectors3D(vX, vY, vZ, pT)
@@ -1453,14 +1453,14 @@ TODO:
 
 #macro M_Translate2D(pT)
 
-    M_FromVectors2D(u, v, pT)
+    M_FromRowVectors2D(u, v, pT)
 
 #end // macro M_Translate2D
 
 
 #macro M_Scale2D(vS)
 
-    M_FromVectors2D(vS*u, vS*v, <0, 0>)
+    M_FromRowVectors2D(vS*u, vS*v, <0, 0>)
 
 #end // macro M_Scale2D
 
@@ -1470,7 +1470,7 @@ TODO:
     #local C = cos(Angle);
     #local S = sin(Angle);
 
-    M_FromVectors2D(
+    M_FromRowVectors2D(
         <+C, +S>,
         <-S, +C>,
         < 0,  0>
@@ -1820,6 +1820,7 @@ TODO:
 #end // macro M_Print
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
+
 
 
 
