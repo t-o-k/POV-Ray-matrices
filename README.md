@@ -449,12 +449,12 @@ See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 [Example(s)](EXAMPLES.md#m_fromvectors2dvu-vv-pt)
 
-## M_FromVectors3D(vX, vY, vZ, pT)
+## M_FromRowVectors3D(vX, vY, vZ, pT)
 Return a 4x4 matrix created from the 3D vectors vX, vY, vZ and pT, used as row vectors.  vX, vY and vZ are considered to be homogenous direction vectors whose W components equal 0, while pT is considered to be a homogenous position vector whose W component equals 1.
 
 See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
-[Example(s)](EXAMPLES.md#m_fromvectors3dvx-vy-vz-pt)
+[Example(s)](EXAMPLES.md#m_fromrowvectors3dvx-vy-vz-pt)
 
 ## M_Translate2D(pT)
 Return a 3×3 transformation matrix for translating in 2D space by the position vector pT.
