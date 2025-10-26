@@ -1422,7 +1422,7 @@ TODO:
 #end // macro M_FromVectors2D
 
 
-#macro M_FromVectors3D(vX, vY, vZ, pT)
+#macro M_FromRowVectors3D(vX, vY, vZ, pT)
 
     #local Xx = vX.x;
     #local Xy = vX.y;
@@ -1448,7 +1448,7 @@ TODO:
         { Tx, Ty, Tz, Tw }
     }
 
-#end // macro M_FromVectors3D
+#end // macro M_FromRowVectors3D
 
 
 #macro M_Translate2D(pT)
@@ -1492,14 +1492,14 @@ TODO:
 
 #macro M_Translate3D(pT)
 
-    M_FromVectors3D(x, y, z, pT)
+    M_FromRowVectors3D(x, y, z, pT)
 
 #end // macro M_Translate3D
 
 
 #macro M_Scale3D(vS)
 
-    M_FromVectors3D(vS*x, vS*y, vS*z, <0, 0, 0>)
+    M_FromRowVectors3D(vS*x, vS*y, vS*z, <0, 0, 0>)
 
 #end // macro M_Scale3D
 
@@ -1509,7 +1509,7 @@ TODO:
     #local C = cos(Angle);
     #local S = sin(Angle);
 
-    M_FromVectors3D(
+    M_FromRowVectors3D(
         < 1,  0,  0>,
         < 0, +C, +S>,
         < 0, -S, +C>,
@@ -1524,7 +1524,7 @@ TODO:
     #local C = cos(Angle);
     #local S = sin(Angle);
 
-    M_FromVectors3D(
+    M_FromRowVectors3D(
         <+C,  0, -S>,
         < 0,  1,  0>,
         <+S,  0, +C>,
@@ -1539,7 +1539,7 @@ TODO:
     #local C = cos(Angle);
     #local S = sin(Angle);
 
-    M_FromVectors3D(
+    M_FromRowVectors3D(
         <+C, +S,  0>,
         <-S, +C,  0>,
         < 0,  0,  1>,
@@ -1553,7 +1553,7 @@ TODO:
 
     #local A = degrees(Angle);
 
-    M_FromVectors3D(
+    M_FromRowVectors3D(
         vaxis_rotate(x, vAxis, A),
         vaxis_rotate(y, vAxis, A),
         vaxis_rotate(z, vAxis, A),
@@ -1571,7 +1571,7 @@ TODO:
     #local Dot = min(max(-1, vdot(vF, vT)), +1);
     #local A = degrees(acos(Dot));
 
-    M_FromVectors3D(
+    M_FromRowVectors3D(
         vaxis_rotate(x, vAxis, A),
         vaxis_rotate(y, vAxis, A),
         vaxis_rotate(z, vAxis, A),
@@ -1820,6 +1820,7 @@ TODO:
 #end // macro M_Print
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
+
 
 
 
