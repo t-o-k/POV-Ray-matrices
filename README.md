@@ -449,6 +449,13 @@ See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 [Example(s)](EXAMPLES.md#m_fromrowvectors2dvu-vv-pt)
 
+## M_FromColVectors2D(vU, vV, pT)
+Return a 3x3 matrix created from the 2D vectors vU, vV and pT, used as column vectors. Vu and vV are considered to be homogenous direction vectors whose W components equal 0, while pT is considered to be a homogenous position vector whose W component equals 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
+
+[Example(s)](EXAMPLES.md#m_fromcolvectors2dvu-vv-pt)
+
 ## M_FromRowVectors3D(vX, vY, vZ, pT)
 Return a 4x4 matrix created from the 3D vectors vX, vY, vZ and pT, used as row vectors. vX, vY and vZ are considered to be homogenous direction vectors whose W components equal 0, while pT is considered to be a homogenous position vector whose W component equals 1.
 
