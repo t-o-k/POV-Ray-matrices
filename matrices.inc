@@ -1422,6 +1422,27 @@ TODO:
 #end // macro M_FromRowVectors2D
 
 
+#macro M_FromColVectors2D(vU, vV, pT)
+
+    #local Uu = vU.u;
+    #local Uv = vU.v;
+    #local Uw = 0;
+    #local Vu = vV.u;
+    #local Vv = vV.v;
+    #local Vw = 0;
+    #local Tu = pT.u;
+    #local Tv = pT.v;
+    #local Tw = 1;
+
+    array[3][3] {
+        { Uu, Vu, Tu },
+        { Uv, Vv, Tv },
+        { Uw, Vw, Tw }
+    }
+
+#end // macro M_FromColVectors2D
+
+
 #macro M_FromRowVectors3D(vX, vY, vZ, pT)
 
     #local Xx = vX.x;
@@ -1849,6 +1870,7 @@ TODO:
 #end // macro M_Print
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
+
 
 
 
