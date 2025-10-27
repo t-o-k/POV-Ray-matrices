@@ -1188,29 +1188,8 @@ TODO:
     #local vX = TransformFn(1, 0, 0) - pT;
     #local vY = TransformFn(0, 1, 0) - pT;
     #local vZ = TransformFn(0, 0, 1) - pT;
-    #local Xx = vX.x;
-    #local Xy = vX.y;
-    #local Xz = vX.z;
-    #local Xw = 0;
-    #local Yx = vY.x;
-    #local Yy = vY.y;
-    #local Yz = vY.z;
-    #local Yw = 0;
-    #local Zx = vZ.x;
-    #local Zy = vZ.y;
-    #local Zz = vZ.z;
-    #local Zw = 0;
-    #local Tx = pT.x;
-    #local Ty = pT.y;
-    #local Tz = pT.z;
-    #local Tw = 1;
 
-    array[4][4] {
-        { Xx, Xy, Xz, Xw },
-        { Yx, Yy, Yz, Yw },
-        { Zx, Zy, Zz, Zw },
-        { Tx, Ty, Tz, Tw }
-    }
+    M_FromRowVectors3D(vX, vY, vZ, pT)
 
 #end // macro M_FromTransformFn
 
@@ -1918,6 +1897,7 @@ TODO:
 #end // macro M_Print
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
+
 
 
 
