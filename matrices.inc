@@ -1554,6 +1554,7 @@ TODO:
 #end // macro M_Scale3D
 
 
+/*
 #macro M_Rotate3D_AroundX(Angle)
 
     #local C = cos(Angle);
@@ -1567,8 +1568,24 @@ TODO:
     )
 
 #end // macro M_Rotate3D_AroundX
+*/
 
 
+#macro M_Rotate3D_AroundX(Angle)
+
+    #local vX = degrees(Angle)*x;
+    
+    M_FromRowVectors3D(
+        x,
+        vrotate(y, vX),
+        vrotate(z, vX),
+        0*x
+    )
+
+#end // macro M_Rotate3D_AroundX
+
+
+/*
 #macro M_Rotate3D_AroundY(Angle)
 
     #local C = cos(Angle);
@@ -1582,8 +1599,24 @@ TODO:
     )
 
 #end // macro M_Rotate3D_AroundY
+*/
 
 
+#macro M_Rotate3D_AroundY(Angle)
+
+    #local vY = degrees(Angle)*y;
+    
+    M_FromRowVectors3D(
+        vrotate(x, vY),
+        y,
+        vrotate(z, vY),
+        0*y
+    )
+
+#end // macro M_Rotate3D_AroundY
+
+
+/*
 #macro M_Rotate3D_AroundZ(Angle)
 
     #local C = cos(Angle);
@@ -1594,6 +1627,21 @@ TODO:
         <-S, +C,  0>,
         < 0,  0,  1>,
         < 0,  0,  0>
+    )
+
+#end // macro M_Rotate3D_AroundZ
+*/
+
+
+#macro M_Rotate3D_AroundZ(Angle)
+
+    #local vZ = degrees(Angle)*z;
+    
+    M_FromRowVectors3D(
+        vrotate(x, vZ),
+        vrotate(y, vZ),
+        z,
+        0*z
     )
 
 #end // macro M_Rotate3D_AroundZ
@@ -1870,6 +1918,7 @@ TODO:
 #end // macro M_Print
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
+
 
 
 
