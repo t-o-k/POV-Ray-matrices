@@ -1558,7 +1558,6 @@ array[4][4] {
 
 [Description](README.md#m_fromtransformtransform)
 
-
 #### Example:
 ```povray
 #declare MM =
@@ -1605,10 +1604,28 @@ array[4][4] {
 }
 ```
 
+#### Example:
+```povray
+#declare MM =
+    M_FromTransform(
+        transform { }
+    )
+;
+M_Print(MM)
+```
+#### Result:
+```povray
+array[4][4] {
+    {  1.000000,  0.000000,  0.000000,  0.000000 },
+    {  0.000000,  1.000000,  0.000000,  0.000000 },
+    {  0.000000,  0.000000,  1.000000,  0.000000 },
+    {  0.000000,  0.000000,  0.000000,  1.000000 }
+}
+```
+
 ## M_ToTransform(AA)
 
 [Description](README.md#m_totransformaa)
-
 
 #### Example:
 ```povray
