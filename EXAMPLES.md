@@ -2358,9 +2358,26 @@ array[4][4] {
 
 #### Example:
 ```povray
+#declare MM =
+    M_FromRowVectors3D(
+        < -1,  -2,  -3>,
+        < -4,  -5,  -6>,
+        < -7,  -8,  -9>,
+        <-10, -11, -12>
+    )
+;
+
+M_CustomPrint(MM, 3, 0, "", false)
 ```
+
 #### Result:
 ```povray
+array[4][4] {
+    {  -1,  -2,  -3,   0 },
+    {  -4,  -5,  -6,   0 },
+    {  -7,  -8,  -9,   0 },
+    { -10, -11, -12,   1 }
+}
 ```
 
 ## M_FromColVectors3D(vX, vY, vZ, pT)
@@ -2369,9 +2386,25 @@ array[4][4] {
 
 #### Example:
 ```povray
+#declare MM =
+    M_FromColVectors3D(
+        < -1,  -2,  -3>,
+        < -4,  -5,  -6>,
+        < -7,  -8,  -9>,
+        <-10, -11, -12>
+    )
+;
+
+M_CustomPrint(MM, 3, 0, "", false)
 ```
 #### Result:
 ```povray
+array[4][4] {
+    {  -1,  -4,  -7, -10 },
+    {  -2,  -5,  -8, -11 },
+    {  -3,  -6,  -9, -12 },
+    {   0,   0,   0,   1 }
+}
 ```
 
 ## M_Translate2D(pT)
