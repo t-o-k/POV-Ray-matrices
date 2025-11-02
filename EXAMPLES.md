@@ -4,8 +4,7 @@ POV-Ray include file for working with matrices
 Below are short examples illustrating how to use each of the macros in this library.
 
 ## M_NoOfRows(AA)
-
-[Description](README.md#m_noofrowsaa)
+Return the number of rows in the matrix AA.
 
 #### Example:
 ```povray
@@ -26,8 +25,7 @@ Below are short examples illustrating how to use each of the macros in this libr
 ```
 
 ## M_NoOfCols(AA)
-
-[Description](README.md#m_noofcolsaa)
+Return the number of columns in the matrix AA.
 
 #### Example:
 ```povray
@@ -48,8 +46,9 @@ Below are short examples illustrating how to use each of the macros in this libr
 ```
 
 ## M_CustomStr(AA, Length, Precision, ExtraIndentStr, Compact)
+Return the matrix AA (as a 2 dimensional array) in a string. The formatting of each element is defined by the Length and Precision paramenters in the same way that the L and P parameters defines the format in POV-Ray built in str() function. The Compact parameter is boolean and controls if the return string contains minimal white space.
 
-[Description](README.md#m_customstraa-length-precision-extraindentstr-compact)
+See also http://www.povray.org/documentation/view/3.7.1/232/
 
 #### Example:
 ```povray
@@ -153,8 +152,7 @@ array[3][4]{{2.2,4.0,5.0,4.0},{-4.9,7.2,-2.0,-0.5},{1.0,3.0,1.1,0.0}}
 ```
 
 ## M_Str(AA)
-
-[Description](README.md#m_straa)
+Return the matrix AA (as a 2 dimensional array) in a string. The elements are printed with platform specific precision.
 
 #### Example:
 ```povray
@@ -178,8 +176,9 @@ array[3][4] {
 ```
 
 ## M_CustomPrint(AA, Length, Precision, ExtraIndentStr, Compact)
+Print the matrix AA (as a 2 dimensional array). The formatting of each element is defined by the Length and Precision paramenters in the same way that the L and P parameters defines the format in POV-Ray built in str() function. The Compact parameter is boolean and controls if the matrix is printed with minimal white space. 
 
-[Description](README.md#m_customprintaa-length-precision-extraindentstr-compact)
+See also http://www.povray.org/documentation/view/3.7.1/232/
 
 #### Example:
 ```povray
@@ -273,8 +272,7 @@ M_CustomPrint(
 ```
 
 ## M_Print(AA)
-
-[Description](README.md#m_printaa)
+Print the matrix AA (as a 2 dimensional array). The elements are printed with platform specific precision.
 
 #### Example:
 ```povray
@@ -296,8 +294,7 @@ array[3][4] {
 ```
 
 ## M_Zeros(NoOfRows, NoOfCols)
-
-[Description](README.md#m_zerosnoofrows-noofcols)
+Return a matrix with size NoOfRows x NoOfCols, filled with zeros.
 
 #### Example:
 ```povray
@@ -315,8 +312,7 @@ array[4][3] {
 ```
 
 ## M_Ones(NoOfRows, NoOfCols)
-
-[Description](README.md#m_onesnoofrows-noofcols)
+Return a matrix with size NoOfRows x NoOfCols, filled with ones.
 
 #### Example:
 ```povray
@@ -333,8 +329,7 @@ array[3][4] {
 ```
 
 ## M_Full(NoOfRows, NoOfCols, Const)
-
-[Description](README.md#m_fullnoofrows-noofcols-const)
+Return a matrix with size NoOfRows x NoOfCols, filled with the number Const.
 
 #### Example:
 ```povray
@@ -352,8 +347,9 @@ array[4][3] {
 ```
 
 ## M_Identity(Size)
+Return an identity matrix of size Size x Size with ones on the main diagonal and zeros elsewhere.
 
-[Description](README.md#m_fullnoofrows-noofcols-const)
+See also https://en.wikipedia.org/wiki/Identity_matrix
 
 #### Example:
 ```povray
@@ -370,8 +366,7 @@ array[3][3] {
 ```
 
 ## M_Neg(AA)
-
-[Description](README.md#m_negaa)
+Return a matrix where the unary minus operator has been applied to the elements of the matrix AA.
 
 #### Example:
 ```povray
@@ -396,8 +391,7 @@ array[3][4] {
 ```
 
 ## M_Pos(AA)
-
-[Description](README.md#m_posaa)
+Return a matrix where the unary plus operator has been applied to the elements of the matrix AA.
 
 #### Example:
 ```povray
@@ -422,8 +416,7 @@ array[3][4] {
 ```
 
 ## M_Scale(AA, Scale)
-
-[Description](README.md#m_scaleaa-scale)
+Return a matrix where all the elements of the matrix AA has been multipled by the number Scale.
 
 #### Example:
 ```povray
@@ -449,8 +442,7 @@ array[3][2] {
 ```
 
 ## M_Round(AA, N)
-
-[Description](README.md#m_roundaa-n)
+Return a matrix where all elements of matrix AA have been rounded to N decimal places.
 
 #### Example:
 ```povray
@@ -499,9 +491,7 @@ array[3][3] {
 ```
 
 ## M_ApplyCheckerSigns(AA)
-
-[Description](README.md#m_applycheckersignsaa)
-
+Return a matrix where the unary minus and unary plus operators has been applied to the elements of AA in a checkerboard pattern.
 
 #### Example:
 ```povray
@@ -528,8 +518,9 @@ array[4][5] {
 ```
 
 ## M_ScaleRow(AA, RowNo, Scale)
+Return a matrix with the same elements as the matrix AA, except that all the elements in the row rowNo has been multiplied by the number Scale.
 
-[Description](README.md#m_scalerowaa-rowno-scale)
+See also https://en.wikipedia.org/wiki/Elementary_matrix#Row-multiplying_transformations
 
 #### Example:
 ```povray
@@ -560,8 +551,7 @@ array[5][4] {
 ```
 
 ## M_ScaleCol(AA, ColNo, Scale)
-
-[Description](README.md#m_scalecolaa-colno-scale)
+Return a matrix with the same elements as the matrix AA, except that all the elements in the column ColNo has been multiplied by the number Scale.
 
 #### Example:
 ```povray
@@ -591,8 +581,9 @@ array[5][4] {
 ```
 
 ## M_SwapRows(AA, RowNo, Row_No)
+Return a matrix with the same elements as the matrix AA, except that the columns RowNo and Row_No has been swapped.
 
-[Description](README.md#m_swaprowsaa-rowno-row_no)
+See also https://en.wikipedia.org/wiki/Elementary_matrix#Row-switching_transformations
 
 #### Example:
 ```povray
@@ -622,8 +613,7 @@ array[5][4] {
 ```
 
 ## M_SwapCols(AA, ColNo, Col_No)
-
-[Description](README.md#m_swapcolsaa-colno-col_no)
+Return a matrix with the same elements as the matrix AA, except that the columns ColNo and Col_No has been swapped.
 
 #### Example:
 ```povray
@@ -653,8 +643,9 @@ array[5][4] {
 ```
 
 ## M_Add(AA, BB)
+Return a matrix that is the entrywise sum of the matrices AA and BB.
 
-[Description](README.md#m_addaa-bb)
+See also https://en.wikipedia.org/wiki/Matrix_addition
 
 #### Example:
 ```povray
@@ -684,8 +675,7 @@ array[3][4] {
 ```
 
 ## M_Sub(AA, BB)
-
-[Description](README.md#m_subaa-bb)
+Return a matrix that is the entrywise difference of the matrices AA and BB.
 
 #### Example:
 ```povray
@@ -715,8 +705,9 @@ array[3][4] {
 ```
 
 ## M_Trace(AA)
+Return the sum of all the elements along the main diagonal in the square matrix AA.
 
-[Description](README.md#m_traceaa)
+See also https://en.wikipedia.org/wiki/Trace_(linear_algebra)
 
 #### Example:
 ```povray
@@ -737,8 +728,9 @@ array[3][4] {
 ```
 
 ## M_Transpose(AA)
+Returns a matrix that is the transpose of the matrix AA.
 
-[Description](README.md#m_transposeaa)
+See also https://en.wikipedia.org/wiki/Transpose
 
 #### Example:
 ```povray
@@ -765,8 +757,9 @@ array[5][3] {
 ```
 
 ## M_Mult(AA, BB)
+Return a matrix that is the product of the matrices AA and BB.
 
-[Description](README.md#m_multaa-bb)
+See also https://en.wikipedia.org/wiki/Matrix_multiplication
 
 #### Example:
 ```povray
@@ -827,8 +820,9 @@ array[4][4] {
 ```
 
 ## M_Gramian(AA)
+Return a matrix that is the product of the transpose of the matrix AA and the matrix AA.
 
-[Description](README.md#m_gramianaa)
+See also https://en.wikipedia.org/wiki/Gram_matrix
 
 #### Example:
 ```povray
@@ -872,8 +866,7 @@ array[1][1] {
 ```
 
 ## M_DelRow(AA, RowNo)
-
-[Description](README.md#m_delrowaa-rowno)
+Return a matrix with the same elements as the matrix AA, except that the row RowNo has been removed.
 
 #### Example:
 ```povray
@@ -902,8 +895,7 @@ array[4][4] {
 ```
 
 ## M_DelCol(AA, ColNo)
-
-[Description](README.md#m_delcolaa-colno)
+Return a matrix with the same elements as the matrix AA, except that the column ColNo has been removed.
 
 #### Example:
 ```povray
@@ -933,8 +925,7 @@ array[5][3] {
 ```
 
 ## M_DelRowAndCol(AA, RowNo, ColNo)
-
-[Description](README.md#m_delrowandcolaa-rowno-colno)
+Return a matrix with the same elements as the matrix AA, except that both the row RowNo and column ColNo has been removed.
 
 #### Example:
 ```povray
@@ -963,8 +954,9 @@ array[4][3] {
 ```
 
 ## M_AddScaledRowToRow(AA, Scale, RowNo, ToRowNo)
+Return a matrix with the same elements as matrix AA, except that the row RowNo multiplied by the number Scale has been added to the row ToRowNo.
 
-[Description](README.md#m_addscaledrowtorowaa-scale-rowno-torowno)
+See also https://en.wikipedia.org/wiki/Elementary_matrix#Row-multiplying_transformations and https://en.wikipedia.org/wiki/Elementary_matrix#Row-addition_transformations
 
 #### Example:
 ```povray
@@ -1017,8 +1009,7 @@ array[4][4] {
 ```
 
 ## M_AddScaledColToCol(AA, Scale, ColNo, ToColNo)
-
-[Description](README.md#m_addscaledcoltocolaa-scale-colno-tocolno)
+Return a matrix with the same elements as matrix AA, except that the column ColNo multiplied by the number Scale has been added to the column ToColNo.
 
 #### Example:
 ```povray
@@ -1071,8 +1062,9 @@ array[4][4] {
 ```
 
 ## M_SubMatrix(AA, RowNo, NoOfRows, ColNo, NoOfCols)
+Return a submatrix extracted from matrix AA, starting at row RowNo and column ColNo, with dimensions NoOfRows × NoOfCols.
 
-[Description](README.md#m_submatrixaa-rowno-noofrows-colno-noofcols)
+See also https://en.wikipedia.org/wiki/Block_matrix
 
 #### Example:
 ```povray
@@ -1100,8 +1092,7 @@ array[3][4] {
 ```
 
 ## M_Stack(AAAA)
-
-[Description](README.md#m_stackaaaa)
+Assemble the matrices in the 2-dimensional array AAAA into a single matrix. Matrices in the same column within AAAA must have the same number of columns, and matrices in the same row within AAA must have the same number of rows.
 
 #### Example:
 ```povray
@@ -1150,8 +1141,9 @@ array[4][6] {
 ```
 
 ## M_Det_SS(AA)
+Return the determinant of the square matrix AA. Use this if AA is large and if many of its elements are zero.
 
-[Description](README.md#m_det_ssaa)
+See also https://en.wikipedia.org/wiki/Determinant and https://en.wikipedia.org/wiki/Sparse_matrix
 
 #### Example:
 ```povray
@@ -1200,8 +1192,9 @@ array[4][6] {
 ```
 
 ## M_Det(AA)
+Return the determinant of the square matrix AA.
 
-[Description](README.md#m_detaa)
+See also https://en.wikipedia.org/wiki/Determinant
 
 #### Example:
 ```povray
@@ -1241,8 +1234,9 @@ array[4][6] {
 ```
 
 ## M_Minors(AA)
+Return a square matrix formed by all the minors of the square matrix AA.
 
-[Description](README.md#m_minorsaa)
+See also https://en.wikipedia.org/wiki/Minor_(linear_algebra)
 
 #### Example:
 ```povray
@@ -1269,8 +1263,7 @@ array[4][4] {
 ```
 
 ## M_Cofactors(AA)
-
-[Description](README.md#m_cofactorsaa)
+Return a square matrix formed by all of the cofactors of the square matrix AA.
 
 #### Example:
 ```povray
@@ -1297,8 +1290,9 @@ array[4][4] {
 ```
 
 ## M_Adjoint(AA)
+Return a square matrix that is the classical adjoint of a the square matrix AA.
 
-[Description](README.md#m_adjointaa)
+See also https://en.wikipedia.org/wiki/Adjugate_matrix
 
 #### Example:
 ```povray
@@ -1325,8 +1319,9 @@ array[4][4] {
 ```
 
 ## M_Inv_SS(AA)
+Return a square matrix that is the inverse of the square matrix AA. Use this if AA is large and if many of its elements are zero.
 
-[Description](README.md#m_inv_ssaa)
+Also see https://en.wikipedia.org/wiki/Minor_(linear_algebra)#Inverse_of_a_matrix
 
 #### Example:
 ```povray
@@ -1383,8 +1378,9 @@ array[8][8] {
 ```
 
 ## M_Inv(AA)
+Return a square matrix that is the inverse of the square matrix AA.
 
-[Description](README.md#m_invaa)
+See also https://en.wikipedia.org/wiki/Minor_(linear_algebra)#Inverse_of_a_matrix
 
 #### Example:
 ```povray
@@ -1451,8 +1447,11 @@ array[4][4] {
 ```
 
 ## M_PseudoInv(AA)
+Return a square matrix that is the pseudoinverse of the matrix AA.
 
-[Description](README.md#m_pseudoinvaa)
+At the moment this library can only calculate the pseudoinverse of matrices that have full rank.
+
+See also https://en.wikipedia.org/wiki/Moore%E2%80%93Penrose_inverse
 
 #### Example:
 ```povray
@@ -1496,8 +1495,7 @@ array[2][2] {
 ```
 
 ## M_FromTransformFn(TransformFn)
-
-[Description](README.md#m_fromtransformfntransformfn)
+Return a 4x4 matrix created from the matrix inherent in the transform function TransformFn().
 
 #### Example:
 ```povray
@@ -1544,8 +1542,7 @@ array[4][4] {
 ```
 
 ## M_ToTransformFn(AA)
-
-[Description](README.md#m_totransformfnaa)
+Return a transform function created from the 4x4 matrix AA.
 
 #### Example:
 ```povray
@@ -1555,8 +1552,7 @@ array[4][4] {
 ```
 
 ## M_FromTransform(Transform)
-
-[Description](README.md#m_fromtransformtransform)
+Return a 4x4 matrix created from the matrix inherent in the transform Transform.
 
 #### Example:
 ```povray
@@ -1624,8 +1620,7 @@ array[4][4] {
 ```
 
 ## M_ToTransform(AA)
-
-[Description](README.md#m_totransformaa)
+Return a transform created from the 4x4 matrix AA.
 
 #### Example:
 ```povray
@@ -1635,8 +1630,11 @@ array[4][4] {
 ```
 
 ## M_Row_FromPos2D(p0)
+Return a matrix with a single row and 3 columns with values from the U, V and W components from the 2D position vector p0.
 
-[Description](README.md#m_row_frompos2dp0)
+The vector p0 is considered to be a homogeneous vector with it's W component equal to 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
  
 #### Example:
 ```povray
@@ -1664,8 +1662,11 @@ array[1][3] {
 ```
 
 ## M_Col_FromPos2D(p0)
+Return a matrix with a single column and 3 rows with values from the U, V and W components from the 2D position vector p0.
 
-[Description](README.md#m_col_frompos2dp0)
+The vector p0 is considered to be a homogeneous vector with it's W component equal to 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -1697,8 +1698,11 @@ array[3][1] {
 ```
 
 ## M_Row_FromDir2D(v0)
+Return a matrix with a single row and 3 columns with values from the U, V and W components from the 2D direction vector v0.
 
-[Description](README.md#m_row_fromdir2dv0)
+The vector v0 is considered to be a homogeneous vector with it's W component equal to 0.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -1726,8 +1730,11 @@ array[1][3] {
 ```
 
 ## M_Col_FromDir2D(v0)
+Return a matrix with a single column and 3 rows with values from the U, V and W components from the 2D direction vector v0.
 
-[Description](README.md#m_col_fromdir2dv0)
+The vector v0 is considered to be a homogeneous vector with it's W component equal to 0.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -1759,8 +1766,11 @@ array[3][1] {
 ```
 
 ## M_Row_FromPos3D(p0)
+Return a matrix with a single row and 4 columns with values from the X, Y, Z and W components from the 3D position vector p0.
 
-[Description](README.md#m_row_frompos3dp0)
+The vector p0 is considered to be a homogeneous vector with it's W component equal to 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -1788,8 +1798,11 @@ array[1][4] {
 ```
 
 ## M_Col_FromPos3D(p0)
+Return a matrix with a single column and 4 rows with values from the X, Y, Z and W components from the 3D position vector p0.
 
-[Description](README.md#m_col_frompos3dp0)
+The vector p0 is considered to be a homogeneous vector with it's W component equal to 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -1823,8 +1836,11 @@ array[4][1] {
 ```
 
 ## M_Row_FromDir3D(v0)
+Return a matrix with a single row and 4 columns with values from the X, Y, Z and W components from the 3D direction vector v0.
 
-[Description](README.md#m_row_fromdir3dv0)
+The vector v0 is considered to be a homogeneous vector with it's W component equal to 0.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -1852,8 +1868,11 @@ array[1][4] {
 ```
 
 ## M_Col_FromDir3D(v0)
+Return a matrix with a single column and 4 rows with values from the X, Y, Z and W components from the 3D direction vector v0.
 
-[Description](README.md#m_col_fromdir3dv0)
+The vector v0 is considered to be a homogeneous vector with it's W component equal to 0.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -1887,8 +1906,11 @@ array[4][1] {
 ```
 
 ## M_SkewSym_FromDir3D(v0)
+Return a skew symmetric matrix with values from the X, Y and Z components from the 3D direction vector v0.
 
-[Description](README.md#m_skewsym_fromdir3dv0)
+The vector v0 is considered to be a homogeneous vector. It's W component is not used.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -1922,8 +1944,13 @@ array[4][4] {
 ```
 
 ## M_Pos2D_FromRow(AA, RowNo)
+Return a 2D position vector with the component values equal to U/W and V/W.
 
-[Description](README.md#m_pos2d_fromrowaa-rowno)
+The values in the 3 columns in row number RowNo in the matrix AA are used for U, V and W.
+
+The returned vector is considered to be a homogenous vector whose W component equals 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -1982,8 +2009,13 @@ array[4][4] {
 ```
 
 ## M_Pos2D_FromCol(AA, ColNo)
+Return a 2D position vector with the component values equal to U/W and V/W.
 
-[Description](README.md#m_pos2d_fromcolaa-colno)
+The values in the 3 rows in column number ColNo in the matrix AA are used for U, V and W.
+
+The returned vector is considered to be a homogenous vector whose W component equals 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -2042,8 +2074,13 @@ array[4][4] {
 ```
 
 ## M_Dir2D_FromRow(AA, RowNo)
+Return a 2D direction vector with the component values U and V.
 
-[Description](README.md#m_dir2d_fromrowaa-rowno)
+The values in the 3 columns in row number RowNo in the matrix AA are used for U, V and W.
+
+The returned vector is considered to be a homogenous vector whose W component equals 0.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -2083,8 +2120,13 @@ array[4][4] {
 ```
 
 ## M_Dir2D_FromCol(AA, ColNo)
+Return a 2D direction vector with the component values U and V.
 
-[Description](README.md#m_dir2d_fromcolaa-colno)
+The values in the 3 rows in column number ColNo in the matrix AA are used for U, V and W.
+
+The returned vector is considered to be a homogenous vector whose W component equals 0.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -2124,8 +2166,13 @@ array[4][4] {
 ```
 
 ## M_Pos3D_FromRow(AA, RowNo)
+Return a 3D position vector with the component values equal to X/W, Y/Z and Z/W.
 
-[Description](README.md#m_pos3d_fromrowaa-rowno)
+The values in the 4 columns in row number RowNo in the matrix AA are used for X, Y, Z and W.
+
+The returned vector is considered to be a homogenous vector whose W component equals 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -2184,8 +2231,13 @@ array[4][4] {
 ```
 
 ## M_Pos3D_FromCol(AA, ColNo)
+Return a 3D position vector with the component values equal to X/W, Y/Z and Z/W.
 
-[Description](README.md#m_pos3d_fromcolaa-colno)
+The values in the 4 rows in column number ColNo in the matrix AA are used for X, Y, Z and W.
+
+The returned vector is considered to be a homogenous vector whose W component equals 1.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -2247,8 +2299,13 @@ array[4][4] {
 ```
 
 ## M_Dir3D_FromRow(AA, RowNo)
+Return a 3D direction vector with the component values X, Y and Z.
 
-[Description](README.md#m_dir3d_fromrowaa-rowno)
+The values in the 4 columns in row number RowNo in the matrix AA are used for X, Y, Z and W.
+
+The returned vector is considered to be a homogenous vector whose W component equals 0.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -2288,8 +2345,13 @@ array[4][4] {
 ```
 
 ## M_Dir3D_FromCol(AA, ColNo)
+Return a 3D direction vector with the component values X, Y and Z.
 
-[Description](README.md#m_dir3d_fromcolaa-colno)
+The values in the 4 rows in column number ColNo in the matrix AA are used for X, Y, Z and W.
+
+The returned vector is considered to be a homogenous vector whose W component equals 0.
+
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -2331,8 +2393,9 @@ array[4][4] {
 ```
 
 ## M_FromRowVectors2D(vU, vV, pT)
+Return a 3x3 matrix created from the 2D vectors vU, vV and pT, used as row vectors. Vu and vV are considered to be homogenous direction vectors whose W components equal 0, while pT is considered to be a homogenous position vector whose W component equals 1.
 
-[Description](README.md#m_fromrowvectors2dvu-vv-pt)
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -2356,8 +2419,9 @@ array[3][3] {
 ```
 
 ## M_FromColVectors2D(vU, vV, pT)
+Return a 3x3 matrix created from the 2D vectors vU, vV and pT, used as column vectors. Vu and vV are considered to be homogenous direction vectors whose W components equal 0, while pT is considered to be a homogenous position vector whose W component equals 1.
 
-[Description](README.md#m_fromcolvectors2dvu-vv-pt)
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -2381,8 +2445,9 @@ array[3][3] {
 ```
 
 ## M_FromRowVectors3D(vX, vY, vZ, pT)
+Return a 4x4 matrix created from the 3D vectors vX, vY, vZ and pT, used as row vectors. vX, vY and vZ are considered to be homogenous direction vectors whose W components equal 0, while pT is considered to be a homogenous position vector whose W component equals 1.
 
-[Description](README.md#m_fromrowvectors3dvx-vy-vz-pt)
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -2409,8 +2474,9 @@ array[4][4] {
 ```
 
 ## M_FromColVectors3D(vX, vY, vZ, pT)
+Return a 4x4 matrix created from the 3D vectors vX, vY, vZ and pT, used as column vectors. vX, vY and vZ are considered to be homogenous direction vectors whose W components equal 0, while pT is considered to be a homogenous position vector whose W component equals 1.
 
-[Description](README.md#m_fromcolvectors3dvx-vy-vz-pt)
+See also https://en.wikipedia.org/wiki/Homogeneous_coordinates
 
 #### Example:
 ```povray
@@ -2436,8 +2502,7 @@ array[4][4] {
 ```
 
 ## M_Translate2D(pT)
-
-[Description](README.md#m_translate2dpt)
+Return a 3×3 transformation matrix for translating in 2D space by the position vector pT.
 
 #### Example:
 ```povray
@@ -2455,8 +2520,7 @@ array[3][3] {
 ```
 
 ## M_Scale2D(vS)
-
-[Description](README.md#m_scale2dvs)
+Return a 3×3 transformation matrix for scaling in 2D space by the scaling vector vS.
 
 #### Example:
 ```povray
@@ -2474,8 +2538,9 @@ array[3][3] {
 ```
 
 ## M_Rotate2D(Angle)
+Return a 3×3 transformation matrix for rotating in 2D space by the angle Angle in radians.
 
-[Description](README.md#m_rotate2dangle)
+See also https://en.wikipedia.org/wiki/Rotation_matrix
 
 #### Example:
 ```povray
@@ -2485,8 +2550,7 @@ array[3][3] {
 ```
 
 ## M_Translate3D(pT)
-
-[Description](README.md#m_translate3dpt)
+Return a 4×4 transformation matrix for translating in 3D space by the position vector pT.
 
 #### Example:
 ```povray
@@ -2505,8 +2569,7 @@ array[4][4] {
 ```
 
 ## M_Scale3D(vS)
-
-[Description](README.md#m_scale3dvs)
+Return a 4×4 transformation matrix for scaling in 3D space by the scaling vector vS
 
 #### Example:
 ```povray
@@ -2525,8 +2588,9 @@ array[4][4] {
 ```
 
 ## M_Rotate3D_AroundX(Angle)
+Return a 4×4 rotation matrix for rotating around the X-axis. The angle Angle must be in radians.
 
-[Description](README.md#m_rotate3d_aroundxangle)
+See also https://en.wikipedia.org/wiki/Rotation_matrix
 
 #### Example:
 ```povray
@@ -2545,8 +2609,9 @@ array[4][4] {
 ```
 
 ## M_Rotate3D_AroundY(Angle)
+Return a 4×4 rotation matrix for rotating around the Y-axis. The angle Angle must be in radians.
 
-[Description](README.md#m_rotate3d_aroundyangle)
+See also https://en.wikipedia.org/wiki/Rotation_matrix
 
 #### Example:
 ```povray
@@ -2565,8 +2630,9 @@ array[4][4] {
 ```
 
 ## M_Rotate3D_AroundZ(Angle)
+Return a 4×4 rotation matrix for rotating around the Z-axis. The angle Angle must be in radians.
 
-[Description](README.md#m_rotate3d_aroundzangle)
+See also https://en.wikipedia.org/wiki/Rotation_matrix
 
 #### Example:
 ```povray
@@ -2585,8 +2651,9 @@ array[4][4] {
 ```
 
 ## M_Rotate3D_AroundAxis(vAxis, Angle)
+Return a 4×4 rotation matrix for rotating around an arbitrary 3D axis vAxis. The angle Angle must be in radians.
 
-[Description](README.md#m_rotate3d_aroundaxisvaxis-angle)
+See also https://en.wikipedia.org/wiki/Rotation_matrix and https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula
 
 #### Example:
 ```povray
@@ -2610,8 +2677,11 @@ array[4][4] {
 ```
 
 ## M_Reorient3D(vFrom, vTo)
+Return a 4×4 rotation matrix that rotates the 3D direction vector vFrom to align with the 3D direction vector vTo.
 
-[Description](README.md#m_reorient3dvfrom-vto)
+This is useful for aligning objects 3D space.
+
+See also https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula
 
 #### Example:
 ```povray
