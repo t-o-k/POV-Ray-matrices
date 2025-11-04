@@ -163,4 +163,4 @@ See also https://en.wikipedia.org/wiki/Matrix_(mathematics)
 
 ### [M_Rotate3D_AroundAxis(vAxis, Angle)](DescriptionsAndExamples.md#m_rotate3d_aroundaxisvaxis-angle)
 
-## [M_Reorient3D(vFrom, vTo)](DescriptionsAndExamples.md#m_reorient3dvfrom-vto)
+### [M_Reorient3D(vFrom, vTo)](DescriptionsAndExamples.md#m_reorient3dvfrom-vto)
