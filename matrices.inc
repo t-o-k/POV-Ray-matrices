@@ -15,6 +15,128 @@ which can be found in the LICENSE file.
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
+#macro _M_DebugLongStr(Str)
+
+    #local C = 100;
+    #local L = strlen(Str);
+    #local D = div(L, C);
+    #local M = mod(L, C);
+    #for (I, 0, D-1)
+        #debug substr(Str, 1 + I*C, C)
+    #end // for
+    #debug substr(Str, 1 + D*C, M)
+
+#end // macro _M_DebugLongStr
+
+
+#macro M_NoOfRows(AA)
+
+    dimension_size(AA, 1)
+
+#end // M_NoOfRows
+
+
+#macro M_NoOfCols(AA)
+
+    dimension_size(AA, 2)
+
+#end // M_NoOfCols
+
+
+#macro _M_NoOfRowsStr(AA)
+
+    str(M_NoOfRows(AA), 0, 0)
+
+#end // _M_NoOfRowsStr
+
+
+#macro _M_NoOfColsStr(AA)
+
+    str(M_NoOfCols(AA), 0, 0)
+
+#end // _M_NoOfColsStr
+
+
+#macro M_CustomStr(AA, Length, Precision, ExtraIndentStr, Compact)
+
+    #local BB = _M_RemoveZeroSigns(AA);
+    #local PosStr = ""
+    #local IndentStr = ""
+    #local XtraIndStr = ""
+    #local EndStr = ""
+    #local PadStr = ""
+    #if (! Compact)
+        #if (Precision <= 0)
+            #if (Length <= 1)
+                #local PosStr = " "
+            #end // if
+        #else
+            #if (Length - Precision <= 2)
+                #local PosStr = " "
+            #end // if
+        #end // if
+        #local IndentStr = "    "
+        #local XtraIndStr = ExtraIndentStr
+        #local EndStr = "\n"
+        #local PadStr = " "
+    #end // if
+    #local SizeI = dimension_size(BB, 1);
+    #local SizeJ = dimension_size(BB, 2);
+    #local StrI = str(SizeI, 0, 0)
+    #local StrJ = str(SizeJ, 0, 0)
+    #local Str = concat(ExtraIndentStr, "array[", StrI, "][", StrJ, "]")
+    #local Str = concat(Str, PadStr, "{", EndStr)
+    #for (I, 0, SizeI-1)
+        #local Str = concat(Str, XtraIndStr, IndentStr, "{", PadStr)
+        #for (J, 0, SizeJ-1)
+            #local M = BB[I][J];
+            #if (M >= 0)
+                #local Str = concat(Str, PosStr)
+            #end // if
+            #local Str = concat(Str, str(M, Length, Precision))
+            #if (J < SizeJ-1)
+                #local Str = concat(Str, ",", PadStr)
+            #end // if
+        #end // for
+        #local Str = concat(Str, PadStr, "}")
+        #if (I < SizeI-1)
+            #local Str = concat(Str, ",")
+        #end // if
+        #local Str = concat(Str, EndStr)
+    #end // for
+    #local Str = concat(Str, XtraIndStr, "}")
+
+    Str
+
+#end // macro M_CustomStr
+
+
+#macro M_Str(AA)
+
+    M_CustomStr(AA, 0, -1, "", false)
+
+#end // macro M_Str
+
+
+#macro M_CustomPrint(AA, Length, Precision, ExtraIndentStr, Compact)
+
+    _M_DebugLongStr(
+        M_CustomStr(AA, Length, Precision, ExtraIndentStr, Compact)
+    )
+
+#end // macro M_CustomPrint
+
+
+#macro M_Print(AA)
+
+    _M_DebugLongStr(
+        M_Str(AA)
+    )
+
+#end // macro M_Print
+
+// ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
+
 #macro _M_FromFn(SizeI, SizeJ, Fn)
 
     #local MM = array[SizeI][SizeJ];
@@ -567,37 +689,6 @@ which can be found in the LICENSE file.
 #end // macro _M_ZeroCountInCol
 
 
-/*
-#macro M_Det(AA)
-
-    #local Size =
-        min(
-            dimension_size(AA, 1),
-            dimension_size(AA, 2)
-        )
-    ;
-    #if (Size > 1)
-        #local Det = 0;
-        #for (J, 0, Size-1)
-            #local A = AA[0][J];
-            #if (A != 0)
-                #local D =
-                    M_Det(
-                        M_DelRowAndCol(AA, 0, J)
-                    )
-                ;
-                #local Det = Det + pow(-1, J)*A*D;
-            #end // if
-        #end // for
-    #else
-        #local Det = AA[0][0];
-    #end // if
-
-    Det
-
-#end // macro M_Det
-*/
-
 #macro _M_Det_11(AA)
 
     (AA[0][0])
@@ -912,6 +1003,38 @@ which can be found in the LICENSE file.
     Det
 
 #end // macro M_Det
+
+
+/*
+#macro M_Det(AA)
+
+    #local Size =
+        min(
+            dimension_size(AA, 1),
+            dimension_size(AA, 2)
+        )
+    ;
+    #if (Size > 1)
+        #local Det = 0;
+        #for (J, 0, Size-1)
+            #local A = AA[0][J];
+            #if (A != 0)
+                #local D =
+                    M_Det(
+                        M_DelRowAndCol(AA, 0, J)
+                    )
+                ;
+                #local Det = Det + pow(-1, J)*A*D;
+            #end // if
+        #end // for
+    #else
+        #local Det = AA[0][0];
+    #end // if
+
+    Det
+
+#end // macro M_Det
+*/
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
@@ -1533,6 +1656,20 @@ TODO:
 #end // macro M_Scale3D
 
 
+#macro M_Rotate3D_AroundX(Angle)
+
+    #local vX = degrees(Angle)*x;
+    
+    M_FromRowVectors3D(
+        x,
+        vrotate(y, vX),
+        vrotate(z, vX),
+        0*x
+    )
+
+#end // macro M_Rotate3D_AroundX
+
+
 /*
 #macro M_Rotate3D_AroundX(Angle)
 
@@ -1550,18 +1687,18 @@ TODO:
 */
 
 
-#macro M_Rotate3D_AroundX(Angle)
+#macro M_Rotate3D_AroundY(Angle)
 
-    #local vX = degrees(Angle)*x;
+    #local vY = degrees(Angle)*y;
     
     M_FromRowVectors3D(
-        x,
-        vrotate(y, vX),
-        vrotate(z, vX),
-        0*x
+        vrotate(x, vY),
+        y,
+        vrotate(z, vY),
+        0*y
     )
 
-#end // macro M_Rotate3D_AroundX
+#end // macro M_Rotate3D_AroundY
 
 
 /*
@@ -1581,18 +1718,18 @@ TODO:
 */
 
 
-#macro M_Rotate3D_AroundY(Angle)
+#macro M_Rotate3D_AroundZ(Angle)
 
-    #local vY = degrees(Angle)*y;
+    #local vZ = degrees(Angle)*z;
     
     M_FromRowVectors3D(
-        vrotate(x, vY),
-        y,
-        vrotate(z, vY),
-        0*y
+        vrotate(x, vZ),
+        vrotate(y, vZ),
+        z,
+        0*z
     )
 
-#end // macro M_Rotate3D_AroundY
+#end // macro M_Rotate3D_AroundZ
 
 
 /*
@@ -1610,20 +1747,6 @@ TODO:
 
 #end // macro M_Rotate3D_AroundZ
 */
-
-
-#macro M_Rotate3D_AroundZ(Angle)
-
-    #local vZ = degrees(Angle)*z;
-    
-    M_FromRowVectors3D(
-        vrotate(x, vZ),
-        vrotate(y, vZ),
-        z,
-        0*z
-    )
-
-#end // macro M_Rotate3D_AroundZ
 
 
 #macro M_Rotate3D_AroundAxis(vAxis, Angle)
@@ -1775,134 +1898,3 @@ TODO:
 #end // macro M_Dir3D_FromCol
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
-
-#macro _M_DebugLongStr(Str)
-
-    #local C = 100;
-    #local L = strlen(Str);
-    #local D = div(L, C);
-    #local M = mod(L, C);
-    #for (I, 0, D-1)
-        #debug substr(Str, 1 + I*C, C)
-    #end // for
-    #debug substr(Str, 1 + D*C, M)
-
-#end // macro _M_DebugLongStr
-
-
-#macro M_NoOfRows(AA)
-
-    dimension_size(AA, 1)
-
-#end // M_NoOfRows
-
-
-#macro M_NoOfCols(AA)
-
-    dimension_size(AA, 2)
-
-#end // M_NoOfCols
-
-
-#macro _M_NoOfRowsStr(AA)
-
-    str(M_NoOfRows(AA), 0, 0)
-
-#end // _M_NoOfRowsStr
-
-
-#macro _M_NoOfColsStr(AA)
-
-    str(M_NoOfCols(AA), 0, 0)
-
-#end // _M_NoOfColsStr
-
-
-#macro M_CustomStr(AA, Length, Precision, ExtraIndentStr, Compact)
-
-    #local BB = _M_RemoveZeroSigns(AA);
-    #local PosStr = ""
-    #local IndentStr = ""
-    #local XtraIndStr = ""
-    #local EndStr = ""
-    #local PadStr = ""
-    #if (! Compact)
-        #if (Precision <= 0)
-            #if (Length <= 1)
-                #local PosStr = " "
-            #end // if
-        #else
-            #if (Length - Precision <= 2)
-                #local PosStr = " "
-            #end // if
-        #end // if
-        #local IndentStr = "    "
-        #local XtraIndStr = ExtraIndentStr
-        #local EndStr = "\n"
-        #local PadStr = " "
-    #end // if
-    #local SizeI = dimension_size(BB, 1);
-    #local SizeJ = dimension_size(BB, 2);
-    #local StrI = str(SizeI, 0, 0)
-    #local StrJ = str(SizeJ, 0, 0)
-    #local Str = concat(ExtraIndentStr, "array[", StrI, "][", StrJ, "]")
-    #local Str = concat(Str, PadStr, "{", EndStr)
-    #for (I, 0, SizeI-1)
-        #local Str = concat(Str, XtraIndStr, IndentStr, "{", PadStr)
-        #for (J, 0, SizeJ-1)
-            #local M = BB[I][J];
-            #if (M >= 0)
-                #local Str = concat(Str, PosStr)
-            #end // if
-            #local Str = concat(Str, str(M, Length, Precision))
-            #if (J < SizeJ-1)
-                #local Str = concat(Str, ",", PadStr)
-            #end // if
-        #end // for
-        #local Str = concat(Str, PadStr, "}")
-        #if (I < SizeI-1)
-            #local Str = concat(Str, ",")
-        #end // if
-        #local Str = concat(Str, EndStr)
-    #end // for
-    #local Str = concat(Str, XtraIndStr, "}")
-
-    Str
-
-#end // macro M_CustomStr
-
-
-#macro M_Str(AA)
-
-    M_CustomStr(AA, 0, -1, "", false)
-
-#end // macro M_Str
-
-
-#macro M_CustomPrint(AA, Length, Precision, ExtraIndentStr, Compact)
-
-    _M_DebugLongStr(
-        M_CustomStr(AA, Length, Precision, ExtraIndentStr, Compact)
-    )
-
-#end // macro M_CustomPrint
-
-
-#macro M_Print(AA)
-
-    _M_DebugLongStr(
-        M_Str(AA)
-    )
-
-#end // macro M_Print
-
-// ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
-
-
-
-
-
-
-
-
-
