@@ -1092,7 +1092,7 @@ array[3][4] {
 ```
 
 ## M_Stack(AAAA)
-Assemble the matrices in the 2-dimensional array AAAA into a single matrix. Matrices in the same column within AAAA must have the same number of columns, and matrices in the same row within AAA must have the same number of rows.
+Assemble the matrices in the 2-dimensional array AAAA into a single matrix. Matrices in the same column within AAAA must have the same number of columns, and matrices in the same row within AAAA must have the same number of rows.
 
 #### Example:
 ```povray
