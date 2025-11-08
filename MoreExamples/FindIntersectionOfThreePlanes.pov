@@ -20,6 +20,8 @@ global_settings { assumed_gamma 1.0 }
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
 
 // This macro illustrates a plane with a round disc near the origin.
+// The plane is defined by a normal vector and its distance from the
+// origin in the direction of the normal vector.
 // The normal vector is shown as a cylinder
 
 #macro ShowPlane(vNormal, Distance) 
@@ -260,5 +262,6 @@ camera {
 }
 
 // ===== 1 ======= 2 ======= 3 ======= 4 ======= 5 ======= 6 ======= 7 ======= 8 ======= 9 ======= 10
+
 
 
